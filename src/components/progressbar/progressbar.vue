@@ -5,7 +5,7 @@
     <div class="ui-progressbar-label" :style="value ? 'display: block' : 'display: none'" v-if="showValue">{{value}}{{unit}}</div>
   </div>
 </template>
-<style lang="scss" src="./progressbar.scss"></style>
+<style lang="css" src="./progressbar.css"></style>
 <script>
   export default {
     name: 'p-progressBar',

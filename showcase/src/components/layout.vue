@@ -16,7 +16,7 @@
 </template>
 <style lang="css" src="../assets/css/showcase.css"></style>
 <style id="current-theme" lang="css" src="../../../src/assets/themes/omega/theme.css"></style>
-<style lang="css" src="../../../src/assets/vue.css"></style>
+<style lang="css" src="../../../src/assets/primevue.css"></style>
 <style lang="css" src="../../../node_modules/font-awesome/css/font-awesome.min.css"></style>
 <script>
   import HeaderLayout from './header.vue'
