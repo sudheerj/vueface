@@ -8,6 +8,7 @@ import Rating from './components/rating/rating.vue';
 import ToggleButton from './components/togglebutton/togglebutton.vue';
 import RadioButton from './components/radiobutton/radiobutton.vue';
 import Captcha from './components/captcha/captcha.vue';
+import Panel from './components/panel/panel.vue';
 
 const components = {
   'p-button': Button,
@@ -19,7 +20,8 @@ const components = {
   'p-rating': Rating,
   'p-toggleButton': ToggleButton,
   'p-radioButton': RadioButton,
-  'p-captcha': Captcha
+  'p-captcha': Captcha,
+  'p-panel': Panel
 };
 
 const install = function (Vue, opts = {}) {

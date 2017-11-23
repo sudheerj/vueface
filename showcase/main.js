@@ -8,7 +8,6 @@ import PrimeVue from '../src/index.js'
 
 Vue.config.productionTip = false;
 
-
 Vue.use(PrimeVue)
 Vue.use(VueHighlightJS)
 Vue.use(VueRouter)
@@ -23,6 +22,7 @@ import RatingDemo from './src/components/rating/ratingdemo.vue'
 import ToggleButtonDemo from './src/components/togglebutton/togglebuttondemo.vue'
 import RadioButtonDemo from './src/components/radiobutton/radiobuttondemo.vue'
 import CaptchaDemo from './src/components/captcha/captchademo.vue'
+import PanelDemo from './src/components/panel/paneldemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -36,6 +36,7 @@ const routes = [
   { path: '/components/togglebutton', component: ToggleButtonDemo },
   { path: '/components/radiobutton', component: RadioButtonDemo },
   { path: '/components/captcha', component: CaptchaDemo },
+  { path: '/components/panel', component: PanelDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

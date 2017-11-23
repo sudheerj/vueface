@@ -29,6 +29,7 @@ Vue.use(PrimeVue)
 - ToggleButton
 - RadioButton
 - Captcha
+- Panel
 
 
 ## How to Run
