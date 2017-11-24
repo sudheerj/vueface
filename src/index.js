@@ -9,6 +9,7 @@ import ToggleButton from './components/togglebutton/togglebutton.vue';
 import RadioButton from './components/radiobutton/radiobutton.vue';
 import Captcha from './components/captcha/captcha.vue';
 import Panel from './components/panel/panel.vue';
+import Fieldset from './components/fieldset/fieldset.vue';
 
 const components = {
   'p-button': Button,
@@ -21,7 +22,8 @@ const components = {
   'p-toggleButton': ToggleButton,
   'p-radioButton': RadioButton,
   'p-captcha': Captcha,
-  'p-panel': Panel
+  'p-panel': Panel,
+  'p-fieldset': Fieldset
 };
 
 const install = function (Vue, opts = {}) {

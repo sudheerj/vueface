@@ -12,6 +12,8 @@
     <router-link to="/components/radiobutton">RadioButton</router-link>
     <router-link to="/components/captcha">Captcha</router-link>
     <router-link to="/components/panel">Panel</router-link>
+    <router-link to="/components/fieldset">Fieldset</router-link>
+    <router-link to="/components/grid">Grid</router-link>
   </div>
   <router-view></router-view>
 </div>

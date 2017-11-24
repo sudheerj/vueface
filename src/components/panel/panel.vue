@@ -8,7 +8,7 @@
         <span :class="collapsedStatus ? 'fa fa-fw ' + expandIcon : 'fa fa-fw ' + collapseIcon"></span>
       </a>
     </div>
-    <transition name="fade" @enter="onToggleDone($event)" @leave="onToggleDone($event)">
+    <transition name="slide" @enter="onToggleDone($event)" @leave="onToggleDone($event)">
     <div :id="id + '-content'" class="ui-panel-content-wrapper" v-show ="!collapsedStatus"
          :class="{'ui-panel-content-wrapper-overflown': collapsedStatus||animating}"
          role="region" :aria-hidden="collapsedStatus" :aria-labelledby="id + '-label'">
@@ -32,7 +32,7 @@
     height: 100%;
   }
   .slide-enter, .slide-leave-to  {
-    transition: .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: .4s cubic-bezier(0.86, 0, 0.07, 1);
   }
 </style>
 <script>
@@ -117,7 +117,7 @@
       }
     },
     mounted: function () {
-
+      this.collapsedStatus = this.collapsed;
     },
     computed: {
 
