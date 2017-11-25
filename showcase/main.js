@@ -25,6 +25,7 @@ import CaptchaDemo from './src/components/captcha/captchademo.vue'
 import PanelDemo from './src/components/panel/paneldemo.vue'
 import FieldsetDemo from './src/components/fieldset/fieldsetdemo.vue'
 import GridDemo from './src/components/grid/griddemo.vue'
+import ToolbarDemo from './src/components/toolbar/toolbardemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -41,6 +42,7 @@ const routes = [
   { path: '/components/panel', component: PanelDemo },
   { path: '/components/fieldset', component: FieldsetDemo },
   { path: '/components/grid', component: GridDemo },
+  { path: '/components/toolbar', component: ToolbarDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

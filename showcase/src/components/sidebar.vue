@@ -14,6 +14,7 @@
     <router-link to="/components/panel">Panel</router-link>
     <router-link to="/components/fieldset">Fieldset</router-link>
     <router-link to="/components/grid">Grid</router-link>
+    <router-link to="/components/toolbar">Toolbar</router-link>
   </div>
   <router-view></router-view>
 </div>

@@ -10,6 +10,7 @@ import RadioButton from './components/radiobutton/radiobutton.vue';
 import Captcha from './components/captcha/captcha.vue';
 import Panel from './components/panel/panel.vue';
 import Fieldset from './components/fieldset/fieldset.vue';
+import Toolbar from './components/toolbar/toolbar.vue';
 
 const components = {
   'p-button': Button,
@@ -23,7 +24,8 @@ const components = {
   'p-radioButton': RadioButton,
   'p-captcha': Captcha,
   'p-panel': Panel,
-  'p-fieldset': Fieldset
+  'p-fieldset': Fieldset,
+  'p-toolbar': Toolbar
 };
 
 const install = function (Vue, opts = {}) {
