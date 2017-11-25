@@ -11,6 +11,7 @@ import Captcha from './components/captcha/captcha.vue';
 import Panel from './components/panel/panel.vue';
 import Fieldset from './components/fieldset/fieldset.vue';
 import Toolbar from './components/toolbar/toolbar.vue';
+import Galleria from './components/galleria/galleria.vue';
 
 const components = {
   'p-button': Button,
@@ -25,7 +26,8 @@ const components = {
   'p-captcha': Captcha,
   'p-panel': Panel,
   'p-fieldset': Fieldset,
-  'p-toolbar': Toolbar
+  'p-toolbar': Toolbar,
+  'p-galleria': Galleria
 };
 
 const install = function (Vue, opts = {}) {

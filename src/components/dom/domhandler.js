@@ -1,4 +1,4 @@
-export class DomHandler {
+export default class DomHandler {
   constructor () {
     this.zindex = 1000;
     this.calculatedScrollbarWidth = null;
@@ -60,7 +60,8 @@ export class DomHandler {
     let targetWidth = target.offsetWidth;
     let targetOffset = target.getBoundingClientRect();
     let viewport = this.getViewport();
-    let top, left;
+    let top;
+    let left;
 
     if ((targetOffset.top + targetHeight + elementDimensions.height) > viewport.height) {
       top = -1 * (elementDimensions.height);
@@ -87,7 +88,8 @@ export class DomHandler {
     let windowScrollTop = this.getWindowScrollTop();
     let windowScrollLeft = this.getWindowScrollLeft();
     let viewport = this.getViewport();
-    let top, left;
+    let top;
+    let left;
 
     if (targetOffset.top + targetOuterHeight + elementOuterHeight > viewport.height) {
       top = targetOffset.top + windowScrollTop - elementOuterHeight;
@@ -125,7 +127,7 @@ export class DomHandler {
   }
 
   getHiddenElementDimensions (element) {
-    let dimensions: any = {};
+    let dimensions = {};
     element.style.visibility = 'hidden';
     element.style.display = 'block';
     dimensions.width = element.offsetWidth;
@@ -138,9 +140,9 @@ export class DomHandler {
 
   scrollInView (container, item) {
     let borderTopValue = getComputedStyle(container).getPropertyValue('borderTopWidth');
-    let borderTop: number = borderTopValue ? parseFloat(borderTopValue) : 0;
+    let borderTop = borderTopValue ? parseFloat(borderTopValue) : 0;
     let paddingTopValue = getComputedStyle(container).getPropertyValue('paddingTop');
-    let paddingTop: number = paddingTopValue ? parseFloat(paddingTopValue) : 0;
+    let paddingTop = paddingTopValue ? parseFloat(paddingTopValue) : 0;
     let containerRect = container.getBoundingClientRect();
     let itemRect = item.getBoundingClientRect();
     let offset = (itemRect.top + document.body.scrollTop) - (containerRect.top + document.body.scrollTop) - borderTop - paddingTop;
@@ -209,7 +211,7 @@ export class DomHandler {
     return f.call(element, selector);
   }
 
-  getOuterWidth (el, margin?) {
+  getOuterWidth (el, margin) {
     let width = el.offsetWidth;
 
     if (margin) {
@@ -254,7 +256,7 @@ export class DomHandler {
     return height;
   }
 
-  getOuterHeight (el, margin?) {
+  getOuterHeight (el, margin) {
     let height = el.offsetHeight;
 
     if (margin) {
