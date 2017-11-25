@@ -1,15 +1,19 @@
 <template>
   <fieldset :id="id" :class="{'fieldsetStyleClass:true, ui-fieldset ui-widget ui-widget-content ui-corner-all': true, 'ui-fieldset-toggleable': toggleable}" :style="fieldsetStyle">
     <legend class="ui-fieldset-legend ui-corner-all ui-state-default ui-unselectable-text">
-      <a href="#" @click="toggle($event)" :aria-controls="id + '-content'" :aria-expanded="!collapsed" :tabindex="toggleable ? null : -1">
-        <span class="ui-fieldset-toggler fa fa-w" :class="{'fa-minus': !collapsed,'fa-plus':collapsed}"></span>
+      <a href="#" v-if="toggleable" @click="toggle($event)" :aria-controls="id + '-content'" :aria-expanded="!collapsedStatus" :tabindex="toggleable ? null : -1">
+        <span class="ui-fieldset-toggler fa fa-w" :class="{'fa-minus': !collapsedStatus,'fa-plus':collapsedStatus}"></span>
         <span class="ui-fieldset-legend-text">{{legend}}</span>
                     <slot name="header"></slot>
       </a>
+      <span v-else>
+        <span class="ui-fieldset-legend-text">{{legend}}</span>
+                    <slot name="header"></slot>
+      </span>
     </legend>
     <transition name="slide" @enter="onToggleDone($event)" @leave="onToggleDone($event)">
-    <div :id="id + '-content'" class="ui-fieldset-content-wrapper"
-         :class="{'ui-fieldset-content-wrapper-overflown': collapsed||animating}" :aria-hidden="collapsed"
+    <div :id="id + '-content'" class="ui-fieldset-content-wrapper" v-show ="!collapsedStatus"
+         :class="{'ui-fieldset-content-wrapper-overflown': collapsedStatus||animating}" :aria-hidden="collapsedStatus"
           role="region">
       <div class="ui-fieldset-content">
         <slot></slot>
@@ -19,7 +23,7 @@
   </fieldset>
 </template>
 <style lang="css" src="./fieldset.css"></style>
-<style>
+<style scoped>
   .slide-enter-active {
     height: 0%;
   }
@@ -27,7 +31,7 @@
     height: 100%;
   }
   .slide-enter, .slide-leave-to  {
-    transition: .4s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: 400ms cubic-bezier(0.86, 0, 0.07, 1);
   }
 </style>
 <script>
@@ -88,6 +92,7 @@
 
       onToggleDone (event) {
         this.animating = false;
+        this.$emit('onAfterToggle', {originalEvent: event, collapsed: this.collapsedStatus});
       }
     },
     mounted: function () {

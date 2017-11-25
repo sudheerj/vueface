@@ -18,13 +18,11 @@
 </template>
 <style lang="css" src="./radiobutton.css"></style>
 <script>
-  let checked = false;
-  let focused = false;
   export default {
     name: 'p-radiobutton',
     data: function () {
       return {
-        checked, focused
+        checked: false, focused: false
       };
     },
     model: {
