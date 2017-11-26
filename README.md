@@ -34,6 +34,7 @@ Vue.use(PrimeVue)
 - Grid
 - Toolbar
 - Galleria
+- Message
 
 
 ## How to Run
