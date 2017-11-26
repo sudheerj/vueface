@@ -1,12 +1,13 @@
 <template>
-  <div ref="galleria" class="{'ui-galleria ui-widget ui-widget-content ui-corner-all':true}" :style="galleriaStyle" :class="galleriaStyleClass" >
+  <div id="app">
+  <div ref="galleria" class="ui-galleria ui-widget ui-widget-content ui-corner-all" :style="galleriaStyle" :class="galleriaStyleClass" >
     <ul class="ui-galleria-panel-wrapper" :style="{width:panelWidth + 'px', height: panelHeight + 'px'}" >
       <li v-for="(image,i) in images" class="ui-galleria-panel" :class="{'ui-helper-hidden':i!=activeIndex}"
           :style="{width:panelWidth + 'px', height: panelHeight + 'px'}" @click="clickImage($event,image,i)">
         <img class="ui-panel-images" :src="image.source" :alt="image.alt" :title="image.title"/>
       </li>
     </ul>
-    <div :class="{'ui-galleria-filmstrip-wrapper':true}" v-if="showFilmstrip">
+    <div class="ui-galleria-filmstrip-wrapper" v-if="showFilmstrip">
       <ul class="ui-galleria-filmstrip" :style="{transition:'left 1s',left: stripLeft + 'px'}" >
         <li ref="frame" v-for="(image, i) in images" :class="{'ui-galleria-frame-active':i==activeIndex}" class="ui-galleria-frame" @click="frameClick(frame)"
             :style="{width:frameWidth + 'px', height: frameHeight + 'px', transition: 'opacity 0.75s ease'}" >
@@ -20,9 +21,10 @@
     <div class="ui-galleria-nav-prev fa fa-fw fa-chevron-circle-left" @click="clickNavLeft()" :style="{bottom: frameHeight/2 +'px'}" v-if="activeIndex !== 0"></div>
     <div class="ui-galleria-nav-next fa fa-fw fa-chevron-circle-right" @click="clickNavRight()" :style="{bottom: frameHeight/2 +'px'}"></div>
     <div class="ui-galleria-caption" v-if="showCaption&&images" style="display:block">
-      <h4>{{images[activeIndex].title ? images[activeIndex].title : ''}}</h4><p>{{images[activeIndex].alt ? images[activeIndex].alt : ''}}</p>
+      <h4>{{images[activeIndex] ? images[activeIndex].title : ''}}</h4><p>{{images[activeIndex] ? images[activeIndex].alt : ''}}</p>
     </div>
   </div>
+    </div>
 </template>
 <style lang="css" src="./galleria.css"></style>
 <script>
@@ -57,13 +59,15 @@
 
         initialized: false,
 
-        domHandler: domHandler
+        domHandler: domHandler,
+
+        activeIndex: 0
       };
     },
     props: {
       images: {
         type: Array,
-        default: []
+        default: null
       },
       galleriaStyle: {
         type: String,
@@ -89,7 +93,7 @@
         type: Number,
         default: 40
       },
-      activeIndex: {
+      activeImageIndex: {
         type: Number,
         default: 0
       },
@@ -122,7 +126,7 @@
         }
 
         if (this.showCaption) {
-         // this.caption = domHandler.findSingle(this.container, 'div.ui-galleria-caption');
+          this.caption = domHandler.findSingle(this.container, 'div.ui-galleria-caption');
           this.caption.style.bottom = this.showFilmstrip ? domHandler.getOuterHeight(this.stripWrapper, true) + 'px' : 0 + 'px';
           this.caption.style.width = domHandler.width(this.panelWrapper) + 'px';
         }
@@ -189,12 +193,10 @@
 
       select (index, reposition) {
         if (index !== this.activeIndex) {
-          // let oldPanel = this.panels[this.activeIndex];
           let newPanel = this.panels[index];
           domHandler.fadeIn(newPanel, 500);
 
           if (this.showFilmstrip) {
-            // let oldFrame = this.frames[this.activeIndex],
             let newFrame = this.frames[index];
 
             if (reposition === undefined || reposition === true) {
@@ -218,8 +220,10 @@
 
     },
     mounted: function () {
-      this.container = this.$refs.frame;
-      this.panelWrapper = domHandler.findSingle(this.$refs.galleria, 'ul.ui-galleria-panel-wrapper');
+      this.activeIndex = this.activeImageIndex;
+      this.imagesChanged = true;
+      this.container = this.$refs.galleria;
+      this.panelWrapper = domHandler.findSingle(this.container, 'ul.ui-galleria-panel-wrapper');
       this.initialized = true;
 
       if (this.showFilmstrip) {
@@ -227,14 +231,19 @@
         this.strip = domHandler.findSingle(this.stripWrapper, 'ul.ui-galleria-filmstrip');
       }
 
+      this._images = this.images;
+      this.$refs.galleria.style.width = this.panelWidth + 'px';
+      this.$refs.galleria.style.visibility = 'visible';
+    },
+    updated: function () {
       if (this.images && this.images.length) {
         this.render();
       }
-
-      this._images = this.images;
-      this.activeIndex = 0;
-      this.imagesChanged = true;
     },
-    computed: {}
+    destroyed: function () {
+      this.stopSlideshow();
+    },
+    computed: {
+    }
   };
 </script>

@@ -3,7 +3,7 @@
     <layout>
       <div class="content-section introduction" id="component">
         <div>
-          <span class="feature-title">Panel</span>
+          <span class="feature-title">Fieldset</span>
           <span>Fieldset is a grouping component with a content toggle feature.</span>
         </div>
       </div>

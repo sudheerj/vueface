@@ -1,12 +1,12 @@
-export default class DomHandler {
+export default {
   constructor () {
     this.zindex = 1000;
     this.calculatedScrollbarWidth = null;
-  }
+  },
 
   addClass (element, className) {
     if (element.classList) { element.classList.add(className); } else { element.className += ' ' + className; }
-  }
+  },
 
   addMultipleClasses (element, className) {
     if (element.classList) {
@@ -20,29 +20,29 @@ export default class DomHandler {
         element.className += ' ' + styles[i];
       }
     }
-  }
+  },
 
   removeClass (element, className) {
     if (element.classList) { element.classList.remove(className); } else { element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' '); }
-  }
+  },
 
   hasClass (element, className) {
     if (element.classList) { return element.classList.contains(className); } else { return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className); }
-  }
+  },
 
   siblings (element) {
     return Array.prototype.filter.call(element.parentNode.children, function (child) {
       return child !== element;
     });
-  }
+  },
 
   find (element, selector) {
     return element.querySelectorAll(selector);
-  }
+  },
 
   findSingle (element, selector) {
     return element.querySelector(selector);
-  }
+  },
 
   index (element) {
     let children = element.parentNode.childNodes;
@@ -52,7 +52,7 @@ export default class DomHandler {
       if (children[i].nodeType === 1) num++;
     }
     return -1;
-  }
+  },
 
   relativePosition (element, target) {
     let elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : this.getHiddenElementDimensions(element);
@@ -76,7 +76,7 @@ export default class DomHandler {
 
     element.style.top = top + 'px';
     element.style.left = left + 'px';
-  }
+  },
 
   absolutePosition (element, target) {
     let elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : this.getHiddenElementDimensions(element);
@@ -104,7 +104,7 @@ export default class DomHandler {
 
     element.style.top = top + 'px';
     element.style.left = left + 'px';
-  }
+  },
 
   getHiddenElementOuterHeight (element) {
     element.style.visibility = 'hidden';
@@ -114,7 +114,7 @@ export default class DomHandler {
     element.style.visibility = 'visible';
 
     return elementHeight;
-  }
+  },
 
   getHiddenElementOuterWidth (element) {
     element.style.visibility = 'hidden';
@@ -124,7 +124,7 @@ export default class DomHandler {
     element.style.visibility = 'visible';
 
     return elementWidth;
-  }
+  },
 
   getHiddenElementDimensions (element) {
     let dimensions = {};
@@ -136,7 +136,7 @@ export default class DomHandler {
     element.style.visibility = 'visible';
 
     return dimensions;
-  }
+  },
 
   scrollInView (container, item) {
     let borderTopValue = getComputedStyle(container).getPropertyValue('borderTopWidth');
@@ -155,7 +155,7 @@ export default class DomHandler {
     } else if ((offset + itemHeight) > elementHeight) {
       container.scrollTop = scroll + offset - elementHeight + itemHeight;
     }
-  }
+  },
 
   fadeIn (element, duration) {
     element.style.opacity = 0;
@@ -173,7 +173,7 @@ export default class DomHandler {
     };
 
     tick();
-  }
+  },
 
   fadeOut (element, ms) {
     var opacity = 1;
@@ -191,17 +191,17 @@ export default class DomHandler {
 
       element.style.opacity = opacity;
     }, interval);
-  }
+  },
 
   getWindowScrollTop () {
     let doc = document.documentElement;
     return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-  }
+  },
 
   getWindowScrollLeft () {
     let doc = document.documentElement;
     return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-  }
+  },
 
   matches (element, selector) {
     var p = Element.prototype;
@@ -209,7 +209,7 @@ export default class DomHandler {
       return [].indexOf.call(document.querySelectorAll(s), this) !== -1;
     };
     return f.call(element, selector);
-  }
+  },
 
   getOuterWidth (el, margin) {
     let width = el.offsetWidth;
@@ -220,17 +220,17 @@ export default class DomHandler {
     }
 
     return width;
-  }
+  },
 
   getHorizontalPadding (el) {
     let style = getComputedStyle(el);
     return parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
-  }
+  },
 
   getHorizontalMargin (el) {
     let style = getComputedStyle(el);
     return parseFloat(style.marginLeft) + parseFloat(style.marginRight);
-  }
+  },
 
   innerWidth (el) {
     let width = el.offsetWidth;
@@ -238,7 +238,7 @@ export default class DomHandler {
 
     width += parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
     return width;
-  }
+  },
 
   width (el) {
     let width = el.offsetWidth;
@@ -246,7 +246,7 @@ export default class DomHandler {
 
     width -= parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
     return width;
-  }
+  },
 
   getInnerHeight (el) {
     let height = el.offsetHeight;
@@ -254,7 +254,7 @@ export default class DomHandler {
 
     height += parseFloat(style.paddingTop) + parseFloat(style.paddingBottom);
     return height;
-  }
+  },
 
   getOuterHeight (el, margin) {
     let height = el.offsetHeight;
@@ -265,7 +265,7 @@ export default class DomHandler {
     }
 
     return height;
-  }
+  },
 
   getHeight (el) {
     let height = el.offsetHeight;
@@ -274,7 +274,7 @@ export default class DomHandler {
     height -= parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) + parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
 
     return height;
-  }
+  },
 
   getWidth (el) {
     let width = el.offsetWidth;
@@ -283,7 +283,7 @@ export default class DomHandler {
     width -= parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) + parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
 
     return width;
-  }
+  },
 
   getViewport () {
     let win = window;
@@ -294,7 +294,7 @@ export default class DomHandler {
     let h = win.innerHeight || e.clientHeight || g.clientHeight;
 
     return { width: w, height: h };
-  }
+  },
 
   getOffset (el) {
     let rect = el.getBoundingClientRect();
@@ -303,11 +303,11 @@ export default class DomHandler {
       top: rect.top + document.body.scrollTop,
       left: rect.left + document.body.scrollLeft
     };
-  }
+  },
 
   getUserAgent () {
     return navigator.userAgent;
-  }
+  },
 
   isIE () {
     var ua = window.navigator.userAgent;
@@ -332,21 +332,21 @@ export default class DomHandler {
 
         // other browser
     return false;
-  }
+  },
 
   appendChild (element, target) {
     if (this.isElement(target)) { target.appendChild(element); } else if (target.el && target.el.nativeElement) { target.el.nativeElement.appendChild(element); } else { throw new Error('Cannot append ' + target + ' to ' + element); };
-  }
+  },
 
   removeChild (element, target) {
     if (this.isElement(target)) { target.removeChild(element); } else if (target.el && target.el.nativeElement) { target.el.nativeElement.removeChild(element); } else { throw new Error('Cannot remove ' + element + ' from ' + target); };
-  }
+  },
 
   isElement (obj) {
     return (typeof HTMLElement === 'object' ? obj instanceof HTMLElement
             : obj && typeof obj === 'object' && obj !== null && obj.nodeType === 1 && typeof obj.nodeName === 'string'
     );
-  }
+  },
 
   calculateScrollbarWidth () {
     if (this.calculatedScrollbarWidth !== null) { return this.calculatedScrollbarWidth; }
@@ -361,11 +361,11 @@ export default class DomHandler {
     this.calculatedScrollbarWidth = scrollbarWidth;
 
     return scrollbarWidth;
-  }
+  },
 
   invokeElementMethod (element, methodName, args) {
     methodName.apply(element, args);
-  }
+  },
 
   clearSelection () {
     if (window.getSelection) {
@@ -382,4 +382,4 @@ export default class DomHandler {
       }
     }
   }
-}
+};

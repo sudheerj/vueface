@@ -30,6 +30,10 @@ Vue.use(PrimeVue)
 - RadioButton
 - Captcha
 - Panel
+- Fieldset
+- Grid
+- Toolbar
+- Galleria
 
 
 ## How to Run
