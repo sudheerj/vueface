@@ -37,6 +37,7 @@ Vue.use(PrimeVue)
 - Message
 - Messages
 - Editor
+- Accordion
 
 
 ## How to Run

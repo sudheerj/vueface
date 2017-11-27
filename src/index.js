@@ -15,6 +15,8 @@ import Galleria from './components/galleria/galleria.vue';
 import Message from './components/message/message.vue';
 import Messages from './components/messages/messages.vue';
 import Editor from './components/editor/editor.vue';
+import Accordion from './components/accordion/accordion.vue';
+import AccordionTab from './components/accordion/accordiontab.vue';
 
 const components = {
   'p-button': Button,
@@ -33,7 +35,9 @@ const components = {
   'p-galleria': Galleria,
   'p-message': Message,
   'p-messages': Messages,
-  'p-editor': Editor
+  'p-editor': Editor,
+  'p-accordion': Accordion,
+  'p-accordionTab': AccordionTab
 };
 
 const install = function (Vue, opts = {}) {
