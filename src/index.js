@@ -13,6 +13,7 @@ import Fieldset from './components/fieldset/fieldset.vue';
 import Toolbar from './components/toolbar/toolbar.vue';
 import Galleria from './components/galleria/galleria.vue';
 import Message from './components/message/message.vue';
+import Messages from './components/messages/messages.vue';
 
 const components = {
   'p-button': Button,
@@ -29,7 +30,8 @@ const components = {
   'p-fieldset': Fieldset,
   'p-toolbar': Toolbar,
   'p-galleria': Galleria,
-  'p-message': Message
+  'p-message': Message,
+  'p-messages': Messages
 };
 
 const install = function (Vue, opts = {}) {

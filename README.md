@@ -35,6 +35,7 @@ Vue.use(PrimeVue)
 - Toolbar
 - Galleria
 - Message
+- Messages
 
 
 ## How to Run
