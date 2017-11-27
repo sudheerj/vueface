@@ -17,6 +17,7 @@
     <router-link to="/components/toolbar">Toolbar</router-link>
     <router-link to="/components/galleria">Galleria</router-link>
     <router-link to="/components/message">Message</router-link>
+    <router-link to="/components/editor">Editor</router-link>
   </div>
   <router-view></router-view>
 </div>

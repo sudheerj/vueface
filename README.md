@@ -36,6 +36,7 @@ Vue.use(PrimeVue)
 - Galleria
 - Message
 - Messages
+- Editor
 
 
 ## How to Run

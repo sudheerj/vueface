@@ -28,6 +28,7 @@ import GridDemo from './src/components/grid/griddemo.vue'
 import ToolbarDemo from './src/components/toolbar/toolbardemo.vue'
 import GalleriaDemo from './src/components/galleria/galleriademo.vue'
 import MessageDemo from './src/components/message/messagedemo.vue'
+import EditorDemo from './src/components/editor/editordemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -47,6 +48,7 @@ const routes = [
   { path: '/components/toolbar', component: ToolbarDemo },
   { path: '/components/galleria', component: GalleriaDemo },
   { path: '/components/message', component: MessageDemo },
+  { path: '/components/editor', component: EditorDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

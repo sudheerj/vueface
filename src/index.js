@@ -14,6 +14,7 @@ import Toolbar from './components/toolbar/toolbar.vue';
 import Galleria from './components/galleria/galleria.vue';
 import Message from './components/message/message.vue';
 import Messages from './components/messages/messages.vue';
+import Editor from './components/editor/editor.vue';
 
 const components = {
   'p-button': Button,
@@ -31,7 +32,8 @@ const components = {
   'p-toolbar': Toolbar,
   'p-galleria': Galleria,
   'p-message': Message,
-  'p-messages': Messages
+  'p-messages': Messages,
+  'p-editor': Editor
 };
 
 const install = function (Vue, opts = {}) {

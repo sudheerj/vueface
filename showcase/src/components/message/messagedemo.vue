@@ -26,7 +26,7 @@
 
         <h3>2. Inline Message CSS</h3>
         <p>CSS helpers to display inline messages mostly within forms.</p>
-        <p-message severity="info" text="PrimeNG Rocks"></p-message>
+        <p-message severity="info" text="PrimeVue Rocks"></p-message>
         <p-message severity="success" text="Record Saved"></p-message>
         <p-message severity="warn" text="Are you sure?"></p-message>
         <p-message severity="error" text="Field is required"></p-message>
@@ -55,7 +55,7 @@
 
       showInfo() {
         this.msgs = [];
-        this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeNG rocks'});
+        this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeVue rocks'});
       },
 
       showWarn() {
@@ -70,9 +70,9 @@
 
       showMultiple() {
         this.msgs = [];
-        this.msgs.push({severity:'info', summary:'Message 1', detail:'PrimeNG rocks'});
-        this.msgs.push({severity:'info', summary:'Message 2', detail:'PrimeUI rocks'});
-        this.msgs.push({severity:'info', summary:'Message 3', detail:'PrimeFaces rocks'});
+        this.msgs.push({severity:'info', summary:'Message 1', detail:'PrimeVue rocks'});
+        this.msgs.push({severity:'info', summary:'Message 2', detail:'PrimeNG rocks'});
+        this.msgs.push({severity:'info', summary:'Message 3', detail:'PrimeReact rocks'});
       },
 
       clear() {

@@ -4,7 +4,7 @@
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Grid CSS</span>
-          <span>Grid CSS is a lightweight responsive and fluid layout utility optimized for mobile devices, tablets and desktops. Grid CSS is used internally in PrimeNG components and can be used as standalone as well.</span>
+          <span>Grid CSS is a lightweight responsive and fluid layout utility optimized for mobile devices, tablets and desktops. Grid CSS is used internally in PrimeVue components and can be used as standalone as well.</span>
         </div>
       </div>
       <div id="wrapper">
