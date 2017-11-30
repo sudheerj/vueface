@@ -1,3 +1,4 @@
+import InputText from './components/inputtext/inputtext.vue';
 import Button from './components/button/button.vue';
 import ProgressSpinner from './components/progressspinner/progressspinner.vue';
 import ProgressBar from './components/progressbar/progressbar.vue';
@@ -19,6 +20,7 @@ import Accordion from './components/accordion/accordion.vue';
 import AccordionTab from './components/accordion/accordiontab.vue';
 
 const components = {
+  'p-inputText': InputText,
   'p-button': Button,
   'p-progressSpinner': ProgressSpinner,
   'p-progressBar': ProgressBar,

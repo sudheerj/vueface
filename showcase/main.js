@@ -12,6 +12,7 @@ Vue.use(PrimeVue)
 Vue.use(VueHighlightJS)
 Vue.use(VueRouter)
 
+import InputTextDemo from './src/components/inputtext/inputtextdemo.vue'
 import ButtonDemo from './src/components/button/buttondemo.vue'
 import ProgressbarDemo from './src/components/progressbar/progressbardemo.vue'
 import ProgressSpinnerDemo from './src/components/progressspinner/progressspinnerdemo.vue'
@@ -33,6 +34,7 @@ import AccordionDemo from './src/components/accordion/accordiondemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
+  { path: '/components/inputtext', component: InputTextDemo },
   { path: '/components/button', component: ButtonDemo },
   { path: '/components/progressspinner', component: ProgressSpinnerDemo },
   { path: '/components/progressbar', component: ProgressbarDemo },
