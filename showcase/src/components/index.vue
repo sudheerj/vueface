@@ -2,7 +2,7 @@
 
     <layout>
       <div style="text-align: center;margin-top: 80px;">
-      <h2>Vue-UI</h2>
+      <h2>PrimeVue</h2>
       <h5>A Vue.js Component library.</h5>
       </div>
       <div id="wrapper">
