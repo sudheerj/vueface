@@ -18,6 +18,7 @@ import Messages from './components/messages/messages.vue';
 import Editor from './components/editor/editor.vue';
 import Accordion from './components/accordion/accordion.vue';
 import AccordionTab from './components/accordion/accordiontab.vue';
+import Terminal from './components/terminal/terminal.vue';
 
 const components = {
   'p-inputText': InputText,
@@ -39,7 +40,8 @@ const components = {
   'p-messages': Messages,
   'p-editor': Editor,
   'p-accordion': Accordion,
-  'p-accordionTab': AccordionTab
+  'p-accordionTab': AccordionTab,
+  'p-terminal': Terminal
 };
 
 const install = function (Vue, opts = {}) {
