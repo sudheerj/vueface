@@ -20,7 +20,6 @@ Vue.use(PrimeVue)
 ## Components
 
 - Charts (pie,bar,horizontalBar,line,doughnut,area,radar and bubble)
-- InputText
 - Button
 - ProgressSpinner
 - ProgressBar
