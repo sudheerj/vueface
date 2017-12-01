@@ -20,6 +20,7 @@
     <router-link to="/components/message">Message</router-link>
     <router-link to="/components/editor">Editor</router-link>
     <router-link to="/components/accordion">Accordion</router-link>
+    <router-link to="/components/terminal">Terminal</router-link>
   </div>
   <router-view></router-view>
 </div>

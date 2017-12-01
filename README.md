@@ -39,7 +39,8 @@ Vue.use(PrimeVue)
 - Messages
 - Editor
 - Accordion
-
+- InputText
+- Terminal
 
 ## How to Run
 

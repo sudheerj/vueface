@@ -234,10 +234,23 @@
       this._images = this.images;
       this.$refs.galleria.style.width = this.panelWidth + 'px';
       this.$refs.galleria.style.visibility = 'visible';
-    },
-    updated: function () {
+
       if (this.images && this.images.length) {
         this.render();
+      }
+    },
+    watch: {
+      images (value) {
+        this._images = value;
+        this.activeIndex = 0;
+        this.imagesChanged = true;
+      }
+    },
+    updated: function () {
+      if (this.imagesChanged) {
+        this.stopSlideshow();
+        this.render();
+        this.imagesChanged = false;
       }
     },
     destroyed: function () {
