@@ -20,6 +20,7 @@ import Accordion from './components/accordion/accordion.vue';
 import AccordionTab from './components/accordion/accordiontab.vue';
 import Terminal from './components/terminal/terminal.vue';
 import Growl from './components/growl/growl.vue';
+import Gmap from './components/gmap/gmap.vue';
 
 const components = {
   'p-inputText': InputText,
@@ -43,7 +44,8 @@ const components = {
   'p-accordion': Accordion,
   'p-accordionTab': AccordionTab,
   'p-terminal': Terminal,
-  'p-growl': Growl
+  'p-growl': Growl,
+  'p-gmap': Gmap
 };
 
 const install = function (Vue, opts = {}) {
