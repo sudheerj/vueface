@@ -10,12 +10,12 @@
       <div id="wrapper">
 
         <h3 class="first">Basic</h3>
-        <p-inputText id="input" type="text" size="30" v-model="text"></p-inputText> 
+        <p-inputText id="input" type="text" size="30" v-model="text"></p-inputText>
         <span id="text">{{text}}</span>
 
         <h3>Float Label</h3>
         <span class="ui-float-label">
-            <p-inputText id="float-input" type="text" size="30"></p-inputText> 
+            <p-inputText id="float-input" type="text" size="30"></p-inputText>
             <label for="float-input">Username</label>
         </span>
 

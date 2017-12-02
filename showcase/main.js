@@ -34,6 +34,7 @@ import AccordionDemo from './src/components/accordion/accordiondemo.vue'
 import TerminalDemo from './src/components/terminal/terminaldemo.vue'
 import GrowlDemo from './src/components/growl/growldemo.vue'
 import GmapDemo from './src/components/gmap/gmapdemo.vue'
+import InputSwitchDemo from './src/components/inputswitch/inputswitchdemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -59,6 +60,7 @@ const routes = [
   { path: '/components/terminal', component: TerminalDemo },
   { path: '/components/growl', component: GrowlDemo },
   { path: '/components/gmap', component: GmapDemo },
+  { path: '/components/inputswitch', component: InputSwitchDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]
