@@ -32,6 +32,7 @@ import MessageDemo from './src/components/message/messagedemo.vue'
 import EditorDemo from './src/components/editor/editordemo.vue'
 import AccordionDemo from './src/components/accordion/accordiondemo.vue'
 import TerminalDemo from './src/components/terminal/terminaldemo.vue'
+import GrowlDemo from './src/components/growl/growldemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -55,6 +56,7 @@ const routes = [
   { path: '/components/editor', component: EditorDemo },
   { path: '/components/accordion', component: AccordionDemo },
   { path: '/components/terminal', component: TerminalDemo },
+  { path: '/components/growl', component: GrowlDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

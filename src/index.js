@@ -19,6 +19,7 @@ import Editor from './components/editor/editor.vue';
 import Accordion from './components/accordion/accordion.vue';
 import AccordionTab from './components/accordion/accordiontab.vue';
 import Terminal from './components/terminal/terminal.vue';
+import Growl from './components/growl/growl.vue';
 
 const components = {
   'p-inputText': InputText,
@@ -41,7 +42,8 @@ const components = {
   'p-editor': Editor,
   'p-accordion': Accordion,
   'p-accordionTab': AccordionTab,
-  'p-terminal': Terminal
+  'p-terminal': Terminal,
+  'p-growl': Growl
 };
 
 const install = function (Vue, opts = {}) {

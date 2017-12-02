@@ -40,6 +40,7 @@ Vue.use(PrimeVue)
 - Accordion
 - InputText
 - Terminal
+- Growl
 
 ## How to Run
 
