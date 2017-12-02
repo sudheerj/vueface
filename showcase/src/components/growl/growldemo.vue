@@ -9,6 +9,7 @@
       </div>
       <div id="wrapper">
         <p-growl :value="msgs" :growlStyle="{top:'100px'}"></p-growl>
+        <p-growl :value="msgs1" :growlStyle="{top:'100px'}" :sticky="true"></p-growl>
 
         <h3 class="first"></h3>
         <p>The notifications displayed in one place using p-growl component.</p>
@@ -18,7 +19,7 @@
           <p-button type="button"  @click="showWarn()" label="Warn" class="ui-button-warning"></p-button>
           <p-button type="button"  @click="showError()" label="Error" class="ui-button-danger"></p-button>
           <p-button type="button"  @click="showMultiple()" label="Multiple"></p-button>
-          <p-button type="button"  @click="showSuccess()" :sticky="true" label="Sticky"></p-button>
+          <p-button type="button"  @click="showSticky()" label="Sticky"></p-button>
           <p-button type="button"  @click="clear()" icon="fa-close"  label="Clear"></p-button>
         </div>
 
@@ -34,7 +35,8 @@
     components: {Layout},
     data: function () {
       return {
-        msgs : []
+        msgs : [],
+        msgs1: []
       }
 
     },
@@ -66,8 +68,14 @@
         this.msgs.push({severity:'info', summary:'Message 3', detail:'PrimeReact rocks'});
       },
 
+      showSticky() {
+        this.msgs1 = [];
+        this.msgs1.push({severity:'info', summary:'Error Message', detail:'Sticky message'});
+      },
+
       clear() {
         this.msgs = [];
+        this.msgs1 = [];
       }
     }
   };
