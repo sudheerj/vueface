@@ -39,6 +39,7 @@ Vue.use(PrimeVue)
 - Editor
 - Accordion
 - InputText
+- InputTextarea
 - Terminal
 - Growl
 

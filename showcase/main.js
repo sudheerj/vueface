@@ -13,6 +13,7 @@ Vue.use(VueHighlightJS)
 Vue.use(VueRouter)
 
 import InputTextDemo from './src/components/inputtext/inputtextdemo.vue'
+import InputTextareaDemo from './src/components/inputtextarea/inputtextareademo.vue'
 import ButtonDemo from './src/components/button/buttondemo.vue'
 import ProgressbarDemo from './src/components/progressbar/progressbardemo.vue'
 import ProgressSpinnerDemo from './src/components/progressspinner/progressspinnerdemo.vue'
@@ -61,6 +62,7 @@ const routes = [
   { path: '/components/growl', component: GrowlDemo },
   { path: '/components/gmap', component: GmapDemo },
   { path: '/components/inputswitch', component: InputSwitchDemo },
+  { path: '/components/inputtextarea', component: InputTextareaDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]

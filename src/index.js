@@ -1,4 +1,5 @@
 import InputText from './components/inputtext/inputtext.vue';
+import InputTextarea from './components/inputtextarea/inputtextarea.vue';
 import Button from './components/button/button.vue';
 import ProgressSpinner from './components/progressspinner/progressspinner.vue';
 import ProgressBar from './components/progressbar/progressbar.vue';
@@ -25,6 +26,7 @@ import InputSwitch from './components/inputswitch/inputswitch.vue';
 
 const components = {
   'p-inputText': InputText,
+  'p-inputTextarea': InputTextarea,
   'p-button': Button,
   'p-progressSpinner': ProgressSpinner,
   'p-progressBar': ProgressBar,
