@@ -40,6 +40,9 @@ Vue.use(PrimeVue)
 - Accordion
 - InputText
 - InputTextarea
+- Password
+- InputSwitch
+- Gmap
 - Terminal
 - Growl
 

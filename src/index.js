@@ -23,6 +23,7 @@ import Terminal from './components/terminal/terminal.vue';
 import Growl from './components/growl/growl.vue';
 import Gmap from './components/gmap/gmap.vue';
 import InputSwitch from './components/inputswitch/inputswitch.vue';
+import Password from './components/password/password.vue';
 
 const components = {
   'p-inputText': InputText,
@@ -49,7 +50,8 @@ const components = {
   'p-terminal': Terminal,
   'p-growl': Growl,
   'p-gmap': Gmap,
-  'p-inputSwitch': InputSwitch
+  'p-inputSwitch': InputSwitch,
+  'p-password': Password
 };
 
 const install = function (Vue, opts = {}) {
