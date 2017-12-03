@@ -4,6 +4,7 @@
     <router-link to="/components/inputtext">InputText</router-link>
     <router-link to="/components/inputtextarea">InputTextarea</router-link>
     <router-link to="/components/password">Password</router-link>
+    <router-link to="/components/inputgroup">InputGroup</router-link>
     <router-link to="/components/button">Button</router-link>
     <router-link to="/components/progressspinner">ProgressSpinner</router-link>
     <router-link to="/components/progressbar">ProgressBar</router-link>

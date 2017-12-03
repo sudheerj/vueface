@@ -45,6 +45,7 @@ Vue.use(PrimeVue)
 - Gmap
 - Terminal
 - Growl
+- InputGroup
 
 ## How to Run
 

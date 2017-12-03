@@ -36,12 +36,14 @@ import TerminalDemo from './src/components/terminal/terminaldemo.vue'
 import GrowlDemo from './src/components/growl/growldemo.vue'
 import GmapDemo from './src/components/gmap/gmapdemo.vue'
 import InputSwitchDemo from './src/components/inputswitch/inputswitchdemo.vue'
+import InputGroupDemo from './src/components/inputgroup/inputgroupdemo.vue'
 import PasswordDemo from './src/components/password/passworddemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
   { path: '/components/inputtext', component: InputTextDemo },
   { path: '/components/button', component: ButtonDemo },
+  { path: '/components/inputgroup', component: InputGroupDemo },
   { path: '/components/progressspinner', component: ProgressSpinnerDemo },
   { path: '/components/progressbar', component: ProgressbarDemo },
   { path: '/components/checkbox', component: CheckboxDemo },
