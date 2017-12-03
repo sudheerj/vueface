@@ -26,6 +26,7 @@
     <router-link to="/components/terminal">Terminal</router-link>
     <router-link to="/components/growl">Growl</router-link>
     <router-link to="/components/inputswitch">InputSwitch</router-link>
+    <router-link to="/components/spinner">Spinner</router-link>
     <router-link to="/components/gmap">Gmap</router-link>
   </div>
   <router-view></router-view>

@@ -38,6 +38,7 @@ import GmapDemo from './src/components/gmap/gmapdemo.vue'
 import InputSwitchDemo from './src/components/inputswitch/inputswitchdemo.vue'
 import InputGroupDemo from './src/components/inputgroup/inputgroupdemo.vue'
 import PasswordDemo from './src/components/password/passworddemo.vue'
+import SpinnerDemo from './src/components/spinner/spinnerdemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -67,6 +68,7 @@ const routes = [
   { path: '/components/inputswitch', component: InputSwitchDemo },
   { path: '/components/inputtextarea', component: InputTextareaDemo },
   { path: '/components/password', component: PasswordDemo },
+  { path: '/components/spinner', component: SpinnerDemo },
   { path: '/components/index', component: Index },
   { path: '/', redirect: '/components/index' }
 ]
