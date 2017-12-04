@@ -100,9 +100,6 @@
         this.$refs.rb.click();
         this.$emit('click');
         this.checked = this.$refs.rb.checked;
-        if (focus) {
-          this.$refs.rb.focus();
-        }
       },
       onFocus (event) {
         this.focused = true;

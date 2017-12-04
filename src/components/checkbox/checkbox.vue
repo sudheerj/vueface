@@ -1,124 +1,120 @@
 <template>
   <div>
-    <div :style="checkboxStyle" class="ui-chkbox ui-widget" :class="checkboxStyleClass">
+    <div :style="checkboxStyle" 
+         class="ui-chkbox ui-widget" 
+         :class="checkboxStyleClass">
       <div class="ui-helper-hidden-accessible">
-        <input ref="cb" type="checkbox" :id="inputId" :name="name" :value="value" :checked="checked" @focus="onFocus"
+        <input ref="cb" 
+               type="checkbox"
+               :id="inputId"
+               :name="name"
+               v-model="newModel"
+               :value="value"
+               :disabled="disabled"
+               :tabindex="tabindex"
+               v-bind="$attrs"
+               @focus="onFocus"
                @blur="onBlur"
-               :class="{'ui-state-focus':focused}" @change="handleChange" :disabled="disabled" :tabindex="tabindex">
+               :class="{'ui-state-focus': focused}">
       </div>
-      <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" @click="onClick($event,true)"
-           :class="{'ui-state-active':checked,'ui-state-disabled':disabled,'ui-state-focus':focused}">
-        <span class="ui-chkbox-icon ui-clickable" :class="{'fa fa-check':checked}"></span>
+      <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" 
+           @click.prevent="onClick($event, true)"
+           :class="{
+             'ui-state-active': checked,
+             'ui-state-disabled': disabled,
+             'ui-state-focus': focused
+           }">
+        <span class="ui-chkbox-icon ui-clickable"
+              :class="{'fa fa-check': checked}">
+        </span>
       </div>
     </div>
-    <label class="ui-chkbox-label" @click="onClick($event,true)"
-           :class="{'ui-label-active':checked, 'ui-label-disabled':disabled, 'ui-label-focus':focused}"
-           v-if="label" :for="inputId">{{label}}</label>
+    <label class="ui-chkbox-label" 
+           @click.prevent="onClick($event, true)"
+           :class="{
+             'ui-label-active': checked, 
+             'ui-label-disabled':disabled,
+             'ui-label-focus':focused
+           }"
+           v-if="label" 
+           :for="inputId">
+      {{label}}
+    </label>
   </div>
 </template>
 <style lang="css" src="./checkbox.css"></style>
 <script>
   export default {
     name: 'p-checkbox',
-    data: function () {
-      return {
-        focused: false,
-        checked: false
-      };
-    },
+    inheritAttrs: false,
     model: {
       prop: 'model',
-      event: 'onChange'
+      event: 'input'
     },
     props: {
       disabled: {
         type: Boolean,
         default: false
       },
-      value: {
-        type: Boolean,
-        default: false
-      },
+      value: {},
       label: {
-        type: String,
-        default: null
+        type: String
       },
       name: {
-        type: String,
-        default: null
-      },
-      binary: {
-        type: String,
-        default: null
+        type: String
       },
       inputId: {
-        type: String,
-        default: null
+        type: String
       },
       tabindex: {
-        type: Number,
-        default: null
+        type: [Number, String]
       },
-      checkboxStyle: {
-        type: String,
-        default: null
-      },
+      checkboxStyle: {},
       checkboxStyleClass: {
-        type: String,
-        default: null
+        type: String
       },
-      model: {
-        default: undefined
+      model: {}
+    },
+    data () {
+      return {
+        focused: false,
+        checked: false,
+        newModel: this.model
+      };
+    },
+    watch: {
+      model (value) {
+        this.newModel = value;
+      },
+      newModel (value) {
+        this.$emit('input', value);
+        this.$nextTick(() => {
+          this.checked = this.$refs.cb.checked;
+        });
       }
-
     },
     methods: {
       onClick (event, focus) {
-        event.preventDefault();
-
         if (this.disabled) {
           return;
         }
-
-        this.checked = !this.checked;
-        this.updateModel();
-
+        this.$refs.cb.click();
+        this.checked = this.$refs.cb.checked;
         if (focus) {
           this.$refs.cb.focus();
         }
       },
-      handleChange (event) {
-        this.checked = event.target.checked;
-      },
-      updateModel () {
-        if (!this.binary) {
-          if (this.checked) { this.addValue(); } else { this.removeValue(); }
-        }
-
-        this.$emit('onChange', this.checked);
-      },
       onFocus (event) {
         this.focused = true;
+        this.$emit('focus', event);
       },
-
       onBlur (event) {
         this.focused = false;
-      },
-
-      isChecked () {
-        if (this.binary) { return this.model; } else { return this.model && this.model.indexOf(this.value) > -1; }
-      },
-
-      removeValue () {
-        this.model = this.model.filter(val => val !== this.value);
-      },
-
-      addValue () {
-        if (this.model) { this.model = [...this.model, this.value]; } else { this.model = [this.value]; }
+        this.$emit('blur', event);
       }
     },
-    mounted: function () {
-      this.checked = this.isChecked();
+    mounted () {
+      this.checked = this.$refs.cb.checked;
     }
   };
 </script>
