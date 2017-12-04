@@ -26,40 +26,42 @@ import InputSwitch from './components/inputswitch/inputswitch.vue';
 import Spinner from './components/spinner/spinner.vue';
 import Password from './components/password/password.vue';
 
-const components = {
-  'p-inputText': InputText,
-  'p-inputTextarea': InputTextarea,
-  'p-button': Button,
-  'p-progressSpinner': ProgressSpinner,
-  'p-progressBar': ProgressBar,
-  'p-checkbox': Checkbox,
-  'p-tristatecheckbox': TristateCheckbox,
-  'p-charts': Chart,
-  'p-rating': Rating,
-  'p-toggleButton': ToggleButton,
-  'p-radioButton': RadioButton,
-  'p-captcha': Captcha,
-  'p-panel': Panel,
-  'p-fieldset': Fieldset,
-  'p-toolbar': Toolbar,
-  'p-galleria': Galleria,
-  'p-message': Message,
-  'p-messages': Messages,
-  'p-editor': Editor,
-  'p-accordion': Accordion,
-  'p-accordionTab': AccordionTab,
-  'p-terminal': Terminal,
-  'p-growl': Growl,
-  'p-gmap': Gmap,
-  'p-inputSwitch': InputSwitch,
-  'p-password': Password,
-  'p-spinner': Spinner
+export const components = {
+  InputText,
+  InputTextarea,
+  Button,
+  ProgressSpinner,
+  ProgressBar,
+  Checkbox,
+  TristateCheckbox,
+  Chart,
+  Rating,
+  ToggleButton,
+  RadioButton,
+  Captcha,
+  Panel,
+  Fieldset,
+  Toolbar,
+  Galleria,
+  Message,
+  Messages,
+  Editor,
+  Accordion,
+  AccordionTab,
+  Terminal,
+  Growl,
+  Gmap,
+  InputSwitch,
+  Password,
+  Spinner
 };
 
-const install = function (Vue, opts = {}) {
-  Object.keys(components).forEach((component) => {
-    Vue.component(component, components[component]);
-  });
+export default {
+  install (Vue, options = {}) {
+    for (const key in components) {
+      const component = components[key];
+      console.log(component.name);
+      Vue.component(component.name, component);
+    }
+  }
 };
-
-export default Object.assign({}, components, {install});  // eslint-disable-line no-undef

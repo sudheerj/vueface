@@ -44,7 +44,7 @@
 <style lang="css" src="./radiobutton.css"></style>
 <script>
   export default {
-    name: 'p-radiobutton',
+    name: 'p-radioButton',
     inheritAttrs: false,
     model: {
       prop: 'model',

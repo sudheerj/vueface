@@ -16,6 +16,7 @@
 <style lang="css" src="./spinner.css"></style>
 <script>
   export default {
+    name: 'p-spinner',
     props: {
       step: {
         type: Number,
