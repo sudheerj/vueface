@@ -16,9 +16,9 @@
         <p>Used to select an option from multiple choices.</p>
 
         <div class="ui-g" style="width:250px;margin-bottom:10px">
-          <div class="ui-g-12"><p-radioButton name="group1" value="VueJS" label="VueJS" v-model="val1" inputId="opt1"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group1" value="Angular" label="Angular" v-model="val1" inputId="opt2"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group1" value="React" label="React" v-model="val1" inputId="opt3"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group1" value="VueJS" label="VueJS" v-model="val1" inputId="g1opt1"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group1" value="Angular" label="Angular" v-model="val1" inputId="g1opt2"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group1" value="React" label="React" v-model="val1" inputId="g1opt3"></p-radioButton></div>
         </div>
         Selected Value = {{val1||'none'}}
 
@@ -27,9 +27,9 @@
         <p>The preselection feature allows default selection of any option.</p>
 
         <div class="ui-g" style="width:250px;margin-bottom:10px">
-          <div class="ui-g-12"><p-radioButton name="group2" value="VueJS" label="VueJS" v-model="val2" inputId="opt1"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group2" value="Angular" label="Angular" v-model="val2" inputId="opt2"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group2" value="React" label="React" v-model="val2" inputId="opt3"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group2" value="VueJS" label="VueJS" v-model="val2" inputId="g2opt1"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group2" value="Angular" label="Angular" v-model="val2" inputId="g2opt2"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group2" value="React" label="React" v-model="val2" inputId="g2opt3"></p-radioButton></div>
         </div>
 
         Selected Value = {{val2||'none'}}
@@ -38,9 +38,9 @@
         <p>The radio button component supports click event</p>
 
         <div class="ui-g" style="width:250px;margin-bottom:10px">
-          <div class="ui-g-12"><p-radioButton name="group3" value="VueJS" label="VueJS" v-model="val3" inputId="opt1" @click="clickMe"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group3" value="Angular" label="Angular" v-model="val3" inputId="opt2" @click="clickMe"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group3" value="React" label="React" v-model="val3" inputId="opt3" @click="clickMe"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group3" value="VueJS" label="VueJS" v-model="val3" inputId="g3opt1" @click="clickMe"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group3" value="Angular" label="Angular" v-model="val3" inputId="g3opt2" @click="clickMe"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group3" value="React" label="React" v-model="val3" inputId="g3opt3" @click="clickMe"></p-radioButton></div>
         </div>
         Selected Value = {{val3||'none'}}
 
@@ -48,9 +48,9 @@
         <p>The component disabled using disabled attribute</p>
 
         <div class="ui-g" style="width:250px;margin-bottom:10px">
-          <div class="ui-g-12"><p-radioButton name="group4" value="VueJS" label="VueJS" v-model="val4" inputId="opt1" :disabled="true"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group4" value="Angular" label="Angular" v-model="val4" inputId="opt2" :disabled="true"></p-radioButton></div>
-          <div class="ui-g-12"><p-radioButton name="group4" value="React" label="React" v-model="val4" inputId="opt3" :disabled="true"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group4" value="VueJS" label="VueJS" v-model="val4" inputId="g4opt1" :disabled="true"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group4" value="Angular" label="Angular" v-model="val4" inputId="g4opt2" :disabled="true"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group4" value="React" label="React" v-model="val4" inputId="g4opt3" :disabled="true"></p-radioButton></div>
         </div>
         Selected Value = {{val4||'none'}}
 
@@ -71,14 +71,10 @@
     components: {Layout},
     data: function () {
       return {val1,val2,val3,val4}
-
     },
     methods: {
-      clickMe: function (event) {
-        if (event) {
-          alert(event.target.value)
-        }
-
+      clickMe () {
+        alert('click');
       }
     }
   };
