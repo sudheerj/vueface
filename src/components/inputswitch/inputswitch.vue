@@ -1,5 +1,5 @@
 <template>
-  <div ref="checkbox" :class="[inputswitchStyleClass, {'ui-inputswitch ui-widget ui-widget-content ui-corner-all': true,
+  <div ref="inputswitch" :class="[inputswitchStyleClass, {'ui-inputswitch ui-widget ui-widget-content ui-corner-all': true,
             'ui-state-disabled': disabled,'ui-inputswitch-checked':checked, 'ui-state-focus':focused}]" @click="toggle($event)"
        :style="inputswitchStyle">
     <div class="ui-inputswitch-off">
@@ -121,10 +121,7 @@
             this.checkUI();
           }
 
-          this.$emit('onChange', {
-            originalEvent: event,
-            checked: this.checked
-          });
+          this.$emit('input', this.checked);
           this.$refs.in.focus();
         }
       },
@@ -169,14 +166,12 @@
         this.newValue = value;
       },
       newValue (value) {
-        this.$emit('onChange', {
-          originalEvent: event,
-          checked: value
-        });
+        this.$emit('input', value);
       }
     },
     mounted: function () {
-      this.container = this.$refs.checkbox;
+      this.container = this.$refs.inputswitch;
+      this.checked = this.$refs.in.checked;
       this.handle = domHandler.findSingle(this.container, 'div.ui-inputswitch-handle');
       this.onContainer = domHandler.findSingle(this.container, 'div.ui-inputswitch-on');
       this.offContainer = domHandler.findSingle(this.container, 'div.ui-inputswitch-off');
