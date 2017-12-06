@@ -1,16 +1,47 @@
 <template>
   <span class="ui-spinner ui-widget ui-corner-all">
-            <input ref="inputfield" :type="type" :id="inputId" v-model="valueAsString" class="ui-spinner-input ui-inputtext ui-widget ui-state-default ui-corner-all"
-                   :size="size" :maxlength="maxlength" :tabindex="tabindex" :placeholder="placeholder" :disabled="disabled" :readonly="readonly" :required="required"
-                   @keydown="onInputKeydown($event)" @keyup="onInputKeyup($event)" @keypress="onInputKeyPress($event)" @blur="onInputBlur($event)" @change="handleChange($event)" @focus="onInputFocus($event)">
-            <button type="button" :class="{'ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default':true,'ui-state-disabled':disabled}" :disabled="disabled" :readonly="readonly"
-                    @mouseleave="onUpButtonMouseleave($event)" @mousedown="onUpButtonMousedown($event)" @mouseup="onUpButtonMouseup($event)">
-                <span class="fa fa-caret-up ui-clickable"></span>
-            </button>
-            <button type="button" :class="{'ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default':true,'ui-state-disabled':disabled}" :disabled="disabled" :readonly="readonly"
-                    @mouseleave="onDownButtonMouseleave($event)" @mousedown="onDownButtonMousedown($event)" @mouseup="onDownButtonMouseup($event)">
-                <span class="fa fa-caret-down ui-clickable"></span>
-            </button>
+      <input ref="inputfield"
+        :type="type"
+        :id="inputId" 
+        :value="valueAsString"
+        class="ui-spinner-input ui-inputtext ui-widget ui-state-default ui-corner-all"
+        :size="size"
+        :maxlength="maxlength"
+        :tabindex="tabindex"
+        :placeholder="placeholder"
+        :disabled="disabled"
+        :readonly="readonly"
+        :required="required"
+        @keydown="onInputKeydown($event)"
+        @keyup="onInputKeyup($event)"
+        @keypress="onInputKeyPress($event)"
+        @blur="onInputBlur($event)"
+        @change="handleChange($event)"
+        @focus="onInputFocus($event)">
+      <button type="button" 
+        :class="[
+          'ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default',{
+          'ui-state-disabled': disabled
+        }]"
+        :disabled="disabled"
+        :readonly="readonly"
+        @mouseleave="onUpButtonMouseleave($event)"
+        @mousedown="onUpButtonMousedown($event)"
+        @mouseup="onUpButtonMouseup($event)">
+        <span class="fa fa-caret-up ui-clickable"></span>
+      </button>
+      <button type="button"
+              :class="[
+                'ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default',{
+                'ui-state-disabled': disabled
+              }]"
+              :disabled="disabled"
+              :readonly="readonly"
+              @mouseleave="onDownButtonMouseleave($event)"
+              @mousedown="onDownButtonMousedown($event)"
+              @mouseup="onDownButtonMouseup($event)">
+          <span class="fa fa-caret-down ui-clickable"></span>
+      </button>
   </span>
 </template>
 <style lang="css" src="./spinner.css"></style>
@@ -18,41 +49,36 @@
   export default {
     name: 'p-spinner',
     props: {
+      value: {
+        type: [Number, String]
+      },
       step: {
         type: Number,
         default: 1
       },
       min: {
-        type: Number,
-        default: null
+        type: Number
       },
       max: {
-        type: Number,
-        default: null
+        type: Number
       },
       maxlength: {
-        type: Number,
-        default: null
+        type: Number
       },
       size: {
-        type: Number,
-        default: null
+        type: Number
       },
       placeholder: {
-        type: String,
-        default: null
+        type: String
       },
       inputId: {
-        type: String,
-        default: null
+        type: String
       },
       disabled: {
-        type: Boolean,
-        default: false
+        type: Boolean
       },
       readonly: {
-        type: Boolean,
-        default: false
+        type: Boolean
       },
       decimalSeparator: {
         type: String,
@@ -63,8 +89,7 @@
         default: ','
       },
       tabindex: {
-        type: Number,
-        default: null
+        type: Number
       },
       formatInput: {
         type: Boolean,
@@ -82,8 +107,8 @@
     data () {
       return {
         filled: false,
-        valueAsString: '',
-        value: null,
+        newValue: this.value,
+        valueAsString: null,
         keyPattern: new RegExp('/[0-9\+\-]/'),
         precision: null,
         timer: null,
@@ -92,9 +117,9 @@
     },
     watch: {
       value (value) {
-        this.valueAsString = value;
+        this.newValue = value;
       },
-      valueAsString (value) {
+      newValue (value) {
         this.formatValue();
         this.updateFilled(value);
         this.$emit('input', value);
@@ -117,24 +142,28 @@
 
       spin (event, dir) {
         let step = this.step * dir;
-        let currentValue = this.value || 0;
+        let currentValue = this.newValue || 0;
 
-        if (this.precision) { this.value = parseFloat(this.toFixed(currentValue + step, this.precision)); } else { this.value = currentValue + step; }
-
-        if (this.maxlength !== undefined && this.value.toString().length > this.maxlength) {
-          this.value = currentValue;
+        if (this.precision) {
+          this.newValue = parseFloat(this.toFixed(currentValue + step, this.precision));
+        } else {
+          this.newValue = currentValue + step;
         }
 
-        if (this.min !== undefined && this.value < this.min) {
-          this.value = this.min;
+        if (this.maxlength !== undefined && this.newValue.toString().length > this.maxlength) {
+          this.newValue = currentValue;
         }
 
-        if (this.max !== undefined && this.value > this.max) {
-          this.value = this.max;
+        if (this.min !== undefined && this.newValue < this.min) {
+          this.newValue = this.min;
+        }
+
+        if (this.max !== undefined && this.newValue > this.max) {
+          this.newValue = this.max;
         }
 
         this.formatValue();
-        this.$emit('onChange', event);
+        this.$emit('change', event);
       },
 
       toFixed (value, precision) {
@@ -200,19 +229,19 @@
       },
 
       onInputKeyup (event) {
-        this.value = this.parseValue((event.target).value);
+        this.newValue = this.parseValue((event.target).value);
         this.formatValue();
         this.updateFilled();
       },
 
       onInputBlur (event) {
         this.focus = false;
-        this.$emit('onBlur', event);
+        this.$emit('blur', event);
       },
 
       onInputFocus (event) {
         this.focus = true;
-        this.$emit('onFocus', event);
+        this.$emit('focus', event);
       },
 
       parseValue (val) {
@@ -248,8 +277,8 @@
       },
 
       formatValue () {
-        if (this.value !== null && this.value !== undefined) {
-          let textValue = String(this.value).replace('.', this.decimalSeparator);
+        if (this.newValue !== null && this.newValue !== undefined) {
+          let textValue = String(this.newValue).replace('.', this.decimalSeparator);
 
           if (this.formatInput) {
             textValue = textValue.replace(/\B(?=(\d{3})+(?!\d))/g, this.thousandSeparator);
@@ -264,7 +293,7 @@
       },
 
       handleChange (event) {
-        this.$emit('onChange', event);
+        this.$emit('change', event);
       },
 
       clearTimer () {
@@ -273,8 +302,9 @@
         }
       }
     },
-    created () {
-      this.updateFilled(this.value);
+    mounted () {
+      this.updateFilled(this.newValue);
+      this.formatValue();
       if (Math.floor(this.step) === 0) {
         this.precision = this.step.toString().split(/[,]|[.]/)[1].length;
       }
