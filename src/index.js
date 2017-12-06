@@ -60,7 +60,6 @@ export default {
   install (Vue, options = {}) {
     for (const key in components) {
       const component = components[key];
-      console.log(component.name);
       Vue.component(component.name, component);
     }
   }

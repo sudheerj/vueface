@@ -17,12 +17,12 @@
                  @blur="onBlur($event)">
       </div>
       <div @click="!disabled && select()"
-           :class="{
-            'ui-radiobutton-box ui-widget ui-state-default': true,
+           :class="[
+            'ui-radiobutton-box ui-widget ui-state-default',{ 
             'ui-state-active': checked,
             'ui-state-disabled': disabled,
-            'ui-state-focus': focused
-           }">
+            'ui-state-focus': focused 
+          }]">
           <span class="ui-radiobutton-icon ui-clickable" 
                 :class="{'fa fa-circle': checked}">
           </span>
