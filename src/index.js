@@ -25,6 +25,7 @@ import Gmap from './components/gmap/gmap.vue';
 import InputSwitch from './components/inputswitch/inputswitch.vue';
 import Spinner from './components/spinner/spinner.vue';
 import Password from './components/password/password.vue';
+import Inplace from './components/inplace/inplace.vue';
 
 export const components = {
   InputText,
@@ -53,7 +54,8 @@ export const components = {
   Gmap,
   InputSwitch,
   Password,
-  Spinner
+  Spinner,
+  Inplace
 };
 
 export default {

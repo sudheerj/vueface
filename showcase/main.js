@@ -39,6 +39,7 @@ import InputSwitchDemo from './src/components/inputswitch/inputswitchdemo.vue'
 import InputGroupDemo from './src/components/inputgroup/inputgroupdemo.vue'
 import PasswordDemo from './src/components/password/passworddemo.vue'
 import SpinnerDemo from './src/components/spinner/spinnerdemo.vue'
+import InplaceDemo from './src/components/inplace/inplacedemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -70,6 +71,7 @@ const routes = [
   { path: '/components/password', component: PasswordDemo },
   { path: '/components/spinner', component: SpinnerDemo },
   { path: '/components/index', component: Index },
+  { path: '/components/inplace', component: InplaceDemo },
   { path: '/', redirect: '/components/index' }
 ]
 const router = new VueRouter({

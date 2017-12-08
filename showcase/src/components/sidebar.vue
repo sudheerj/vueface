@@ -28,6 +28,7 @@
     <router-link to="/components/inputswitch">InputSwitch</router-link>
     <router-link to="/components/spinner">Spinner</router-link>
     <router-link to="/components/gmap">Gmap</router-link>
+    <router-link to="/components/inplace">Inplace</router-link>
   </div>
   <router-view></router-view>
 </div>

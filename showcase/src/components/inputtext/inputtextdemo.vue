@@ -36,7 +36,7 @@
     components: {Layout},
     data () {
       return {
-        text: '',
+        text: '20',
         disabled: true
       };
     },
