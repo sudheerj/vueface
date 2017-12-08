@@ -47,6 +47,7 @@ Vue.use(PrimeVue)
 - Growl
 - InputGroup
 - Spinner
+- Inplace
 
 ## How to Run
 
