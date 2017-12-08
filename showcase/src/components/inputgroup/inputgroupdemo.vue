@@ -101,7 +101,6 @@
     </layout>
   </div>
 </template>
-
 <script>
   import Layout from "../layout";
 
