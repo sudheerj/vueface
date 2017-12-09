@@ -2,7 +2,7 @@
   <div>
     <div :style="checkboxStyle" class="ui-chkbox ui-tristatechkbox ui-widget" :class="checkboxStyleClass">
       <div class="ui-helper-hidden-accessible">
-        <input ref="" input" type="text" :id="inputId" :name="name" :tabindex="tabindex" readonly :disabled="disabled" @keyup="onKeyup($event)" @keydown="onKeydown($event)" @focus="onFocus()" @blur="onBlur()">
+        <input ref="input" type="text" :id="inputId" :name="name" :tabindex="tabindex" readonly :disabled="disabled" @keyup="onKeyup($event)" @keydown="onKeydown($event)" @focus="onFocus()" @blur="onBlur()">
 
       </div>
       <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" @click="onClick($event)"
