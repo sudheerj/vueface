@@ -26,6 +26,7 @@ import InputSwitch from './components/inputswitch/inputswitch.vue';
 import Spinner from './components/spinner/spinner.vue';
 import Password from './components/password/password.vue';
 import Inplace from './components/inplace/inplace.vue';
+import BlockUI from './components/blockui/blockui.vue';
 
 export const components = {
   InputText,
@@ -55,7 +56,8 @@ export const components = {
   InputSwitch,
   Password,
   Spinner,
-  Inplace
+  Inplace,
+  BlockUI
 };
 
 export default {

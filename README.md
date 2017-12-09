@@ -48,6 +48,7 @@ Vue.use(PrimeVue)
 - InputGroup
 - Spinner
 - Inplace
+- BlockUI
 
 ## How to Run
 
