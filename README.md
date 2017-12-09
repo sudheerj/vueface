@@ -49,6 +49,7 @@ Vue.use(PrimeVue)
 - Spinner
 - Inplace
 - BlockUI
+- Sidebar
 
 ## How to Run
 

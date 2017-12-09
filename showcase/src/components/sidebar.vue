@@ -29,6 +29,8 @@
     <router-link to="/components/spinner">Spinner</router-link>
     <router-link to="/components/gmap">Gmap</router-link>
     <router-link to="/components/inplace">Inplace</router-link>
+    <router-link to="/components/blockui">BlockUI</router-link>
+    <router-link to="/components/sidebar">Sidebar</router-link>
   </div>
   <router-view></router-view>
 </div>
