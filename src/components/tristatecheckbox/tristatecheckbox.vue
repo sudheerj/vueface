@@ -59,6 +59,9 @@
       },
       value: {
         default: undefined
+      },
+      name: {
+        type: String
       }
 
     },
