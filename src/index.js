@@ -29,6 +29,7 @@ import Inplace from './components/inplace/inplace.vue';
 import BlockUI from './components/blockui/blockui.vue';
 import SideBar from './components/sidebar/sidebar.vue';
 import BackToTop from './components/backtotop/backtotop.vue';
+import CodeHighlighter from './components/codehighlighter/codehighlighter.vue';
 
 export const components = {
   InputText,
@@ -64,11 +65,19 @@ export const components = {
   BackToTop
 };
 
+export const directives = {
+  CodeHighlighter
+};
+
 export default {
   install (Vue, options = {}) {
     for (const key in components) {
       const component = components[key];
       Vue.component(component.name, component);
+    }
+    for (const key in directives) {
+      const directive = directives[key];
+      Vue.directive(directive.name, directive);
     }
   }
 };

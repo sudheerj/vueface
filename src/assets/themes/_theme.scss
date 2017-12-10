@@ -1,3 +1,6 @@
+@import '../../components/common/common.css';
+@import '../../components/grid/grid.css';
+
 @mixin hover-element() {
   border-color: $stateHoverBorderColor;
   background: $stateHoverBgColor;
@@ -634,3 +637,4 @@ p-togglebutton.ng-dirty.ng-invalid .ui-button {
 .ui-corner-right {  -moz-border-radius-topright: $borderRadius; -webkit-border-top-right-radius: $borderRadius; border-top-right-radius: $borderRadius; -moz-border-radius-bottomright: $borderRadius; -webkit-border-bottom-right-radius: $borderRadius; border-bottom-right-radius: $borderRadius; }
 .ui-corner-left { -moz-border-radius-topleft: $borderRadius; -webkit-border-top-left-radius: $borderRadius; border-top-left-radius: $borderRadius; -moz-border-radius-bottomleft: $borderRadius; -webkit-border-bottom-left-radius: $borderRadius; border-bottom-left-radius: $borderRadius; }
 .ui-corner-all { -moz-border-radius: $borderRadius; -webkit-border-radius: $borderRadius; border-radius: $borderRadius; }
+

@@ -18,7 +18,6 @@
 <style id="current-theme" lang="css" src="../../../src/assets/themes/omega/theme.css"></style>
 <style lang="css" src="../../../src/assets/primevue.css"></style>
 <style lang="css" src="../../../node_modules/font-awesome/css/font-awesome.min.css"></style>
-<style lang="css" src="../../../src/components/grid/grid.css"></style>
 <script>
   import HeaderLayout from './header.vue'
   import FooterLayout from './footer.vue'

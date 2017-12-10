@@ -32,6 +32,7 @@
     <router-link to="/components/blockui">BlockUI</router-link>
     <router-link to="/components/sidebar">Sidebar</router-link>
     <router-link to="/components/backtotop">BackToTop</router-link>
+    <router-link to="/components/codehighlighter">CodeHighlighter</router-link>
   </div>
   <router-view></router-view>
 </div>
