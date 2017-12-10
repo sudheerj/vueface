@@ -50,6 +50,7 @@ Vue.use(PrimeVue)
 - Inplace
 - BlockUI
 - Sidebar
+- BackToTop
 
 ## How to Run
 

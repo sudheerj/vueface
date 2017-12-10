@@ -42,6 +42,7 @@ import SpinnerDemo from './src/components/spinner/spinnerdemo.vue'
 import InplaceDemo from './src/components/inplace/inplacedemo.vue'
 import BlockuiDemo from './src/components/blockui/blockuidemo.vue'
 import SidebarDemo from './src/components/sidebar/sidebardemo.vue'
+import BacktotopDemo from './src/components/backtotop/backtotopdemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -76,6 +77,7 @@ const routes = [
   { path: '/components/inplace', component: InplaceDemo },
   { path: '/components/blockui', component: BlockuiDemo },
   { path: '/components/sidebar', component: SidebarDemo },
+  { path: '/components/backtotop', component: BacktotopDemo },
   { path: '/', redirect: '/components/index' }
 ]
 const router = new VueRouter({

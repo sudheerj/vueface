@@ -1,0 +1,20 @@
+.back-to-top{
+  z-index: 1000;
+  position: fixed;
+  right: 80px;
+  bottom: 50px;
+  cursor: pointer;
+  background: rgba(169, 65, 244, .6);
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  border-radius: 4px;
+  padding: 1em;
+  line-height: 1em;
+  cursor:pointer;
+  color:#ffffff;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.back-to-top span{
+  vertical-align: middle;
+}

@@ -28,6 +28,7 @@ import Password from './components/password/password.vue';
 import Inplace from './components/inplace/inplace.vue';
 import BlockUI from './components/blockui/blockui.vue';
 import SideBar from './components/sidebar/sidebar.vue';
+import BackToTop from './components/backtotop/backtotop.vue';
 
 export const components = {
   InputText,
@@ -59,7 +60,8 @@ export const components = {
   Spinner,
   Inplace,
   BlockUI,
-  SideBar
+  SideBar,
+  BackToTop
 };
 
 export default {
