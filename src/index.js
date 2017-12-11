@@ -30,6 +30,7 @@ import BlockUI from './components/blockui/blockui.vue';
 import SideBar from './components/sidebar/sidebar.vue';
 import BackToTop from './components/backtotop/backtotop.vue';
 import CodeHighlighter from './components/codehighlighter/codehighlighter.vue';
+import SelectButton from './components/selectButton/selectbutton.vue';
 
 export const components = {
   InputText,
@@ -62,7 +63,8 @@ export const components = {
   Inplace,
   BlockUI,
   SideBar,
-  BackToTop
+  BackToTop,
+  SelectButton
 };
 
 export const directives = {

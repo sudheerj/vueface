@@ -33,6 +33,7 @@
     <router-link to="/components/sidebar">Sidebar</router-link>
     <router-link to="/components/backtotop">BackToTop</router-link>
     <router-link to="/components/codehighlighter">CodeHighlighter</router-link>
+    <router-link to="/components/selectbutton">SelectButton</router-link>
   </div>
   <router-view></router-view>
 </div>

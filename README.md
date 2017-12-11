@@ -51,6 +51,7 @@ Vue.use(PrimeVue)
 - BlockUI
 - Sidebar
 - BackToTop
+- SelectButton
 
 ## How to Run
 
