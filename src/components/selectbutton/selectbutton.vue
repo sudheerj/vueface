@@ -7,12 +7,12 @@
          :class="[optionStyleClass, {
           'ui-state-active': isChecked(option),
           'ui-state-disabled': disabled,
-          'ui-state-focus': $refs.input && $refs.input[index] == focusedItem
+          'ui-state-focus': $refs.cbox && $refs.cbox[index] == focusedItem
          }]"
          @click="onItemClick($event, option, index)">
         <span class="ui-button-text ui-clickable">{{option.label}}</span>
         <div class="ui-helper-hidden-accessible">
-            <input ref="input"
+            <input ref="cbox"
                    type="checkbox"
                    :value="option.value"
                    @focus="onFocus($event)"
@@ -59,6 +59,7 @@ export default {
       if (this.disabled) {
         return;
       }
+      this.$refs.cbox[index].focus();
       const checked = this.isChecked(option);
       if (this.multiple) {
         if (!checked) {
