@@ -36,12 +36,12 @@
 </template>
 
 <script>
-let menuActive = false;
   export default {
     name: 'header-layout',
     data: function(){
       return {
-        menuActive
+        menuActive: false,
+        activeMenuId: ''
       }
 
     },
