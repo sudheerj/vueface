@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">SelectButton</span>
@@ -22,11 +21,9 @@
 
         <p-button type="button" @click="clear" icon="fa-close" label="Clear"></p-button>
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
   
   const types = []
   types.push({label: 'Apartment', value: 'Apartment'});
@@ -35,16 +32,15 @@
  
   export default {
     name: 'ratingdemo',
-    components: {Layout},
-    data() {
+    data () {
       return {
         types,
         selectedType: null,
         selectedTypes: ['Apartment','Studio']
-      }
+      };
     },
     methods: {
-      clear() {
+      clear () {
         this.selectedType = null;
         this.selectedTypes = [];
       }

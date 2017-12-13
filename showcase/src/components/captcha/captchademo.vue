@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Captcha</span>
@@ -36,21 +35,19 @@
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  let verified = false;
-  let expired = false;
   export default {
     name: 'captchademo',
-    components: {Layout},
-    data: function () {
-      return {verified, expired}
-
+    data () {
+      return {
+        verified: false, 
+        expired: false
+      };
     },
     methods: {
-      showResponse: function (event) {
+      showResponse (event) {
         this.verification = true;
       },
-      onExpire: function (event) {
+      onExpire (event) {
         this.expired = true;
       }
     }

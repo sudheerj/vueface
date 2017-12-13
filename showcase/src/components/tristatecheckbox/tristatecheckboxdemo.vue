@@ -1,12 +1,11 @@
 <template>
-  <div id="app">
+  <div>
     <div class="content-section introduction" id="component">
       <div>
         <span class="feature-title">TriStateCheckbox</span>
         <span>TriStateCheckbox is used to select either "true", "false" or "null" as the value.</span>
       </div>
     </div>
-    <layout>
       <div id="wrapper">
         <h2>Features</h2>
 
@@ -21,20 +20,16 @@
         <p-tristatecheckbox v-model="disabledCheck" :disabled="true"></p-tristatecheckbox>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
   export default {
     name: 'tristatecheckboxdemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
         checked: false,
         disabledCheck: true
-      }
-
+      };
     }
   };
 </script>

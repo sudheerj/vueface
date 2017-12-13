@@ -1,6 +1,6 @@
 <template>
 
-    <layout>
+    <div>
       <div style="text-align: center;margin-top: 80px;">
       <h2>PrimeVue</h2>
       <h5>A Vue.js Component library.</h5>
@@ -60,13 +60,11 @@ export default {
       <h4>Run</h4>
       <pre v-highlightjs><code class="bash">$ npm run dev</code></pre>
       </div>
-    </layout>
+    </div>
 
 </template>
 <script>
-  import Layout from './layout.vue'
   export default {
-    components: {Layout},
     name: 'indexdemo'
   }
 </script>

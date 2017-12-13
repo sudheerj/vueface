@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Rating</span>
@@ -40,47 +39,27 @@
         <span v-if="msg" >{{msg}}</span>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
-  let val1;
-  let val2;
-  let val3=6;
-  let val4=8;
-  let val5;
-  let val6;
-  let msg;
   export default {
     name: 'ratingdemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
-        val1,
-
-        val2,
-
-        val3,
-
-        val4,
-
-        val5,
-
-        val6,
-
-        msg
-
-      }
-
+        val1: null,
+        val2: null,
+        val3: 6,
+        val4: 8,
+        val5: null,
+        val6: null,
+        msg: null
+      };
     },
     methods: {
-      rating(event) {
+      rating (event) {
         this.msg = "You rated " + event.value;
       },
-
-      canceling() {
+      canceling () {
         this.msg = "Rating is Cancelled";
       }
     }

@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">BlockUI</span>
@@ -33,39 +32,31 @@
       </p-panel>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  let target = null;
   export default {
     name: 'blockuidemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
         blockedPanel: false,
         blockedDocument: false,
         target: 'pnl'
-      }
-
+      };
     },
     methods: {
-      blockDocument() {
+      blockDocument () {
         this.blockedDocument = true;
         setTimeout(() => {
           this.blockedDocument = false;
         }, 3000);
       },
-      blockPanel() {
+      blockPanel () {
         this.blockedPanel = true;
       },
-      unblockPanel() {
+      unblockPanel () {
         this.blockedPanel = false;
       }
-    },
-    mounted: {
-       // this.target = (HTMLElement)this.$refs.pnl;
     }
   };
 </script>

@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Grid CSS</span>
@@ -147,21 +146,13 @@
         </div>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'griddemo',
-    components: {Layout},
-    data: function () {
-      return {}
-
-    },
-    methods: {
-
+    data () {
+      return {};
     }
   };
 </script>

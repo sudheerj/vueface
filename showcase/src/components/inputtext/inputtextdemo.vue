@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">InputText</span>
@@ -24,16 +23,12 @@
         <p-button id="disabled-btn" type="button" @click="toggleDisabled" label="Toggle"></p-button>
 
       </div>
-    </layout>
   </div>
 </template>
 
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'inputtextdemo',
-    components: {Layout},
     data () {
       return {
         text: '20',

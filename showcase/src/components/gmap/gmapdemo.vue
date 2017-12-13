@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">GMap</span>
@@ -24,70 +23,51 @@
         <p-button type="button"  label="Zoom Out" icon="fa-search-minus" @click="zoomOut(gmap.getMap())" style="margin-top:10px"></p-button>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'gmapdemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
         options: null,
-
-      overlays: [],
-
-      dialogVisible: false,
-
-      markerTitle: null,
-
-      selectedPosition: null,
-
-      infoWindow: null,
-
-      draggable: false,
-
-      msgs: []
-      }
-
+        overlays: [],
+        dialogVisible: false,
+        markerTitle: null,
+        selectedPosition: null,
+        infoWindow: null,
+        draggable: false,
+        msgs: []
+      };
     },
     methods: {
-      handleMapClick(event) {
+      handleMapClick (event) {
         this.dialogVisible = true;
         this.selectedPosition = event.latLng;
       },
-
-      handleOverlayClick(event) {
+      handleOverlayClick (event) {
         this.msgs = [];
         let isMarker = event.overlay.getTitle != undefined;
-
         if(isMarker) {
           let title = event.overlay.getTitle();
           this.infoWindow.setContent('' + title + '');
           this.infoWindow.open(event.map, event.overlay);
           event.map.setCenter(event.overlay.getPosition());
-
           this.msgs.push({severity:'info', summary:'Marker Selected', detail: title});
-        }
-        else {
+        } else {
           this.msgs.push({severity:'info', summary:'Shape Selected', detail: ''});
         }
       },
-
-      addMarker() {
+      addMarker () {
         this.overlays.push(new google.maps.Marker({position:{lat: this.selectedPosition.lat(), lng: this.selectedPosition.lng()}, title:this.markerTitle, draggable: this.draggable}));
         this.markerTitle = null;
         this.dialogVisible = false;
       },
-
-      handleDragEnd(event) {
+      handleDragEnd (event) {
         this.msgs = [];
         this.msgs.push({severity:'info', summary:'Marker Dragged', detail: event.overlay.getTitle()});
       },
-
-      initOverlays() {
+      initOverlays () {
         if (!this.overlays || !this.overlays.length) {
           this.overlays = [
             new google.maps.Marker({position: {lat: 14.6188043, lng: 79.9630253}, title: 'Talamanchi'}),
@@ -104,29 +84,24 @@
           ];
         }
       },
-
-      zoomIn(map) {
+      zoomIn (map) {
         map.setZoom(map.getZoom()+1);
       },
-
-      zoomOut(map) {
+      zoomOut (map) {
         map.setZoom(map.getZoom()-1);
       },
-
-      clear() {
+      clear () {
         this.overlays = [];
       }
     },
-    mounted: function (){
+    mounted () {
       this.options = {
         center: {
-            lat: 14.4426, lng: 79.9865
+          lat: 14.4426, lng: 79.9865
         },
-      zoom: 8
-    };
-
+        zoom: 8
+      };
       this.initOverlays();
-
       this.infoWindow = new google.maps.InfoWindow();
     }
   };

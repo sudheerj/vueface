@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="ui-toolbar ui-widget ui-widget-header ui-corner-all ui-helper-clearfix" :style="toolbarStyle" :class="toolbarStyleClass">
+  <div class="ui-toolbar ui-widget ui-widget-header ui-corner-all ui-helper-clearfix" :style="toolbarStyle" :class="toolbarStyleClass">
     <slot></slot>
   </div>
 </template>

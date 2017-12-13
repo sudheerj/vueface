@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Terminal</span>
@@ -16,23 +15,18 @@
         <p-terminal @handler="onCommand($event)" :response="response" welcomeMessage="Welcome to PrimeVue" prompt="primevue $"></p-terminal>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'terminaldemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
-          response: null
-      }
-
+        response: null
+      };
     },
     methods: {
-      onCommand(event) {
+      onCommand (event) {
         //event.command = entered command
         //in a real application connect to remote service to process the command and update the response field in return
         this.response = (event.command === 'date') ? new Date().toDateString() : 'Unknown command: ' + event.command;

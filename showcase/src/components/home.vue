@@ -7,7 +7,7 @@
       <sidebar-layout></sidebar-layout>
     </div>
     <div slot="content">
-      <slot></slot>
+      <router-view></router-view>
     </div>
     <div>
       <footer-layout></footer-layout>
@@ -37,7 +37,6 @@
         event.preventDefault();
       }
     }
-
   }
 </script>
 <style>

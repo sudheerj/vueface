@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Password</span>
@@ -13,20 +12,14 @@
         <p-password />
 
       </div>
-    </layout>
   </div>
 </template>
 
 <script>
-  import Layout from "../layout";
-  import PPassword from "../../../../src/components/password/password";
-
   export default {
     name: 'passworddemo',
-    components: {Layout},
     data () {
-      return {
-      };
+      return {};
     }
   };
 </script>

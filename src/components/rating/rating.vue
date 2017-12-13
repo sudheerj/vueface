@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <div class="ui-rating" :class="{'ui-state-disabled': disabled}">
       <a href="#" v-if="cancel" @click="clear">
         <span class="fa" :class="iconCancelClass" :style="iconCancelStyle"></span>

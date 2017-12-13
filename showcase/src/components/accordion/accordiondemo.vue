@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Accordion</span>
@@ -85,41 +84,30 @@
         </p-accordion>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
-  let msgs = [];
-  let index = -1;
   export default {
     name: 'accordiondemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
-        msgs: msgs,
-
-        index: index
-      }
-
+        msgs: [],
+        index: -1
+      };
     },
     methods: {
-      onTabClose(event) {
+      onTabClose (event) {
         this.msgs = [];
         this.msgs.push({severity:'info', summary:'Tab Closed', detail: 'Index: ' + event.index});
       },
-
-      onTabOpen(event) {
+      onTabOpen (event) {
         this.msgs = [];
         this.msgs.push({severity:'info', summary:'Tab Expanded', detail: 'Index: ' + event.index});
       },
-
-      openNext() {
+      openNext () {
         this.index = (this.index === 3) ? 0 : this.index + 1;
       },
-
-      openPrev() {
+      openPrev () {
         this.index = (this.index <=0 ) ? 3 : this.index - 1;
       }
     }

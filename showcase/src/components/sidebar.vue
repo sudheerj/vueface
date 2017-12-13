@@ -130,34 +130,30 @@
       </div>
 
     </div>
-    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
   export default {
     name: 'sidebar',
-    data: function () {
+    data () {
       return {
         menuActive: false,
         activeMenuId: '',
         element: {}
       }
     },
-        mounted: function () {
-          this.element.inputmenutitle = this.$refs.inputmenutitle.id;
-          this.element.buttonmenutitle = this.$refs.buttonmenutitle.id;
-          this.element.datamenutitle = this.$refs.datamenutitle.id;
-          this.element.panelmenutitle = this.$refs.panelmenutitle.id;
-          this.element.overlaymenutitle = this.$refs.overlaymenutitle.id;
-          this.element.chartmenutitle = this.$refs.chartmenutitle.id;
-          this.element.messagesmenutitle = this.$refs.messagesmenutitle.id;
-          this.element.multimediamenutitle = this.$refs.multimediamenutitle.id;
-          this.element.misctitle = this.$refs.misctitle.id;
-      }
-
-
+    mounted () {
+      this.element.inputmenutitle = this.$refs.inputmenutitle.id;
+      this.element.buttonmenutitle = this.$refs.buttonmenutitle.id;
+      this.element.datamenutitle = this.$refs.datamenutitle.id;
+      this.element.panelmenutitle = this.$refs.panelmenutitle.id;
+      this.element.overlaymenutitle = this.$refs.overlaymenutitle.id;
+      this.element.chartmenutitle = this.$refs.chartmenutitle.id;
+      this.element.messagesmenutitle = this.$refs.messagesmenutitle.id;
+      this.element.multimediamenutitle = this.$refs.multimediamenutitle.id;
+      this.element.misctitle = this.$refs.misctitle.id;
+    }
   };
 </script>
 

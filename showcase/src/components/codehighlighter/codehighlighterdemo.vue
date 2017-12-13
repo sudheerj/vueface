@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">CodeHighlighter</span>
@@ -20,23 +19,18 @@
             </code>
         </div>
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
   import code  from '../../../../src/components/codehighlighter/codehighlighter';
   export default {
     name: 'codehighlighterdemo',
-    components: {Layout},
-    data: function () {
-      return {}
-
+    data () {
+      return {};
     },
     directives: {
       code
-    },
-    methods: {}
+    }
   };
 </script>
 

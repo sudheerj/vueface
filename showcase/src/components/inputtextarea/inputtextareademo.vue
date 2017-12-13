@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">InputTextarea</span>
@@ -17,16 +16,12 @@
         <p-inputTextarea rows="5" cols="30"  :autoResize="autoResize"></p-inputTextarea>
 
       </div>
-    </layout>
   </div>
 </template>
 
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'inputtextareademo',
-    components: {Layout},
     data () {
       return {
         text: 'PrimeVue',

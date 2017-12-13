@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">InputSwitch</span>
@@ -25,21 +24,16 @@
         <h3>Labels - <span> {{checked2}} </span></h3>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'inputswitchdemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
         checked1: false,
         checked2: true
-      }
-
+      };
     }
   };
 </script>

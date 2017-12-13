@@ -1,5 +1,5 @@
 <template>
-<div id="layout-topbar" class="content-section introduction">
+<div id="layout-topbar" class="content-section introduction demo-component">
   <a href="#" class="menu-button" click="onMenuButtonClick">
     <i class="fa fa-bars"></i>
   </a>
@@ -8,7 +8,7 @@
     <img alt="logo" src="../assets/images/logo.png" /><span style="font-weight: bold;font-size:40px;color:white">PrimeVue</span>
   </a>
 
-  <!--<ul class="topbar-menu">
+  <ul class="topbar-menu">
     <li class="topbar-menu-themes">
       <a href="#">THEMES</a>
       <ul>
@@ -31,27 +31,26 @@
         <li><a href="#" @click="changeTheme($event, 'voclain')"><span class="ui-text">Voclain</span></a></li>
       </ul>
     </li>
-  </ul>-->
+  </ul>
 </div>
 </template>
 
 <script>
   export default {
     name: 'header-layout',
-    data: function(){
+    data (){
       return {
         menuActive: false,
         activeMenuId: ''
-      }
-
+      };
     },
     methods: {
-      onMenuButtonClick : function (event)  {
+      onMenuButtonClick (event)  {
         this.menuActive = !this.menuActive;
         event.preventDefault();
       },
-      changeTheme(event, theme) {
-        let themeLink =  document.getElementById('current-theme');
+      changeTheme (event, theme) {
+        let themeLink = document.getElementById('current-theme');
         themeLink.href = '../../../src/assets/themes/' + theme + '/theme.css';
         event.preventDefault();
       }

@@ -1,6 +1,5 @@
 <template>
-  <div id="app" style="height: 3000px">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">BackToTop</span>
@@ -23,27 +22,22 @@
         </div>
         <p-backToTop :offset="offset" :text="text"></p-backToTop>
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'backtotopdemo',
-    components: {Layout},
     data () {
       return {
         offset: '600',
         text: 'Top'
-      }
+      };
     },
     watch: {
       offset (newVal) {
         document.body.style.height = parseInt(newVal) + 600
       }
     }
-
   };
 </script>
 

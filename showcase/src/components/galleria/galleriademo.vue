@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Galleria</span>
@@ -18,23 +17,18 @@
         <p-galleria :images="images" :panelWidth="500" :panelHeight="313" :showCaption="true"></p-galleria>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  //var images = [];
   export default {
     name: 'galleriademo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
-          images: []
-      }
-
+        images: []
+      };
     },
     methods: {
-       createImages() {
+       createImages () {
          this.images.push({source:'https://www.primefaces.org/primeng/assets/showcase/images/demo/galleria/galleria1.jpg', alt:'Description for Image 1', title:'Title 1'});
          this.images.push({source:'https://www.primefaces.org/primeng/assets/showcase/images/demo/galleria/galleria2.jpg', alt:'Description for Image 2', title:'Title 2'});
          this.images.push({source:'https://www.primefaces.org/primeng/assets/showcase/images/demo/galleria/galleria3.jpg', alt:'Description for Image 3', title:'Title 3'});
@@ -48,12 +42,10 @@
          this.images.push({source:'https://www.primefaces.org/primeng/assets/showcase/images/demo/galleria/galleria11.jpg', alt:'Description for Image 11', title:'Title 11'});
          this.images.push({source:'https://www.primefaces.org/primeng/assets/showcase/images/demo/galleria/galleria12.jpg', alt:'Description for Image 12', title:'Title 12'});
        }
-
     },
     mounted() {
        this.createImages();
     }
-
   };
 </script>
 

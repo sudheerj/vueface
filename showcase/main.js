@@ -12,6 +12,8 @@ Vue.use(PrimeVue)
 Vue.use(VueHighlightJS)
 Vue.use(VueRouter)
 
+import Home from './src/components/home.vue'
+
 import InputTextDemo from './src/components/inputtext/inputtextdemo.vue'
 import InputTextareaDemo from './src/components/inputtextarea/inputtextareademo.vue'
 import ButtonDemo from './src/components/button/buttondemo.vue'
@@ -48,6 +50,7 @@ import SelectButtonDemo from './src/components/selectbutton/selectbuttondemo.vue
 import Index from './src/components/index.vue'
 
 const routes = [
+  { path: '/', component: Index },
   { path: '/components/inputtext', component: InputTextDemo },
   { path: '/components/button', component: ButtonDemo },
   { path: '/components/inputgroup', component: InputGroupDemo },
@@ -75,14 +78,12 @@ const routes = [
   { path: '/components/inputtextarea', component: InputTextareaDemo },
   { path: '/components/password', component: PasswordDemo },
   { path: '/components/spinner', component: SpinnerDemo },
-  { path: '/components/index', component: Index },
   { path: '/components/inplace', component: InplaceDemo },
   { path: '/components/blockui', component: BlockuiDemo },
   { path: '/components/sidebar', component: SidebarDemo },
   { path: '/components/backtotop', component: BacktotopDemo },
   { path: '/components/codehighlighter', component: CodeHighlighterDemo },
-  { path: '/components/selectbutton', component: SelectButtonDemo },
-  { path: '/', redirect: '/components/index' }
+  { path: '/components/selectbutton', component: SelectButtonDemo }
 ]
 const router = new VueRouter({
   routes: routes
@@ -91,5 +92,6 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
   router: router,
-  template: '<router-view></router-view>'
+  template: '<home/>',
+  components: { Home }
 }).$mount('#app')

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
   <div ref="galleria" class="ui-galleria ui-widget ui-widget-content ui-corner-all" :style="galleriaStyle" :class="galleriaStyleClass" >
     <ul class="ui-galleria-panel-wrapper" :style="{width:panelWidth + 'px', height: panelHeight + 'px'}" >
       <li v-for="(image,i) in images" class="ui-galleria-panel" :class="{'ui-helper-hidden':i!=activeIndex}"

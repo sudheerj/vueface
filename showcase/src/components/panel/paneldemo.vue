@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Panel</span>
@@ -50,20 +49,14 @@
         </p-panel>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'paneldemo',
-    components: {Layout},
-    data: function () {
-      return {}
-
-    },
-    methods: {}
+    data () {
+      return {};
+    }
   };
 </script>
 

@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">ToggleButton</span>
@@ -32,22 +31,19 @@
         <p-toggleButton  :disabled="true" name="disabled" label="Disabled"></p-toggleButton>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  let checked1 = false;
-  let checked2 = true;
   export default {
     name: 'togglebuttondemo',
-    components: {Layout},
-    data: function () {
-      return {checked1, checked2}
-
+    data () {
+      return {
+        checked1: false,
+        checked2: true
+      };
     },
     methods: {
-      toggle: function (value) {
+      toggle (value) {
         console.log(value);
       }
     }

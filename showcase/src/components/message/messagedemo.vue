@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Message</span>
@@ -32,50 +31,40 @@
         <p-message severity="error" text="Field is required"></p-message>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'messagedemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
         msgs : []
-      }
-
+      };
     },
     methods: {
-      showSuccess() {
+      showSuccess () {
         this.msgs = [];
         this.msgs.push({severity:'success', summary:'Success Message', detail:'Order submitted'});
       },
-
-      showInfo() {
+      showInfo () {
         this.msgs = [];
         this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeVue rocks'});
       },
-
-      showWarn() {
+      showWarn () {
         this.msgs = [];
         this.msgs.push({severity:'warn', summary:'Warn Message', detail:'There are unsaved changes'});
       },
-
-      showError() {
+      showError () {
         this.msgs = [];
         this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
       },
-
-      showMultiple() {
+      showMultiple () {
         this.msgs = [];
         this.msgs.push({severity:'info', summary:'Message 1', detail:'PrimeVue rocks'});
         this.msgs.push({severity:'info', summary:'Message 2', detail:'PrimeNG rocks'});
         this.msgs.push({severity:'info', summary:'Message 3', detail:'PrimeReact rocks'});
       },
-
-      clear() {
+      clear () {
         this.msgs = [];
       }
     }

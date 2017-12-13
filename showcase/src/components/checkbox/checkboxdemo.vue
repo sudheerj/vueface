@@ -1,12 +1,11 @@
 <template>
-  <div id="app">
+  <div>
     <div class="content-section introduction" id="component">
       <div>
         <span class="feature-title">Checkbox</span>
         <span>Checkbox is an extension to standard checkbox element with skinning capabilities.</span>
       </div>
     </div>
-    <layout>
       <div id="wrapper">
         <h2>Features</h2>
 
@@ -26,24 +25,16 @@
         </div>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-
-  import Layout from "../layout";
   export default {
     name: 'checkboxdemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
         checked: true,
         selectedFrameworks: ['VueJS','React']
-      }
-
-    },
-    methods: {
-
+      };
     }
   };
 </script>

@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">InputGroup</span>
@@ -98,18 +97,13 @@
         </div>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'inputgroupdemo',
-    components: {Layout},
     data () {
-      return {
-      };
+      return {};
     }
   };
 </script>

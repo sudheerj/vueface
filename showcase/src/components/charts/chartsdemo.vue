@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Charts</span>
@@ -61,12 +60,10 @@
         <p-charts type="bubble" :data="bubbleData" width="100" height="20">></p-charts>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  var pieData = {
+  const pieData = {
     labels: ['VueJS','Angular','ReactJS'],
     datasets: [
       {
@@ -83,7 +80,7 @@
         ]
       }]
   };
-  var barData = {
+  const barData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July' ,'August', 'September', 'October', 'November', 'December'],
     datasets: [
       {
@@ -100,8 +97,8 @@
       }
     ]
   };
-  var horizontalBarData = barData;
-  var lineData = {
+  const horizontalBarData = barData;
+  const lineData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July' ,'August', 'September', 'October', 'November', 'December'],
     datasets: [
       {
@@ -118,7 +115,7 @@
       }
     ]
   };
-  var doughnutData = {
+  const doughnutData = {
     labels: ['VueJS','Angular','ReactJS'],
     datasets: [
       {
@@ -136,7 +133,7 @@
       }]
   };
 
-  var radarData = {
+  const radarData = {
     labels: ['Requirement', 'Design', 'Implementation', 'Testing', 'Deployment', 'Maintainance'],
     datasets: [
       {
@@ -162,7 +159,7 @@
     ]
   };
 
-   var polarData = {
+  const polarData = {
     datasets: [{
       data: [45, 35, 10, 15, 5],
       backgroundColor: ['#6544a9', '#51cc00', '#5d4361', '#E7E9ED', '#36A2EB'],
@@ -171,7 +168,7 @@
     labels: ['VueJS', 'Angular', 'React', 'Ember', 'Meteor.js']
   };
 
-  var bubbleData = {
+  const bubbleData = {
     datasets: [
       {
         label: 'VueJS',
@@ -220,12 +217,17 @@
 
   export default {
     name: 'chartsdemo',
-    components: {Layout},
-    data: function () {
-      return {pieData, barData, horizontalBarData, lineData, doughnutData, radarData, polarData, bubbleData}
-    },
-    mounted: function () {
-      this.data
+    data () {
+      return {
+        pieData,
+        barData,
+        horizontalBarData,
+        lineData,
+        doughnutData,
+        radarData,
+        polarData,
+        bubbleData
+      };
     }
   };
 </script>

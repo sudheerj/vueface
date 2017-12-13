@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Fieldset</span>
@@ -35,21 +34,14 @@
         </p-fieldset>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  import Fieldset from "../../../../src/components/fieldset/fieldset";
-
   export default {
     name: 'fieldsetdemo',
-    components: {Fieldset, Layout},
-    data: function () {
-      return {}
-
+    data () {
+      return {};
     },
-    methods: {}
   };
 </script>
 

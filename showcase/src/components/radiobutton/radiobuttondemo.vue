@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">RadioButton</span>
@@ -55,22 +54,18 @@
         Selected Value = {{val4||'none'}}
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
-  let val1;
-  let val2="VueJS";
-  let val3="Angular";
-  let val4="React";
-
   export default {
-    name: 'buttondemo',
-    components: {Layout},
-    data: function () {
-      return {val1,val2,val3,val4}
+    name: 'radiobuttondemo',
+    data() {
+      return {
+        val1: null,
+        val2: 'VueJS',
+        val3: 'Angular',
+        val4: 'React'
+      };
     },
     methods: {
       clickMe () {

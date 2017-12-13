@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Inplace</span>
@@ -29,16 +28,12 @@
     </span>
         </p-inplace>
       </div>
-    </layout>
   </div>
 </template>
 
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'inputplacedemo',
-    components: {Layout},
     data () {
       return {
         text: 'PrimeVUE',

@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">SideBar</span>
@@ -49,26 +48,18 @@
 
 
       </div>
-    </layout>
   </div>
 </template>
 
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'inputtextdemo',
-    components: {Layout},
     data () {
       return {
         visibleSidebar1: false,
-
         visibleSidebar2: false,
-
         visibleSidebar3: false,
-
         visibleSidebar4: false,
-
         visibleSidebar5: false
       };
     }

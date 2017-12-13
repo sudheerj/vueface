@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Editor</span>
@@ -36,26 +35,20 @@
         <p-button type="button" label="Clear" icon="fa-close" @click="text2=null"></p-button>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-  let text1 = '<div>Hello World!</div><div>PrimeVue <b>Editor</b> Rocks</div><div><br></div>';
-  let text2 = null;
   export default {
     name: 'editordemo',
-    components: {Layout},
-    data: function () {
+    data () {
       return {
-          text1: text1,
-          text2: text2
-      }
-
+          text1: '<div>Hello World!</div><div>PrimeVue <b>Editor</b> Rocks</div><div><br></div>',
+          text2: null
+      };
     },
     methods: {
-        clear(){
-            text1 = '';
+        clear (){
+            this.text1 = '';
         }
     }
   };

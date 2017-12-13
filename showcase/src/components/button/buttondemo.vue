@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <layout>
+  <div>
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">Button</span>
@@ -55,25 +54,19 @@
         <p-button type="button" icon="fa-check" :disabled="true" label="Disabled"></p-button>
 
       </div>
-    </layout>
   </div>
 </template>
 <script>
-  import Layout from "../layout";
-
   export default {
     name: 'buttondemo',
-    components: {Layout},
-    data: function () {
-      return {}
-
+    data () {
+      return {};
     },
     methods: {
-      clickMe: function (event) {
+      clickMe (event) {
         if (event) {
           alert(event.target.innerText)
         }
-
       }
     }
   };
