@@ -21,7 +21,14 @@ import ProgressbarDemo from './src/components/progressbar/progressbardemo.vue'
 import ProgressSpinnerDemo from './src/components/progressspinner/progressspinnerdemo.vue'
 import CheckboxDemo from './src/components/checkbox/checkboxdemo.vue'
 import TristateCheckboxDemo from './src/components/tristatecheckbox/tristatecheckboxdemo.vue'
-import ChartsDemo from './src/components/charts/chartsdemo.vue'
+import BarChartDemo from './src/components/charts/barchart/barchartdemo.vue'
+import BubbleChartDemo from './src/components/charts/bubblechart/bubblechartdemo.vue'
+import DoughnutChartDemo from './src/components/charts/doughnutchart/doughnutchartdemo.vue'
+import HorizontalBarChartDemo from './src/components/charts/horizontalbarchart/horizontalbarchartdemo.vue'
+import LineChartDemo from './src/components/charts/linechart/linechartdemo.vue'
+import PieChartDemo from './src/components/charts/piechart/piechartdemo.vue'
+import PolarareaChartDemo from './src/components/charts/polarareachart/polarareachartdemo.vue'
+import RadarChartDemo from './src/components/charts/radarchart/radarchartdemo.vue'
 import RatingDemo from './src/components/rating/ratingdemo.vue'
 import ToggleButtonDemo from './src/components/togglebutton/togglebuttondemo.vue'
 import RadioButtonDemo from './src/components/radiobutton/radiobuttondemo.vue'
@@ -58,7 +65,15 @@ const routes = [
   { path: '/components/progressbar', component: ProgressbarDemo },
   { path: '/components/checkbox', component: CheckboxDemo },
   { path: '/components/tristatecheckbox', component: TristateCheckboxDemo },
-  { path: '/components/charts', component: ChartsDemo },
+  { path: '/components/charts/barchart', component: BarChartDemo },
+  { path: '/components/charts/bubblechart', component: BubbleChartDemo },
+  { path: '/components/charts/doughnutchart', component: DoughnutChartDemo },
+  { path: '/components/charts/horizontalbarchart', component: HorizontalBarChartDemo },
+  { path: '/components/charts/linechart', component: LineChartDemo },
+  { path: '/components/charts/piechart', component: PieChartDemo },
+  { path: '/components/charts/linechart', component: LineChartDemo },
+  { path: '/components/charts/polarareachart', component: PolarareaChartDemo },
+  { path: '/components/charts/radarchart', component: RadarChartDemo },
   { path: '/components/rating', component: RatingDemo },
   { path: '/components/togglebutton', component: ToggleButtonDemo },
   { path: '/components/radiobutton', component: RadioButtonDemo },

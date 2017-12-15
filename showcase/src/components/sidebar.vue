@@ -85,7 +85,14 @@
       </a>
       <div
         :class="{'submenushow': (element.chartmenutitle == activeMenuId), 'submenuhide': (element.chartmenutitle != activeMenuId)}">
-        <router-link to="/components/charts">&#9679; Charts</router-link>
+        <router-link to="/components/charts/piechart">&#9679; PieChart</router-link>
+        <router-link to="/components/charts/barchart">&#9679; BarChart</router-link>
+        <router-link to="/components/charts/horizontalbarchart">&#9679; HorizontalBar</router-link>
+        <router-link to="/components/charts/linechart">&#9679; LineChart</router-link>
+        <router-link to="/components/charts/polarareachart">&#9679; PolarareaChart</router-link>
+        <router-link to="/components/charts/doughnutchart">&#9679; DoughnutChart</router-link>
+        <router-link to="/components/charts/radarchart">&#9679; RadarChart</router-link>
+        <router-link to="/components/charts/bubblechart">&#9679; BubbleChart</router-link>
       </div>
 
       <a id="menu_messages" ref="messagesmenutitle"
