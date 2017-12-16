@@ -1,4 +1,5 @@
 <template>
+  <div class="layout-wrapper">
 <div id="layout-topbar" class="content-section introduction demo-component">
   <a href="#" class="menu-button" click="onMenuButtonClick">
     <i class="fa fa-bars"></i>
@@ -33,6 +34,7 @@
     </li>
   </ul>
 </div>
+  </div>
 </template>
 
 <script>
