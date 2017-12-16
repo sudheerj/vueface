@@ -26,6 +26,7 @@
         <router-link to="/components/rating">&#9679; Rating</router-link>
         <router-link to="/components/inputswitch">&#9679; InputSwitch</router-link>
         <router-link to="/components/spinner">&#9679; Spinner</router-link>
+        <router-link to="/components/colorpicker">&#9679; ColorPicker</router-link>
       </div>
 
       <a id="button_menutitle" ref="buttonmenutitle" :class="{'active-menuitem': element.buttonmenutitle == activeMenuId}"

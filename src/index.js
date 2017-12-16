@@ -31,6 +31,7 @@ import SideBar from './components/sidebar/sidebar.vue';
 import BackToTop from './components/backtotop/backtotop.vue';
 import CodeHighlighter from './components/codehighlighter/codehighlighter.vue';
 import SelectButton from './components/selectButton/selectbutton.vue';
+import ColorPicker from './components/colorpicker/colorpicker.vue';
 
 export const components = {
   InputText,
@@ -64,7 +65,8 @@ export const components = {
   BlockUI,
   SideBar,
   BackToTop,
-  SelectButton
+  SelectButton,
+  ColorPicker
 };
 
 export const directives = {
