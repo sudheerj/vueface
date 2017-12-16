@@ -107,6 +107,7 @@
         :class="{'submenushow': (element.messagesmenutitle == activeMenuId), 'submenuhide': (element.messagesmenutitle != activeMenuId)}">
         <router-link to="/components/message">&#9679; Message</router-link>
         <router-link to="/components/growl">&#9679; Growl</router-link>
+        <router-link to="/components/badge">&#9679; Badge</router-link>
       </div>
 
       <a id="menu_multimedia" ref="multimediamenutitle"

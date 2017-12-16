@@ -32,6 +32,7 @@ import BackToTop from './components/backtotop/backtotop.vue';
 import CodeHighlighter from './components/codehighlighter/codehighlighter.vue';
 import SelectButton from './components/selectButton/selectbutton.vue';
 import ColorPicker from './components/colorpicker/colorpicker.vue';
+import Badge from './components/badge/badge.vue';
 
 export const components = {
   InputText,
@@ -66,7 +67,8 @@ export const components = {
   SideBar,
   BackToTop,
   SelectButton,
-  ColorPicker
+  ColorPicker,
+  Badge
 };
 
 export const directives = {

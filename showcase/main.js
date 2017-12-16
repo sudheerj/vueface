@@ -55,6 +55,7 @@ import BacktotopDemo from './src/components/backtotop/backtotopdemo.vue'
 import CodeHighlighterDemo from './src/components/codehighlighter/codehighlighterdemo.vue'
 import SelectButtonDemo from './src/components/selectbutton/selectbuttondemo.vue'
 import ColorPickerDemo from './src/components/colorpicker/colorpickerdemo.vue'
+import BadgeDemo from './src/components/badge/badgedemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -100,7 +101,8 @@ const routes = [
   { path: '/components/backtotop', component: BacktotopDemo },
   { path: '/components/codehighlighter', component: CodeHighlighterDemo },
   { path: '/components/selectbutton', component: SelectButtonDemo },
-  { path: '/components/colorpicker', component: ColorPickerDemo }
+  { path: '/components/colorpicker', component: ColorPickerDemo },
+  { path: '/components/badge', component: BadgeDemo }
 ]
 const router = new VueRouter({
   routes: routes
