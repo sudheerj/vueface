@@ -33,6 +33,7 @@ import CodeHighlighter from './components/codehighlighter/codehighlighter.vue';
 import SelectButton from './components/selectButton/selectbutton.vue';
 import ColorPicker from './components/colorpicker/colorpicker.vue';
 import Badge from './components/badge/badge.vue';
+import Card from './components/card/card.vue';
 
 export const components = {
   InputText,
@@ -68,7 +69,8 @@ export const components = {
   BackToTop,
   SelectButton,
   ColorPicker,
-  Badge
+  Badge,
+  Card
 };
 
 export const directives = {

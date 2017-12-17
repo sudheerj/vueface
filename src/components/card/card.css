@@ -1,0 +1,28 @@
+.card {
+  border-radius: 4px;
+  border: 1px solid #ebeef5;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  color: #303133;
+}
+
+.dimensions {
+  width: 400px;
+}
+
+.card-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #ebeef5;
+  box-sizing: border-box;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ebeef5;
+  box-sizing: border-box;
+}

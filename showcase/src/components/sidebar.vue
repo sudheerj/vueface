@@ -77,6 +77,17 @@
         <router-link to="/components/sidebar">&#9679; Sidebar</router-link>
       </div>
 
+      <a id="menu_overlay" ref="layoutmenutitle" :class="{'active-menuitem': element.layoutmenutitle == activeMenuId}"
+         @click="activeMenuId = (activeMenuId === element.layoutmenutitle ? null : element.layoutmenutitle)">
+        <img src="../assets/images/icons/layout-active.svg" class="layout-menu-icon-active"/>
+        <img src="../assets/images/icons/layout.svg" class="layout-menu-icon-inactive"/>
+        <span>Layout</span>
+      </a>
+      <div
+        :class="{'submenushow': (element.layoutmenutitle == activeMenuId), 'submenuhide': (element.layoutmenutitle != activeMenuId)}">
+        <router-link to="/components/card">&#9679; Card</router-link>
+      </div>
+
 
       <a id="menu_chart" ref="chartmenutitle" :class="{'active-menuitem': element.chartmenutitle == activeMenuId}"
          @click="activeMenuId = (activeMenuId === element.chartmenutitle ? null : element.chartmenutitle)">
