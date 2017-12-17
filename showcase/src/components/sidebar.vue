@@ -147,6 +147,7 @@
         <router-link to="/components/blockui">&#9679; BlockUI</router-link>
         <router-link to="/components/backtotop">&#9679; BackToTop</router-link>
         <router-link to="/components/codehighlighter">&#9679; CodeHighlighter</router-link>
+        <router-link to="/components/qrcode">&#9679; QRCode</router-link>
       </div>
 
     </div>

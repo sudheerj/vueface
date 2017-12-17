@@ -34,6 +34,7 @@ import SelectButton from './components/selectButton/selectbutton.vue';
 import ColorPicker from './components/colorpicker/colorpicker.vue';
 import Badge from './components/badge/badge.vue';
 import Card from './components/card/card.vue';
+import QRCode from './components/qrcode/qrcode.vue';
 
 export const components = {
   InputText,
@@ -70,7 +71,8 @@ export const components = {
   SelectButton,
   ColorPicker,
   Badge,
-  Card
+  Card,
+  QRCode
 };
 
 export const directives = {
