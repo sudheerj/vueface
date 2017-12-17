@@ -11,7 +11,7 @@
       <div ref="pickerPanel"
            :class="{'ui-colorpicker-panel ui-corner-all': true, 'ui-colorpicker-overlay-panel ui-shadow':!inline, 'ui-state-disabled': disabled}"
            @click="onPanelClick()"
-           v-show="inline || panelVisible">
+           v-show="display()">
         <div class="ui-colorpicker-content">
           <div ref="colorSelector" class="ui-colorpicker-color-selector" @mousedown="onColorMousedown($event)">
             <div class="ui-colorpicker-color">
@@ -100,7 +100,7 @@
       },
       inputValue (value) {
         this.writeValue(value);
-        this.$emit('input', value);
+        this.$emit('input', this.getValueToUpdate());
       }
     },
     methods: {
@@ -156,7 +156,7 @@
 
         this.updateUI();
         this.updateModel();
-        this.$emit('change', {originalEvent: event, value: this.getValueToUpdate()});
+        this.$emit('input', this.getValueToUpdate());
       },
 
       getValueToUpdate () {
@@ -183,7 +183,7 @@
       },
 
       writeValue (value) {
-        if (value) {
+        if (value && typeof value === 'string') {
           switch (this.format) {
             case 'hex':
               this.inputValue = this.HEXtoHSB(value);
@@ -263,7 +263,6 @@
 
       onPanelClick () {
         this.selfClick = true;
-        this.panelVisible = !this.panelVisible;
       },
 
       setDisabledState (val) {
@@ -459,12 +458,17 @@
 
       updateFilled (value) {
         this.filled = value && value.length;
+      },
+
+      display () {
+        return (this.inline || this.panelVisible);
       }
     },
     created () {
       this.updateFilled(this.inputValue);
     },
     mounted () {
+      this.writeValue(this.value);
       if (this.appendTo) {
         if (this.appendTo === 'body') { document.body.appendChild(this.$refs.pickerPanel); } else { domHandler.appendChild(this.$refs.pickerPanel, this.appendTo); }
       }

@@ -15,7 +15,7 @@
     name: 'p-scrollPanel',
     props: {
       scrollpanelStyle: {
-        type: String,
+        type: Object,
         default: null
       },
       scrollpanelStyleClass: {
