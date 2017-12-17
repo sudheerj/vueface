@@ -1,10 +1,10 @@
-.badge {
+.ui-badge {
   position: relative;
   vertical-align: middle;
   display: inline-block;
 }
 
-.badge-content {
+.ui-badge-content {
   background-color: #f56c6c;
   border-radius: 10px;
   color: #fff;
@@ -18,18 +18,18 @@
   border: 1px solid #fff;
 }
 
-.item {
+.ui-item {
   margin-right: 40px;
 }
 
-.badge-content.fixed {
+.ui-badge-content.fixed {
   position: absolute;
   top: 0;
   right: 10px;
   transform: translateY(-50%) translateX(100%);
 }
 
-.badge-content.dot {
+.ui-badge-content.dot {
   height: 8px;
   width: 8px;
   padding: 0;
@@ -37,11 +37,11 @@
   border-radius: 50%;
 }
 
-.badge-content.fixed.dot {
+.ui-badge-content.fixed.dot {
   right: 5px;
 }
 
-.position {
+.ui-position {
   margin-top: 10px;
   margin-right: 40px;
 }

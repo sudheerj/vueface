@@ -1,12 +1,12 @@
 <template>
-  <div class="card dimensions">
-    <div class="card-header" v-if="$slots.header || header">
+  <div class="ui-widget ui-widget-content ui-corner-all ui-card dimensions">
+    <div class="ui-card-header" v-if="$slots.header || header">
       <slot name="header">{{ header }}</slot>
     </div>
-    <div class="card-content" :style="contentStyle">
+    <div :style="contentStyle">
       <slot></slot>
     </div>
-    <div class="card-footer" v-if="$slots.footer || footer">
+    <div class="ui-card-footer" v-if="$slots.footer || footer">
       <slot name="footer">{{ footer }}</slot>
     </div>
   </div>

@@ -1,11 +1,11 @@
 <template>
-  <div class="badge position">
+  <div class="ui-badge ui-position">
     <slot></slot>
       <span
         v-show="display"
         v-text="data"
-        class="badge-content" :style="{'background-color': backgroundColor}"
-        :class="[badgeClass, {'fixed': true, 'dot': dot }]">
+        class="ui-badge-content" :style="{'background-color': backgroundColor}"
+        :class="['ui-widget ui-widget-content ui-corner-all', badgeClass, {'fixed': true, 'dot': dot }]">
       </span>
   </div>
 </template>

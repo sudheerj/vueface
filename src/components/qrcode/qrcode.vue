@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ui-widget ui-corner-all">
     <canvas ref="qrcode"></canvas>
   </div>
 </template>
