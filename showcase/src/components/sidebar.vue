@@ -64,6 +64,7 @@
         <router-link to="/components/fieldset">&#9679; Fieldset</router-link>
         <router-link to="/components/grid">&#9679; Grid</router-link>
         <router-link to="/components/toolbar">&#9679; Toolbar</router-link>
+        <router-link to="/components/scrollpanel">&#9679; ScrollPanel</router-link>
       </div>
 
       <a id="menu_overlay" ref="overlaymenutitle" :class="{'active-menuitem': element.overlaymenutitle == activeMenuId}"

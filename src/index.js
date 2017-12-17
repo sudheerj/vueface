@@ -35,6 +35,7 @@ import ColorPicker from './components/colorpicker/colorpicker.vue';
 import Badge from './components/badge/badge.vue';
 import Card from './components/card/card.vue';
 import QRCode from './components/qrcode/qrcode.vue';
+import ScrollPanel from './components/scrollpanel/scrollpanel.vue';
 
 export const components = {
   InputText,
@@ -72,7 +73,8 @@ export const components = {
   ColorPicker,
   Badge,
   Card,
-  QRCode
+  QRCode,
+  ScrollPanel
 };
 
 export const directives = {

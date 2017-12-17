@@ -58,6 +58,7 @@ import ColorPickerDemo from './src/components/colorpicker/colorpickerdemo.vue'
 import BadgeDemo from './src/components/badge/badgedemo.vue'
 import CardDemo from './src/components/card/carddemo.vue'
 import QRCodeDemo from './src/components/qrcode/qrcodedemo.vue'
+import ScrollPanelDemo from './src/components/scrollpanel/scrollpaneldemo.vue'
 import Index from './src/components/index.vue'
 
 const routes = [
@@ -106,7 +107,8 @@ const routes = [
   { path: '/components/colorpicker', component: ColorPickerDemo },
   { path: '/components/badge', component: BadgeDemo },
   { path: '/components/card', component: CardDemo },
-  { path: '/components/qrcode', component: QRCodeDemo }
+  { path: '/components/qrcode', component: QRCodeDemo },
+  { path: '/components/scrollpanel', component: ScrollPanelDemo }
 ]
 const router = new VueRouter({
   routes: routes
