@@ -149,6 +149,7 @@
         <router-link to="/components/backtotop">&#9679; BackToTop</router-link>
         <router-link to="/components/codehighlighter">&#9679; CodeHighlighter</router-link>
         <router-link to="/components/qrcode">&#9679; QRCode</router-link>
+        <router-link to="/components/avatar">&#9679; Avatar</router-link>
       </div>
 
     </div>

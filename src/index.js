@@ -36,6 +36,7 @@ import Badge from './components/badge/badge.vue';
 import Card from './components/card/card.vue';
 import QRCode from './components/qrcode/qrcode.vue';
 import ScrollPanel from './components/scrollpanel/scrollpanel.vue';
+import Avatar from './components/avatar/avatar.vue';
 
 export const components = {
   InputText,
@@ -74,7 +75,8 @@ export const components = {
   Badge,
   Card,
   QRCode,
-  ScrollPanel
+  ScrollPanel,
+  Avatar
 };
 
 export const directives = {
