@@ -2,8 +2,8 @@
   <div>
       <div class="content-section introduction" id="component">
         <div>
-          <span class="feature-title">InputText</span>
-          <span>InputText is an extension to standard input element with theming.</span>
+          <span class="feature-title">Avatar</span>
+          <span>Avatars can be used to represent people or objects..</span>
         </div>
       </div>
       <div id="wrapper">

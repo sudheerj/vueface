@@ -52,6 +52,12 @@ Vue.use(PrimeVue)
 - Sidebar
 - BackToTop
 - SelectButton
+- ScrollPanel
+- Avatar
+- Badge
+- Card
+- ColorPicker
+
 
 ## How to Run
 
