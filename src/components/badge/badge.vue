@@ -27,7 +27,7 @@
       },
       backgroundColor: {
         type: String,
-        default: 'green'
+        default: ''
       },
       badgeClass: {
         type: [String, Object, Array]
