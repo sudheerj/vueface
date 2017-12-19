@@ -1,11 +1,11 @@
 <template>
-  <div ref="gmap" :style="gmapStyle" :class="gmapStyleClass"></div>
+  <div ref="gmap"></div>
 </template>
 <script>
-  var google;
+  const google = window.google;
   export default {
     name: 'p-gmap',
-    data: function () {
+    data () {
       return {
         map: null
       };
@@ -18,20 +18,26 @@
       overlays: {
         type: Array,
         default: null
-      },
-      gmapStyle: {
-        type: String,
-        default: null
-      },
-      gmapStyleClass: {
-        type: String,
-        default: null
+      }
+    },
+    watch: {
+      overlays (newValue, oldValue) {
+        if (this.map !== null) {
+          for (let overlay of oldValue) {
+            overlay.setMap(null);
+          }
+          for (let overlay of this.overlays) {
+            overlay.setMap(this.map);
+            this.bindOverlayEvents(overlay);
+          }
+        }
       }
     },
     methods: {
       initialize () {
         this.map = new google.maps.Map(this.$refs.gmap, this.options);
-        this.$emit('onMapReady', {
+
+        this.$emit('ready', {
           map: this.map
         });
 
@@ -43,31 +49,23 @@
         }
 
         this.map.addListener('click', (event) => {
-          this.zone.run(() => {
-            this.$emit('onMapClick', event);
-          });
+          this.$emit('click', event);
         });
 
         this.map.addListener('dragend', (event) => {
-          this.zone.run(() => {
-            this.$emit('onMapDragEnd', event);
-          });
+          this.$emit('dragend', event);
         });
 
         this.map.addListener('zoom_changed', (event) => {
-          this.zone.run(() => {
-            this.$emit('onZoomChanged', event);
-          });
+          this.$emit('zoomchanged', event);
         });
       },
       bindOverlayEvents (overlay) {
         overlay.addListener('click', (event) => {
-          this.zone.run(() => {
-            this.$emit('onOverlayClick', {
-              originalEvent: event,
-              'overlay': overlay,
-              map: this.map
-            });
+          this.$emit('overlayclick', {
+            originalEvent: event,
+            overlay: overlay,
+            map: this.map
           });
         });
 
@@ -77,32 +75,26 @@
       },
       bindDragEvents (overlay) {
         overlay.addListener('dragstart', (event) => {
-          this.zone.run(() => {
-            this.$emit('onOverlayDragStart', {
-              originalEvent: event,
-              overlay: overlay,
-              map: this.map
-            });
+          this.$emit('overlaydragstart', {
+            originalEvent: event,
+            overlay: overlay,
+            map: this.map
           });
         });
 
         overlay.addListener('drag', (event) => {
-          this.zone.run(() => {
-            this.$emit('onOverlayDrag', {
-              originalEvent: event,
-              overlay: overlay,
-              map: this.map
-            });
+          this.$emit('overlaydrag', {
+            originalEvent: event,
+            overlay: overlay,
+            map: this.map
           });
         });
 
         overlay.addListener('dragend', (event) => {
-          this.zone.run(() => {
-            this.$emit('onOverlayDragEnd', {
-              originalEvent: event,
-              overlay: overlay,
-              map: this.map
-            });
+          this.$emit('overlaydragend', {
+            originalEvent: event,
+            overlay: overlay,
+            map: this.map
           });
         });
       },
@@ -110,14 +102,12 @@
         return this.map;
       }
     },
-    watch: {
-
-    },
-    updated () {
+    mounted () {
       if (!this.map && this.$refs.gmap.offsetParent) {
-        this.initialize();
+        this.$nextTick(() => {
+          this.initialize();
+        });
       }
     }
-
   };
 </script>
