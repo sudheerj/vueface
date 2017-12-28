@@ -1,27 +1,36 @@
 <template>
-  <div ref="colorPicker" :style="[colorpickerStyle]"
-       :class="[colorpickerStyleClass,{'ui-colorpicker ui-widget':true,'ui-colorpicker-overlay':!inline,'ui-colorpicker-dragging':colorDragging||hueDragging}]">
-    <input ref="pickerInput" type="text" v-if="!inline"
-           :class="['ui-colorpicker-preview ui-inputtext ui-state-default ui-corner-all',{'ui-state-disabled': disabled}]"
-           readonly="readonly"
-           @click="onInputClick()" @keydown="onInputKeydown($event)" :id="inputId"
-           :tabindex="tabindex" :disabled="disabled"
-           :style="{backgroundColor: inputBgColor}">
+  <div :class="['ui-colorpicker ui-widget', {
+      'ui-colorpicker-overlay': !inline,
+      'ui-colorpicker-dragging': colorDragging || hueDragging
+    }]">
+    <input ref="input" type="text" v-if="!inline" 
+        class="ui-colorpicker-preview ui-inputtext ui-state-default ui-corner-all" 
+        readonly :class="{'ui-state-disabled': disabled}"
+        @click="onInputClick"
+        @keydown="onInputKeydown($event)" 
+        :id="inputId" :tabindex="tabindex" :disabled="disabled"
+        :style="{'background-color': inputBgColor}" />
     <transition name="slide">
-      <div ref="pickerPanel"
-           :class="{'ui-colorpicker-panel ui-corner-all': true, 'ui-colorpicker-overlay-panel ui-shadow':!inline, 'ui-state-disabled': disabled}"
-           @click="onPanelClick()"
-           v-show="display()">
-        <div class="ui-colorpicker-content">
-          <div ref="colorSelector" class="ui-colorpicker-color-selector" @mousedown="onColorMousedown($event)">
-            <div class="ui-colorpicker-color">
-              <div ref="colorHandle" class="ui-colorpicker-color-handle"></div>
-            </div>
+      <div ref="panel" 
+          :class="['ui-colorpicker-panel ui-corner-all', {
+            'ui-shadow': !inline,
+            'ui-state-disabled': disabled
+          }]" 
+          @click="onPanelClick"
+          v-show="inline || panelVisible"
+          :style="{'position': inline ? '' : 'absolute'}">
+          <div class="ui-colorpicker-content">
+              <div ref="colorSelector" class="ui-colorpicker-color-selector"
+                  @mousedown="onColorMousedown($event)">
+                  <div class="ui-colorpicker-color">
+                      <div ref="colorHandle" class="ui-colorpicker-color-handle"></div>
+                  </div>
+              </div>
+              <div ref="hue" class="ui-colorpicker-hue" 
+                  @mousedown="onHueMousedown($event)">
+                  <div ref="hueHandle" class="ui-colorpicker-hue-handle"></div>
+              </div>
           </div>
-          <div ref="hue" class="ui-colorpicker-hue" @mousedown="onHueMousedown($event)">
-            <div ref="hueHandle" class="ui-colorpicker-hue-handle"></div>
-          </div>
-        </div>
       </div>
     </transition>
   </div>
@@ -31,10 +40,9 @@
   .slide-enter-active, .slide-leave-active {
     transition: 0.4s ease;
   }
-
   .slide-enter{
     opacity: 1;
-  },
+  }
   .slide-leave {
     opacity: 0;
   }
@@ -44,18 +52,7 @@
   export default {
     name: 'p-colorPicker',
     props: {
-      value: {
-        type: String,
-        default: null
-      },
-      colorpickerStyle: {
-        type: Object,
-        default: null
-      },
-      colorpickerStyleClass: {
-        type: String,
-        default: null
-      },
+      value: {},
       inline: {
         type: Boolean,
         default: false
@@ -83,7 +80,8 @@
     },
     data () {
       return {
-        inputValue: this.value,
+        newValue: this.value,
+        newValueToUpdate: null,
         filled: false,
         inputBgColor: null,
         shown: false,
@@ -96,11 +94,9 @@
     },
     watch: {
       value (value) {
-        this.inputValue = value;
-      },
-      inputValue (value) {
-        this.writeValue(value);
-        this.$emit('input', this.getValueToUpdate());
+        if (value !== this.newValueToUpdate) {
+          this.writeValue(value);
+        }
       }
     },
     methods: {
@@ -118,16 +114,15 @@
 
       pickHue (event) {
         let top = this.$refs.hue.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
-        this.inputValue = this.validateHSB({
+        this.newValue = this.validateHSB({
           h: Math.floor(360 * (150 - Math.max(0, Math.min(150, (event.pageY - top)))) / 150),
-          s: this.inputValue.s,
-          b: this.inputValue.b
+          s: this.newValue.s,
+          b: this.newValue.b
         });
 
         this.updateColorSelector();
         this.updateUI();
         this.updateModel();
-        this.$emit('change', {originalEvent: event, value: this.getValueToUpdate()});
       },
 
       onColorMousedown (event) {
@@ -148,30 +143,27 @@
         let left = rect.left + document.body.scrollLeft;
         let saturation = Math.floor(100 * (Math.max(0, Math.min(150, (event.pageX - left)))) / 150);
         let brightness = Math.floor(100 * (150 - Math.max(0, Math.min(150, (event.pageY - top)))) / 150);
-        this.inputValue = this.validateHSB({
-          h: this.inputValue.h,
+        this.newValue = this.validateHSB({
+          h: this.newValue.h,
           s: saturation,
           b: brightness
         });
 
         this.updateUI();
         this.updateModel();
-        this.$emit('input', this.getValueToUpdate());
       },
 
       getValueToUpdate () {
-        let val;
+        let val = null;
         switch (this.format) {
           case 'hex':
-            val = '#' + this.HSBtoHEX(this.inputValue);
+            val = '#' + this.HSBtoHEX(this.newValue);
             break;
-
           case 'rgb':
-            val = this.HSBtoRGB(this.inputValue);
+            val = this.HSBtoRGB(this.newValue);
             break;
-
           case 'hsb':
-            val = this.inputValue;
+            val = this.newValue;
             break;
         }
 
@@ -179,47 +171,50 @@
       },
 
       updateModel () {
-        this.inputValue = this.getValueToUpdate();
+        this.newValueToUpdate = this.getValueToUpdate();
+        this.$emit('input', this.newValueToUpdate);
       },
 
-      writeValue (value) {
-        if (value && typeof value === 'string') {
+      writeValue (value, update = true) {
+        if (value) {
           switch (this.format) {
             case 'hex':
-              this.inputValue = this.HEXtoHSB(value);
+              this.newValue = this.HEXtoHSB(value);
               break;
-
             case 'rgb':
-              this.inputValue = this.RGBtoHSB(value);
+              this.newValue = this.RGBtoHSB(value);
               break;
-
             case 'hsb':
-              this.inputValue = value;
+              this.newValue = value;
               break;
           }
         } else {
-          this.inputValue = this.HEXtoHSB(this.defaultColor);
+          this.newValue = this.HEXtoHSB(this.defaultColor);
         }
 
-        this.updateColorSelector();
-        this.updateUI();
+        if (update) {
+          this.updateColorSelector();
+          this.updateUI();
+        }
       },
 
       updateColorSelector () {
-        this.$refs.colorSelector.style.backgroundColor = '#' + this.HSBtoHEX(this.inputValue);
+        this.$refs.colorSelector.style.backgroundColor = '#' + this.HSBtoHEX(this.newValue);
       },
 
       updateUI () {
-        this.$refs.colorHandle.style.left = Math.floor(150 * this.inputValue.s / 100) + 'px';
-        this.$refs.colorHandle.style.top = Math.floor(150 * (100 - this.inputValue.b) / 100) + 'px';
-        this.$refs.hueHandle.style.top = Math.floor(150 - (150 * this.inputValue.h / 360)) + 'px';
-        this.inputBgColor = '#' + this.HSBtoHEX(this.inputValue);
+        this.$refs.colorHandle.style.left = Math.floor(150 * this.newValue.s / 100) + 'px';
+        this.$refs.colorHandle.style.top = Math.floor(150 * (100 - this.newValue.b) / 100) + 'px';
+        this.$refs.hueHandle.style.top = Math.floor(150 - (150 * this.newValue.h / 360)) + 'px';
+        this.inputBgColor = '#' + this.HSBtoHEX(this.newValue);
       },
 
       show () {
-        this.$refs.pickerPanel.style.zIndex = String(++domHandler.zindex);
-        this.panelVisible = true;
-        this.shown = true;
+        this.$refs.panel.style.zIndex = String(++domHandler.zindex);
+        this.$nextTick(() => {
+          this.panelVisible = true;
+          this.shown = true;
+        });
       },
 
       hide () {
@@ -233,7 +228,11 @@
       },
 
       alignPanel () {
-        if (this.appendTo) { domHandler.absolutePosition(this.$refs.pickerPanel, this.$refs.pickerInput); } else { domHandler.relativePosition(this.$refs.pickerPanel, this.$refs.pickerInput); }
+        if (this.appendTo) {
+          domHandler.absolutePosition(this.$refs.panel, this.$refs.input);
+        } else {
+          domHandler.relativePosition(this.$refs.panel, this.$refs.input);
+        }
       },
 
       onInputClick () {
@@ -242,7 +241,11 @@
       },
 
       togglePanel () {
-        if (!this.panelVisible) { this.show(); } else { this.hide(); }
+        if (!this.panelVisible) {
+          this.show();
+        } else {
+          this.hide();
+        }
       },
 
       onInputKeydown (event) {
@@ -252,7 +255,6 @@
             this.togglePanel();
             event.preventDefault();
             break;
-
           // escape and tab
           case 27:
           case 9:
@@ -263,10 +265,6 @@
 
       onPanelClick () {
         this.selfClick = true;
-      },
-
-      setDisabledState (val) {
-        this.disabled = val;
       },
 
       bindDocumentClickListener () {
@@ -284,7 +282,7 @@
         document.removeEventListener('click', null);
       },
 
-      bindDocumentMousemoveListener () {
+      bindDocumentMousemoveListener  () {
         document.addEventListener('mousemove', (event) => {
           if (this.colorDragging) {
             this.pickColor(event);
@@ -330,10 +328,10 @@
       },
 
       validateHEX (hex) {
-        var len = 6 - hex.length;
+        let len = 6 - hex.length;
         if (len > 0) {
-          var o = [];
-          for (var i = 0; i < len; i++) {
+          let o = [];
+          for (let i = 0; i < len; i++) {
             o.push('0');
           }
           o.push(hex);
@@ -352,17 +350,16 @@
       },
 
       RGBtoHSB (rgb) {
-        var hsb = {
+        let hsb = {
           h: 0,
           s: 0,
           b: 0
         };
-        var min = Math.min(rgb.r, rgb.g, rgb.b);
-        var max = Math.max(rgb.r, rgb.g, rgb.b);
-        var delta = max - min;
+        let min = Math.min(rgb.r, rgb.g, rgb.b);
+        let max = Math.max(rgb.r, rgb.g, rgb.b);
+        let delta = max - min;
         hsb.b = max;
         if (max !== 0) {
-
         }
         hsb.s = max !== 0 ? 255 * delta / max : 0;
         if (hsb.s !== 0) {
@@ -386,12 +383,12 @@
       },
 
       HSBtoRGB (hsb) {
-        var rgb = {
+        let rgb = {
           r: null, g: null, b: null
         };
-        var h = Math.round(hsb.h);
-        var s = Math.round(hsb.s * 255 / 100);
-        var v = Math.round(hsb.b * 255 / 100);
+        let h = Math.round(hsb.h);
+        let s = Math.round(hsb.s * 255 / 100);
+        let v = Math.round(hsb.b * 255 / 100);
         if (s === 0) {
           rgb = {
             r: v,
@@ -399,10 +396,12 @@
             b: v
           };
         } else {
-          var t1 = v;
-          var t2 = (255 - s) * v / 255;
-          var t3 = (t1 - t2) * (h % 60) / 60;
-          if (h === 360) h = 0;
+          let t1 = v;
+          let t2 = (255 - s) * v / 255;
+          let t3 = (t1 - t2) * (h % 60) / 60;
+          if (h === 360) {
+            h = 0;
+          }
           if (h < 60) {
             rgb.r = t1;
             rgb.b = t2;
@@ -437,13 +436,13 @@
       },
 
       RGBtoHEX (rgb) {
-        var hex = [
+        let hex = [
           rgb.r.toString(16),
           rgb.g.toString(16),
           rgb.b.toString(16)
         ];
 
-        for (var key in hex) {
+        for (let key in hex) {
           if (hex[key].length === 1) {
             hex[key] = '0' + hex[key];
           }
@@ -454,36 +453,29 @@
 
       HSBtoHEX (hsb) {
         return this.RGBtoHEX(this.HSBtoRGB(hsb));
-      },
-
-      updateFilled (value) {
-        this.filled = value && value.length;
-      },
-
-      display () {
-        return (this.inline || this.panelVisible);
       }
     },
-    created () {
-      this.updateFilled(this.inputValue);
-    },
     mounted () {
-      this.writeValue(this.value);
       if (this.appendTo) {
-        if (this.appendTo === 'body') { document.body.appendChild(this.$refs.pickerPanel); } else { domHandler.appendChild(this.$refs.pickerPanel, this.appendTo); }
+        if (this.appendTo === 'body') {
+          document.body.appendChild(this.$refs.panel);
+        } else {
+          domHandler.appendChild(this.$refs.panel, this.appendTo);
+        }
+      }
+      this.writeValue(this.newValue);
+    },
+    beforeDestroy () {
+      this.unbindDocumentClickListener();
+
+      if (this.appendTo) {
+        this.$el.appendChild(this.$refs.panel);
       }
     },
     updated () {
       if (this.shown) {
         this.onShow();
         this.shown = false;
-      }
-    },
-    destroyed () {
-      this.unbindDocumentClickListener();
-
-      if (this.appendTo) {
-        this.$refs.colorPicker.appendChild(this.$refs.pickerPanel);
       }
     }
   };
