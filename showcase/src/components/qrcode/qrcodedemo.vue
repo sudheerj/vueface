@@ -3,7 +3,7 @@
       <div class="content-section introduction" id="component">
         <div>
           <span class="feature-title">QRCode</span>
-          <span>A barcode is a machine-readable optical label that contains information about the item to which it is attached.</span>
+          <span>A QRCode is a machine-readable optical label that contains information about the item to which it is attached.</span>
         </div>
       </div>
       <div id="wrapper">
