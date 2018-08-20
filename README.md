@@ -1,20 +1,20 @@
-# PrimeVue
+# VueFace
 [![Dependency Status][daviddm-image]][daviddm-url] ![Crates.io](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-> Component library for PrimeVue framework
+> Component library for VueFace framework
 
 ## Install
 
 ``` shell
-npm install --save primevue
+npm install --save VueFace
 ```
 
 ## Quick start
 ``` javascript
 import Vue from 'vue'
-import PrimeVue from 'primevue'
+import VueFace from 'VueFace'
 
-Vue.use(PrimeVue)
+Vue.use(VueFace)
 ```
 
 ## Components
@@ -75,5 +75,5 @@ npm start
 ### LICENSE
 MIT
 
-[daviddm-image]: https://david-dm.org/primefaces/primevue.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/primefaces/primevue
+[daviddm-image]: https://david-dm.org/VueFace.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/VueFace

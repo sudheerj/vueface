@@ -6,10 +6,10 @@
   </a>
 
   <a href="#" class="logo" >
-    <img alt="logo" src="../assets/images/logo.png" /><span style="font-weight: bold;font-size:40px;color:white">PrimeVue</span>
+    <img alt="logo" src="../assets/images/logo.png" /><span style="font-weight: bold;font-size:40px;color:white">VueFace</span>
   </a>
 
-  <ul class="topbar-menu">
+ <!-- <ul class="topbar-menu">
     <li class="topbar-menu-themes">
       <a href="#">THEMES</a>
       <ul>
@@ -32,7 +32,7 @@
         <li><a href="#" @click="changeTheme($event, 'voclain')"><span class="ui-text">Voclain</span></a></li>
       </ul>
     </li>
-  </ul>
+  </ul>-->
 </div>
   </div>
 </template>

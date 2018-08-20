@@ -4,11 +4,11 @@ import Vue from 'vue';
 //import App from './App.vue';
 import VueRouter from 'vue-router'
 import VueHighlightJS from 'vue-highlightjs'
-import PrimeVue from '../src/index.js'
+import VueFace from '../src/index.js'
 
 Vue.config.productionTip = false;
 
-Vue.use(PrimeVue)
+Vue.use(VueFace)
 Vue.use(VueHighlightJS)
 Vue.use(VueRouter)
 

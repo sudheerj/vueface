@@ -1,6 +1,6 @@
 {
-  "name": "primevue",
-  "version": "0.0.1-SNAPSHOT",
+  "name": "vueface",
+  "version": "0.0.1-alpha",
   "description": "Component library for VueJS framework",
   "license": "MIT",
   "private": false,
@@ -15,7 +15,7 @@
     "lint-fix": "eslint --fix --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
-    "vue": "^2.5.9"
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

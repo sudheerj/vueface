@@ -2,26 +2,26 @@
 
     <div>
       <div style="text-align: center;margin-top: 80px;">
-      <h2>PrimeVue</h2>
-      <h5>A Vue.js Component library.</h5>
+      <h2>VueFace</h2>
+      <h5>A VueJS Component library</h5>
       </div>
       <div id="wrapper">
       <h3>Install</h3>
       <p>Install using npm package manager</p>
-      <pre v-highlightjs><code class="bash">$ npm install vue-ui --save</code></pre>
+      <pre v-highlightjs><code class="bash">$ npm install --save vueface</code></pre>
       <h3>Quick Start (Using vue-cli)</h3>
       <pre v-highlightjs><code class="bash">$ npm install -g vue-cli
 $ vue init webpack vue-app
 $ cd vue-app
-$ npm install vue-ui --save </code></pre>
+$ npm install --save vueface</code></pre>
 
       <h4>main.js</h4>
       <pre v-highlightjs><code class="javascript">
 import Vue from &#x27;vue&#x27;
 import App from &#x27;./App&#x27;
-import PrimeVue from &#x27;primevue&#x27;
+import VueFace from &#x27;vueface&#x27;
 
-Vue.use(PrimeVue);
+Vue.use(VueFace);
 
 Vue.config.productionTip = false;
 

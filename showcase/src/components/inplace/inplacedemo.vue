@@ -36,7 +36,7 @@
     name: 'inputplacedemo',
     data () {
       return {
-        text: 'PrimeVUE',
+        text: 'VueFace',
         closable: true
       };
     }

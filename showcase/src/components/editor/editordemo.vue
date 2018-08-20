@@ -42,7 +42,7 @@
     name: 'editordemo',
     data () {
       return {
-          text1: '<div>Hello World!</div><div>PrimeVue <b>Editor</b> Rocks</div><div><br></div>',
+          text1: '<div>Hello World!</div><div>VueFace <b>Editor</b> Rocks</div><div><br></div>',
           text2: null
       };
     },

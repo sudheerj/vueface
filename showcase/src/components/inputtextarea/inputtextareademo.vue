@@ -24,7 +24,7 @@
     name: 'inputtextareademo',
     data () {
       return {
-        text: 'PrimeVue',
+        text: 'VueFace',
         autoResize: true
       };
     }

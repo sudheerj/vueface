@@ -41,7 +41,7 @@
       },
       showInfo () {
         this.msgs = [];
-        this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeVue rocks'});
+        this.msgs.push({severity:'info', summary:'Info Message', detail:'VueFace rocks'});
       },
       showWarn () {
         this.msgs = [];
@@ -53,16 +53,16 @@
       },
       showMultiple () {
         this.msgs = [];
-        this.msgs.push({severity:'info', summary:'Message 1', detail:'PrimeVue rocks'});
-        this.msgs.push({severity:'info', summary:'Message 2', detail:'PrimeNG rocks'});
-        this.msgs.push({severity:'info', summary:'Message 3', detail:'PrimeReact rocks'});
+        this.msgs.push({severity:'info', summary:'Message 1', detail:'VueJS rocks'});
+        this.msgs.push({severity:'info', summary:'Message 2', detail:'Angular rocks'});
+        this.msgs.push({severity:'info', summary:'Message 3', detail:'React rocks'});
       },
       showSticky () {
         this.msgs1 = [];
         this.msgs1.push({severity:'success', summary:'Error Message', detail:'Sticky message'});
-        this.msgs1.push({severity:'info', summary:'Message 1', detail:'PrimeVue rocks'});
-        this.msgs1.push({severity:'warn', summary:'Message 2', detail:'PrimeNG rocks'});
-        this.msgs1.push({severity:'error', summary:'Message 3', detail:'PrimeReact rocks'});
+        this.msgs1.push({severity:'info', summary:'Message 1', detail:'VueJS rocks'});
+        this.msgs1.push({severity:'warn', summary:'Message 2', detail:'Angular rocks'});
+        this.msgs1.push({severity:'error', summary:'Message 3', detail:'React rocks'});
       },
       clear () {
         this.msgs = [];
