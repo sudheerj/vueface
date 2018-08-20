@@ -1,5 +1,5 @@
 # VueFace
-[![Dependency Status][daviddm-image]][daviddm-url] ![Crates.io](https://img.shields.io/github/license/mashape/apistatus.svg)
+<!---[![Dependency Status][daviddm-image]][daviddm-url] ![Crates.io](https://img.shields.io/github/license/mashape/apistatus.svg) --->
 
 > Component library for VueFace framework
 
