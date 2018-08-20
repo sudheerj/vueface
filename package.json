@@ -14,7 +14,7 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
     "lint-fix": "eslint --fix --ext .js,.vue src test/unit/specs",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js -b gh-pages"
   },
   "dependencies": {
     "vue": "^2.5.17"
