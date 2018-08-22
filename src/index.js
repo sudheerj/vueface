@@ -30,7 +30,7 @@ import BlockUI from './components/blockui/blockui.vue';
 import SideBar from './components/sidebar/sidebar.vue';
 import BackToTop from './components/backtotop/backtotop.vue';
 import CodeHighlighter from './components/codehighlighter/codehighlighter.vue';
-import SelectButton from './components/selectButton/selectbutton.vue';
+import SelectButton from './components/selectbutton/selectbutton.vue';
 import ColorPicker from './components/colorpicker/colorpicker.vue';
 import Badge from './components/badge/badge.vue';
 import Card from './components/card/card.vue';
