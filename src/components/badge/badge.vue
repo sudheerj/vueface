@@ -12,7 +12,7 @@
 <style lang="css" src="./badge.css"></style>
 <script>
   export default {
-    name: 'p-badge',
+    name: 'vf-badge',
     props: {
       value: {
 

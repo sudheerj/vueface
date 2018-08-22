@@ -9,12 +9,12 @@
       <div id="wrapper">
 
         <h3 class="first">Inline</h3>
-        <p-colorPicker v-model="color1" :inline="true"></p-colorPicker>
+        <vf-colorPicker v-model="color1" :inline="true"></vf-colorPicker>
 
         <p style="margin-top:.5em">Selected Color: <span :style="{display:'inline-block',width:'32px',height:'32px','vertical-align':'middle', backgroundColor: color1}" ></span> {{color1}} </p>
 
         <h3>Overlay</h3>
-        <p-colorPicker v-model="color2"></p-colorPicker>
+        <vf-colorPicker v-model="color2"></vf-colorPicker>
 
         <p style="margin-top:.5em">Selected Color: <span :style="{'color':color2}">{{color2}}</span></p>
 

@@ -8,43 +8,43 @@
       </div>
       <div id="wrapper">
 
-        <p-sidebar :visible="visibleSidebar1" baseZIndex="10000">
+        <vf-sidebar :visible="visibleSidebar1" baseZIndex="10000">
           <h1 style="font-weight:normal">Left Sidebar</h1>
-          <p-button type="button" @click="visibleSidebar1 = false" label="Save" class="ui-button-success"></p-button>
-          <p-button type="button" @click="visibleSidebar1 = false" label="Cancel"
-                    class="ui-button-secondary"></p-button>
-        </p-sidebar>
+          <vf-button type="button" @click="visibleSidebar1 = false" label="Save" class="ui-button-success"></vf-button>
+          <vf-button type="button" @click="visibleSidebar1 = false" label="Cancel"
+                    class="ui-button-secondary"></vf-button>
+        </vf-sidebar>
 
-        <p-sidebar :visible="visibleSidebar2" position="right" baseZIndex="10000">
+        <vf-sidebar :visible="visibleSidebar2" position="right" baseZIndex="10000">
             <h1 style="font-weight:normal">Right Sidebar</h1>
-        <p-button type="button" @click="visibleSidebar2 = false" label="Save" class="ui-button-success"></p-button>
-        <p-button type="button" @click="visibleSidebar2 = false" label="Cancel" class="ui-button-secondary"></p-button>
-        </p-sidebar>
+        <vf-button type="button" @click="visibleSidebar2 = false" label="Save" class="ui-button-success"></vf-button>
+        <vf-button type="button" @click="visibleSidebar2 = false" label="Cancel" class="ui-button-secondary"></vf-button>
+        </vf-sidebar>
 
-        <p-sidebar :visible="visibleSidebar3" position="top" baseZIndex="10000">
+        <vf-sidebar :visible="visibleSidebar3" position="top" baseZIndex="10000">
             <h1 style="font-weight:normal">Top Sidebar</h1>
-        <p-button type="button" @click="visibleSidebar3 = false" label="Save" class="ui-button-success"></p-button>
-        <p-button type="button" @click="visibleSidebar3 = false" label="Cancel" class="ui-button-secondary"></p-button>
-        </p-sidebar>
+        <vf-button type="button" @click="visibleSidebar3 = false" label="Save" class="ui-button-success"></vf-button>
+        <vf-button type="button" @click="visibleSidebar3 = false" label="Cancel" class="ui-button-secondary"></vf-button>
+        </vf-sidebar>
 
-        <p-sidebar :visible="visibleSidebar4" position="bottom" baseZIndex="10000">
+        <vf-sidebar :visible="visibleSidebar4" position="bottom" baseZIndex="10000">
           <h1 style="font-weight:normal">Bottom Sidebar</h1>
-          <p-button type="button" @click="visibleSidebar4 = false" label="Save" class="ui-button-success"></p-button>
-          <p-button type="button" @click="visibleSidebar4 = false" label="Cancel"
-                    class="ui-button-secondary"></p-button>
-        </p-sidebar>
+          <vf-button type="button" @click="visibleSidebar4 = false" label="Save" class="ui-button-success"></vf-button>
+          <vf-button type="button" @click="visibleSidebar4 = false" label="Cancel"
+                    class="ui-button-secondary"></vf-button>
+        </vf-sidebar>
 
-        <p-sidebar :visible="visibleSidebar5" :fullScreen="true" baseZIndex="10000">
+        <vf-sidebar :visible="visibleSidebar5" :fullScreen="true" baseZIndex="10000">
             <h1 style="font-weight:normal">Full Screen Sidebar</h1>
-        <p-button type="button" @click="visibleSidebar5 = false" label="Save" class="ui-button-success"></p-button>
-        <p-button type="button" @click="visibleSidebar5 = false" label="Cancel" class="ui-button-secondary"></p-button>
-        </p-sidebar>
+        <vf-button type="button" @click="visibleSidebar5 = false" label="Save" class="ui-button-success"></vf-button>
+        <vf-button type="button" @click="visibleSidebar5 = false" label="Cancel" class="ui-button-secondary"></vf-button>
+        </vf-sidebar>
 
-        <p-button type="button" @click="visibleSidebar1 = true" icon="fa-arrow-right"></p-button>
-        <p-button type="button" @click="visibleSidebar2 = true" icon="fa-arrow-left"></p-button>
-        <p-button type="button" @click="visibleSidebar3 = true" icon="fa-arrow-down"></p-button>
-        <p-button type="button" @click="visibleSidebar4 = true" icon="fa-arrow-up"></p-button>
-        <p-button type="button" @click="visibleSidebar5 = true" icon="fa-arrows-alt"></p-button>
+        <vf-button type="button" @click="visibleSidebar1 = true" icon="fa-arrow-right"></vf-button>
+        <vf-button type="button" @click="visibleSidebar2 = true" icon="fa-arrow-left"></vf-button>
+        <vf-button type="button" @click="visibleSidebar3 = true" icon="fa-arrow-down"></vf-button>
+        <vf-button type="button" @click="visibleSidebar4 = true" icon="fa-arrow-up"></vf-button>
+        <vf-button type="button" @click="visibleSidebar5 = true" icon="fa-arrows-alt"></vf-button>
 
 
       </div>

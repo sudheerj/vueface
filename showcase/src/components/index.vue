@@ -39,7 +39,8 @@ new Vue({
     &lt;p-button&gt;Testing&lt;/p-button&gt;
   &lt;/div&gt;
 &lt;/template&gt;
-
+&lt;style id="current-theme" lang="css" src="../node_modules/vueface/src/assets/themes/omega/theme.css"&gt;&lt;/style&gt;
+&lt;style lang="css" src="../node_modules/vueface/src/assets/vue-face.css"&gt;&lt;/style&gt;
 &lt;script&gt;
 export default {
   name: &#x27;app&#x27;

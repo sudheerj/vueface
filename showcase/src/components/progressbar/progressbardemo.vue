@@ -10,14 +10,14 @@
         <h2>Features</h2>
         <h3>1. Dynamic</h3>
         The progress bar is displayed with dynamic value
-        <p-progressBar :value="value"></p-progressBar>
+        <vf-progressBar :value="value"></vf-progressBar>
         <h3>2. Static</h3>
         The progress bar is displayed with static value
-       <p-progressBar :value="50"></p-progressBar>
+       <vf-progressBar :value="50"></vf-progressBar>
 
         <h3>3. Indeterminate</h3>
         The progress bar displayed without any bound using mode attribute instead of showing the value between 0 and 100
-        <p-progressBar mode="indeterminate" :style="{'height': '6px'}"></p-progressBar>
+        <vf-progressBar mode="indeterminate" :style="{'height': '6px'}"></vf-progressBar>
       </div>
   </div>
 </template>

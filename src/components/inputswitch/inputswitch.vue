@@ -18,7 +18,7 @@
 <script>
   import domHandler from '../dom/domhandler';
   export default {
-    name: 'p-inputSwitch',
+    name: 'vf-inputSwitch',
     data: function () {
       return {
         checked: false,

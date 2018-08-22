@@ -8,27 +8,27 @@
       </div>
       <div id="wrapper">
 
-        <p-messages :value="msgs"></p-messages>
+        <vf-messages :value="msgs"></vf-messages>
 
         <h2>Features</h2>
 
         <h3 class="first">1. Basic</h3>
         <p>The list of messages displayed in one place using p-messages component.</p>
         <div>
-          <p-button type="button"  @click="showSuccess()" label="Success" class="ui-button-success"></p-button>
-          <p-button type="button"  @click="showInfo()" label="Info" class="ui-button-info"></p-button>
-          <p-button type="button"  @click="showWarn()" label="Warn" class="ui-button-warning"></p-button>
-          <p-button type="button"  @click="showError()" label="Error" class="ui-button-danger"></p-button>
-          <p-button type="button"  @click="showMultiple()" label="Multiple"></p-button>
-          <p-button type="button"  @click="clear()" icon="fa-close"  label="Clear"></p-button>
+          <vf-button type="button"  @click="showSuccess()" label="Success" class="ui-button-success"></vf-button>
+          <vf-button type="button"  @click="showInfo()" label="Info" class="ui-button-info"></vf-button>
+          <vf-button type="button"  @click="showWarn()" label="Warn" class="ui-button-warning"></vf-button>
+          <vf-button type="button"  @click="showError()" label="Error" class="ui-button-danger"></vf-button>
+          <vf-button type="button"  @click="showMultiple()" label="Multiple"></vf-button>
+          <vf-button type="button"  @click="clear()" icon="fa-close"  label="Clear"></vf-button>
         </div>
 
         <h3>2. Inline Message CSS</h3>
         <p>CSS helpers to display inline messages mostly within forms.</p>
-        <p-message severity="info" text="VueFace Rocks"></p-message>
-        <p-message severity="success" text="Record Saved"></p-message>
-        <p-message severity="warn" text="Are you sure?"></p-message>
-        <p-message severity="error" text="Field is required"></p-message>
+        <vf-message severity="info" text="VueFace Rocks"></vf-message>
+        <vf-message severity="success" text="Record Saved"></vf-message>
+        <vf-message severity="warn" text="Are you sure?"></vf-message>
+        <vf-message severity="error" text="Field is required"></vf-message>
 
       </div>
   </div>

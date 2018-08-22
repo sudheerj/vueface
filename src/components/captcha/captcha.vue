@@ -4,7 +4,7 @@
 <script>
   let _instance = null;
   export default {
-    name: 'p-captcha',
+    name: 'vf-captcha',
     data: function () {
       return {
         _instance

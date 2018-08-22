@@ -14,20 +14,20 @@
 
         <p>Captcha is used with a siteKey and a callback to verify the response..</p>
 
-        <p-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" ></p-captcha>
+        <vf-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" ></vf-captcha>
 
         <h3>2. Verification</h3>
 
         <p>To ensure if a response token is valid then verification against recaptcha api needs to be done at backend using onResponse event.</p>
         <p v-if="verified">The verification is successful</p>
 
-        <p-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" @response="showResponse($event)"></p-captcha>
+        <vf-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" @response="showResponse($event)"></vf-captcha>
 
         <h3>3. Expiration</h3>
 
         <p>The recaptcha response expires and the user needs to solve a new CAPTCHA acknowledge by onExpire event.</p>
 
-        <p-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" @expire="onExpire($event)"></p-captcha>
+        <vf-captcha siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA" @expire="onExpire($event)"></vf-captcha>
         <p v-if="expired">The captcha is expired</p>
 
       </div>
@@ -39,7 +39,7 @@
     name: 'captchademo',
     data () {
       return {
-        verified: false, 
+        verified: false,
         expired: false
       };
     },

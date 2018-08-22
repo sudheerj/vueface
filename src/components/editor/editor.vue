@@ -52,7 +52,7 @@
   import Quill from '../../../node_modules/quill/dist/quill.js';
   import domHandler from '../dom/domhandler.js';
   export default {
-    name: 'p-editor',
+    name: 'vf-editor',
     data: function () {
       return {
         value: null,

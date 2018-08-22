@@ -12,15 +12,15 @@
           <label for="">
             <strong>Offset</strong>
           </label><br>
-          <p-inputText type="text" v-model="offset" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+          <vf-inputText type="text" v-model="offset" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
         </div>
         <div class="form-control">
           <label for="">
             <strong>Text</strong>
           </label><br>
-          <p-inputText type="text" v-model="text"/>
+          <vf-inputText type="text" v-model="text"/>
         </div>
-        <p-backToTop :offset="offset" :text="text"></p-backToTop>
+        <vf-backToTop :offset="offset" :text="text"></vf-backToTop>
       </div>
   </div>
 </template>

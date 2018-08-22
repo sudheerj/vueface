@@ -6,7 +6,7 @@
 <style lang="css" src="./accordion.css"></style>
 <script>
   export default {
-    name: 'p-accordion',
+    name: 'vf-accordion',
     data: function () {
       return {
         _activeIndex: 0,

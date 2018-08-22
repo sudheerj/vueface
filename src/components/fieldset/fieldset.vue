@@ -37,7 +37,7 @@
 <script>
   let idx = 0;
   export default {
-    name: 'p-fieldset',
+    name: 'vf-fieldset',
     data: function () {
       return {
         id: `ui-fieldset-${idx++}`,

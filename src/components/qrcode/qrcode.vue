@@ -7,7 +7,7 @@
 <script>
   import Qrious from 'qrious';
   export default {
-    name: 'p-qrcode',
+    name: 'vf-qrcode',
     data () {
       return {
         qrcode: null

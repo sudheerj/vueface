@@ -14,11 +14,11 @@
 
         <p>The icon of a button is specified using icon attribute and position is customized using iconPos attribute. The default icon position is left. To display only an icon, leave label as undefined.</p>
 
-        <p-button type="button" icon="fa-check" label="VueJS"></p-button>
+        <vf-button type="button" icon="fa-check" label="VueJS"></vf-button>
 
-        <p-button type="button" icon="fa-check" iconPos="right" label="VueJS"></p-button>
+        <vf-button type="button" icon="fa-check" iconPos="right" label="VueJS"></vf-button>
 
-        <p-button type="button" icon="fa-close"></p-button>
+        <vf-button type="button" icon="fa-close"></vf-button>
 
         <h3>2. Severity Buttons</h3>
 
@@ -31,27 +31,27 @@
           <li>.ui-button-danger</li>
         </ul>
 
-        <p-button type="button" label="Primary"></p-button>
+        <vf-button type="button" label="Primary"></vf-button>
 
-        <p-button type="button" label="Secondary" class="ui-button-secondary"></p-button>
+        <vf-button type="button" label="Secondary" class="ui-button-secondary"></vf-button>
 
-        <p-button type="button" label="Success" class="ui-button-success"></p-button>
+        <vf-button type="button" label="Success" class="ui-button-success"></vf-button>
 
-        <p-button type="button" label="Info" class="ui-button-info"></p-button>
+        <vf-button type="button" label="Info" class="ui-button-info"></vf-button>
 
-        <p-button type="button" label="Warning" class="ui-button-warning"></p-button>
+        <vf-button type="button" label="Warning" class="ui-button-warning"></vf-button>
 
-        <p-button type="button" label="Danger" class="ui-button-danger"></p-button>
+        <vf-button type="button" label="Danger" class="ui-button-danger"></vf-button>
 
         <h3>3. Events</h3>
         <p>The button component supports click event</p>
 
-        <p-button type="button" label="Click" @click="clickMe"></p-button>
+        <vf-button type="button" label="Click" @click="clickMe"></vf-button>
 
         <h3>4. Disabled</h3>
         <p>The component disabled using disabled attribute</p>
 
-        <p-button type="button" icon="fa-check" :disabled="true" label="Disabled"></p-button>
+        <vf-button type="button" icon="fa-check" :disabled="true" label="Disabled"></vf-button>
 
       </div>
   </div>

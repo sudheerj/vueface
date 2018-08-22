@@ -9,7 +9,7 @@
       <div id="wrapper">
 
         <h3 class="first">Different slots</h3>
-        <p-card>
+        <vf-card>
           <div slot="header">
             Card header
           </div>
@@ -19,7 +19,7 @@
           <div slot="footer">
             Card footer
           </div>
-        </p-card>
+        </vf-card>
 
       </div>
   </div>

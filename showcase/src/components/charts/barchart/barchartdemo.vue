@@ -9,7 +9,7 @@
       <div id="wrapper">
 
         <p>Define the type as bar(type="bar").</p>
-        <p-charts type="bar" :data="barData" width="100" height="20"></p-charts>
+        <vf-charts type="bar" :data="barData" width="100" height="20"></vf-charts>
 
       </div>
   </div>

@@ -10,7 +10,7 @@
 <script>
   import domHandler from '../dom/domhandler';
   export default {
-    name: 'p-password',
+    name: 'vf-password',
     props: {
       value: String,
       promptLabel: {

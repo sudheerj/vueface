@@ -8,7 +8,7 @@
       </div>
       <div id="wrapper">
         <p>Define the type as horizontalBar(type="horizontalBar").</p>
-        <p-charts type="horizontalBar" :data="horizontalBarData" width="100" height="20">></p-charts>
+        <vf-charts type="horizontalBar" :data="horizontalBarData" width="100" height="20">></vf-charts>
       </div>
   </div>
 </template>

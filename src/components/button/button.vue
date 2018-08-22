@@ -9,7 +9,7 @@
 <style lang="css" src="./button.css"></style>
 <script>
   export default {
-    name: 'p-button',
+    name: 'vf-button',
     data: function () {
       return {
         cornerStyleClass: 'ui-corner-all'

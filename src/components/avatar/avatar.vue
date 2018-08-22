@@ -10,7 +10,7 @@
 <style lang="css" src="./avatar.css"></style>
 <script>
   export default {
-    name: 'p-avatar',
+    name: 'vf-avatar',
     props: {
       icon: {
         type: String,

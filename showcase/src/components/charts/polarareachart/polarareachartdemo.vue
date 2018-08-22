@@ -8,7 +8,7 @@
       </div>
       <div id="wrapper">
         <p>Define the type as polarData(type="polarData").</p>
-        <p-charts type="polarArea" :data="polarData" width="100" height="20">></p-charts>
+        <vf-charts type="polarArea" :data="polarData" width="100" height="20">></vf-charts>
       </div>
   </div>
 </template>

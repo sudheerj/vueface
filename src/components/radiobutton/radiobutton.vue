@@ -9,27 +9,27 @@
                  :id="inputId"
                  :name="name"
                  :tabindex="tabindex"
-                 :disabled="disabled"  
+                 :disabled="disabled"
                  v-model="newModel"
                  :value="value"
-                 v-bind="$attrs" 
+                 v-bind="$attrs"
                  @focus="onFocus($event)"
                  @blur="onBlur($event)">
       </div>
       <div @click="!disabled && select()"
            :class="[
-            'ui-radiobutton-box ui-widget ui-state-default',{ 
+            'ui-radiobutton-box ui-widget ui-state-default',{
             'ui-state-active': checked,
             'ui-state-disabled': disabled,
-            'ui-state-focus': focused 
+            'ui-state-focus': focused
           }]">
-          <span class="ui-radiobutton-icon ui-clickable" 
+          <span class="ui-radiobutton-icon ui-clickable"
                 :class="{'fa fa-circle': checked}">
           </span>
       </div>
     </div>
-    <label class="ui-radiobutton-label" 
-           @click="select" 
+    <label class="ui-radiobutton-label"
+           @click="select"
            :class="{
             'ui-label-active': checked,
             'ui-label-disabled': disabled,
@@ -44,7 +44,7 @@
 <style lang="css" src="./radiobutton.css"></style>
 <script>
   export default {
-    name: 'p-radioButton',
+    name: 'vf-radioButton',
     inheritAttrs: false,
     model: {
       prop: 'model',

@@ -7,19 +7,19 @@
         </div>
       </div>
       <div id="wrapper">
-        <p-growl :value="msgs" :growlStyle="{top:'100px'}"></p-growl>
-        <p-growl :value="msgs1" :growlStyle="{top:'100px'}" :sticky="true"></p-growl>
+        <vf-growl :value="msgs" :growlStyle="{top:'100px'}"></vf-growl>
+        <vf-growl :value="msgs1" :growlStyle="{top:'100px'}" :sticky="true"></vf-growl>
 
         <h3 class="first"></h3>
         <p>The notifications displayed in one place using p-growl component.</p>
         <div>
-          <p-button type="button"  @click="showSuccess()" label="Success" class="ui-button-success"></p-button>
-          <p-button type="button"  @click="showInfo()" label="Info" class="ui-button-info"></p-button>
-          <p-button type="button"  @click="showWarn()" label="Warn" class="ui-button-warning"></p-button>
-          <p-button type="button"  @click="showError()" label="Error" class="ui-button-danger"></p-button>
-          <p-button type="button"  @click="showMultiple()" label="Multiple"></p-button>
-          <p-button type="button"  @click="showSticky()" label="Sticky"></p-button>
-          <p-button type="button"  @click="clear()" icon="fa-close"  label="Clear"></p-button>
+          <vf-button type="button"  @click="showSuccess()" label="Success" class="ui-button-success"></vf-button>
+          <vf-button type="button"  @click="showInfo()" label="Info" class="ui-button-info"></vf-button>
+          <vf-button type="button"  @click="showWarn()" label="Warn" class="ui-button-warning"></vf-button>
+          <vf-button type="button"  @click="showError()" label="Error" class="ui-button-danger"></vf-button>
+          <vf-button type="button"  @click="showMultiple()" label="Multiple"></vf-button>
+          <vf-button type="button"  @click="showSticky()" label="Sticky"></vf-button>
+          <vf-button type="button"  @click="clear()" icon="fa-close"  label="Clear"></vf-button>
         </div>
 
       </div>

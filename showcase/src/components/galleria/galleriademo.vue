@@ -14,7 +14,7 @@
 
         <p>Galleria requires a set of images to display. Images attribute defines the path of the image whereas title and alt attributes are used in the caption section to display summary and description about an image.</p>
 
-        <p-galleria :images="images" :panelWidth="500" :panelHeight="313" :showCaption="true"></p-galleria>
+        <vf-galleria :images="images" :panelWidth="500" :panelHeight="313" :showCaption="true"></vf-galleria>
 
       </div>
   </div>

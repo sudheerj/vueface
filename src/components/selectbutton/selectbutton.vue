@@ -16,8 +16,8 @@
                    type="checkbox"
                    :value="option.value"
                    @focus="onFocus($event)"
-                   @blur="onBlur($event)" 
-                   :tabindex="tabindex" 
+                   @blur="onBlur($event)"
+                   :tabindex="tabindex"
                    :disabled="disabled" />
         </div>
     </div>
@@ -26,7 +26,7 @@
 <style lang="css" src="./selectbutton.css"></style>
 <script>
 export default {
-  name: 'p-selectButton',
+  name: 'vf-selectButton',
   props: {
     value: {},
     options: {

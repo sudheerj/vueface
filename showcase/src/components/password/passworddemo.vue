@@ -9,7 +9,7 @@
       <div id="wrapper">
 
         <h3 class="first">Basic</h3>
-        <p-password />
+        <vf-password />
 
       </div>
   </div>

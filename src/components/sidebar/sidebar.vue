@@ -25,7 +25,7 @@
 <script>
   import domHandler from '../dom/domhandler.js';
   export default {
-    name: 'p-sidebar',
+    name: 'vf-sidebar',
     props: {
       position: {
         type: String,

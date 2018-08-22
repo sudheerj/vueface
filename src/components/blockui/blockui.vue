@@ -7,7 +7,7 @@
 <script>
   import domHandler from '../dom/domhandler.js';
   export default {
-    name: 'p-blockUI',
+    name: 'vf-blockUI',
     data: function () {
       return {
         _blocked: false,

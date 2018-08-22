@@ -9,7 +9,7 @@
       <div id="wrapper">
 
         <p>Define the type as bubble(type="bubble").</p>
-        <p-charts type="bubble" :data="bubbleData" width="100" height="20"></p-charts>
+        <vf-charts type="bubble" :data="bubbleData" width="100" height="20"></vf-charts>
 
       </div>
   </div>

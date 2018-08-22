@@ -12,7 +12,7 @@
 <style lang="css" src="./inplace.css"></style>
 <script>
   export default {
-    name: 'p-inplace',
+    name: 'vf-inplace',
     props: {
       active: Boolean,
       closable: Boolean,

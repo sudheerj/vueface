@@ -14,13 +14,13 @@
 
         <p>The inputswitch component displays on and off toggleable state.</p>
 
-        <p-inputSwitch v-model="checked1"></p-inputSwitch>
+        <vf-inputSwitch v-model="checked1"></vf-inputSwitch>
         <h3>{{checked1}}</h3>
 
         <h3>2. Labels</h3>
 
         <p>The inputswitch component displays customized labels for on and off toggleable state.</p>
-        <p-inputSwitch onLabel="Yes" offLabel="No" v-model="checked2"></p-inputSwitch>
+        <vf-inputSwitch onLabel="Yes" offLabel="No" v-model="checked2"></vf-inputSwitch>
         <h3>Labels - <span> {{checked2}} </span></h3>
 
       </div>

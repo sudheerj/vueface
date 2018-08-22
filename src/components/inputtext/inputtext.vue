@@ -8,7 +8,7 @@
 <style lang="css" src="./inputtext.css"></style>
 <script>
 export default {
-  name: 'p-inputText',
+  name: 'vf-inputText',
   props: {
     value: String
   },

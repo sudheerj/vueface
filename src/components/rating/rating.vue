@@ -17,7 +17,7 @@
   let starsArray = [];
   let value = 0;
   export default {
-    name: 'p-rating',
+    name: 'vf-rating',
     data: function () {
       return {
         starsArray, value

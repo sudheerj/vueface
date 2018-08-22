@@ -18,7 +18,7 @@
 <script>
   import domHandler from '../dom/domhandler.js';
   export default {
-    name: 'p-terminal',
+    name: 'vf-terminal',
     data: function () {
       return {
         commands: [],

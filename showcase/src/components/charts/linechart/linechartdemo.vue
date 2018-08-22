@@ -8,7 +8,7 @@
       </div>
       <div id="wrapper">
         <p>Define the type as lineData(type="lineData").</p>
-        <p-charts type="line" :data="lineData" width="100" height="20">></p-charts>
+        <vf-charts type="line" :data="lineData" width="100" height="20">></vf-charts>
       </div>
   </div>
 </template>

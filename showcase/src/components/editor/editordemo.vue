@@ -14,14 +14,14 @@
 
         <p>The basic WYSIWYG editor is built for the modern web.</p>
 
-        <p-editor v-model="text1" editorStyle="height:320px"></p-editor>
+        <vf-editor v-model="text1" editorStyle="height:320px"></vf-editor>
         <p>Value: {{text1}}</p>
 
-        <p-button type="button" label="Clear" icon="fa-close" @click="text1=null"></p-button>
+        <vf-button type="button" label="Clear" icon="fa-close" @click="text1=null"></vf-button>
 
         <h3>2. Custom Toolbar</h3>
         <p>Editor customized with required toolbar option</p>
-        <p-editor v-model="text2" editorStyle="height:320px">
+        <vf-editor v-model="text2" editorStyle="height:320px">
           <div slot="toolbar">
             <span class="ql-formats">
                 <button class="ql-bold" aria-label="Bold"></button>
@@ -29,10 +29,10 @@
                 <button class="ql-underline" aria-label="Underline"></button>
             </span>
           </div>
-        </p-editor>
+        </vf-editor>
         <p>Value: {{text2}}</p>
 
-        <p-button type="button" label="Clear" icon="fa-close" @click="text2=null"></p-button>
+        <vf-button type="button" label="Clear" icon="fa-close" @click="text2=null"></vf-button>
 
       </div>
   </div>

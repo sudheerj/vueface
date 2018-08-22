@@ -8,7 +8,7 @@
 <style lang="css" src="./progressbar.css"></style>
 <script>
   export default {
-    name: 'p-progressBar',
+    name: 'vf-progressBar',
     data: function () {
       return {};
     },

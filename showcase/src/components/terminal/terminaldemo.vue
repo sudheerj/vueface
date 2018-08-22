@@ -12,7 +12,7 @@
 
         <h3>1. Interactive Terminal</h3>
 
-        <p-terminal @handler="onCommand($event)" :response="response" welcomeMessage="Welcome to VueFace" prompt="VueFace $"></p-terminal>
+        <vf-terminal @handler="onCommand($event)" :response="response" welcomeMessage="Welcome to VueFace" prompt="VueFace $"></vf-terminal>
 
       </div>
   </div>

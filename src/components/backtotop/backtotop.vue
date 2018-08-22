@@ -22,7 +22,7 @@
 </style>
 <script>
   export default {
-    name: 'p-backToTop',
+    name: 'vf-backToTop',
     props: {
       text: {
         type: String,

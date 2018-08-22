@@ -39,7 +39,7 @@
   let idx = 0;
 
   export default {
-    name: 'p-panel',
+    name: 'vf-panel',
     data: function () {
       return {
         animating: false,

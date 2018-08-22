@@ -8,10 +8,10 @@
       </div>
       <div id="wrapper">
         <h2>Image</h2>
-        <p-avatar src="https://placekitten.com/500/350" color="blue" backgroundColor="orange" :size="30" :iconSize="20" imageClass="imageClass">Tom</p-avatar>
+        <vf-avatar src="https://placekitten.com/500/350" color="blue" backgroundColor="orange" :size="30" :iconSize="20" imageClass="imageClass">Tom</vf-avatar>
 
         <h2>Icon</h2>
-        <p-avatar icon="fa-github-square" color="blue" backgroundColor="orange" :size="30" :iconSize="20">Github</p-avatar>
+        <vf-avatar icon="fa-github-square" color="blue" backgroundColor="orange" :size="30" :iconSize="20">Github</vf-avatar>
 
       </div>
   </div>

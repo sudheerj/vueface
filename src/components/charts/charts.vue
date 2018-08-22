@@ -8,7 +8,7 @@
   var Chart = require('../../../node_modules/chart.js/dist/Chart.js');
 
   export default {
-    name: 'p-charts',
+    name: 'vf-charts',
     data: function () {
       return {
       };

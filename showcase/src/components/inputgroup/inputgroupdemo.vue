@@ -13,14 +13,14 @@
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-              <p-inputText type="text" placeholder="Username"/>
+              <vf-inputText type="text" placeholder="Username"/>
             </div>
           </div>
 
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon">$</span>
-              <p-inputText type="text" placeholder="Price"/>
+              <vf-inputText type="text" placeholder="Price"/>
               <span class="ui-inputgroup-addon">.00</span>
             </div>
           </div>
@@ -28,7 +28,7 @@
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon">www</span>
-              <p-inputText type="text" placeholder="Website"/>
+              <vf-inputText type="text" placeholder="Website"/>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
             <div class="ui-inputgroup">
               <span class="ui-inputgroup-addon"><i class="fa fa-credit-card"></i></span>
               <span class="ui-inputgroup-addon"><i class="fa fa-cc-visa"></i></span>
-              <p-inputText type="text" placeholder="Price"/>
+              <vf-inputText type="text" placeholder="Price"/>
               <span class="ui-inputgroup-addon">$</span>
               <span class="ui-inputgroup-addon">.00</span>
             </div>
@@ -50,23 +50,23 @@
         <div class="ui-g ui-fluid">
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
-              <p-button type="button" label="Search"></p-button>
-              <p-inputText type="text"  placeholder="Keyword"/>
+              <vf-button type="button" label="Search"></vf-button>
+              <vf-inputText type="text"  placeholder="Keyword"/>
             </div>
           </div>
 
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
-              <p-inputText type="text" placeholder="Keyword"/>
-              <p-button type="button" icon="fa-superpowers" class="ui-button-secondary"></p-button>
+              <vf-inputText type="text" placeholder="Keyword"/>
+              <vf-button type="button" icon="fa-superpowers" class="ui-button-secondary"></vf-button>
             </div>
           </div>
 
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
               <button type="button" icon="fa-check" class="ui-button-success"></button>
-              <p-inputText type="text" placeholder="Vote"/>
-              <p-button type="button" icon="fa-close" class="ui-button-danger"></p-button>
+              <vf-inputText type="text" placeholder="Vote"/>
+              <vf-button type="button" icon="fa-close" class="ui-button-danger"></vf-button>
             </div>
           </div>
         </div>
@@ -75,23 +75,23 @@
         <div class="ui-g ui-fluid">
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
-              <span class="ui-inputgroup-addon"><p-checkbox></p-checkbox></span>
-              <p-inputText type="text" placeholder="Username"/>
+              <span class="ui-inputgroup-addon"><vf-checkbox></vf-checkbox></span>
+              <vf-inputText type="text" placeholder="Username"/>
             </div>
           </div>
 
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
-              <p-inputText type="text" placeholder="Price"/>
-              <span class="ui-inputgroup-addon"><p-radioButton></p-radioButton></span>
+              <vf-inputText type="text" placeholder="Price"/>
+              <span class="ui-inputgroup-addon"><vf-radioButton></vf-radioButton></span>
             </div>
           </div>
 
           <div class="ui-g-12 ui-md-4">
             <div class="ui-inputgroup">
-              <span class="ui-inputgroup-addon"><p-checkbox></p-checkbox></span>
-              <p-inputText type="text" placeholder="Website"/>
-              <span class="ui-inputgroup-addon"><p-radioButton></p-radioButton></span>
+              <span class="ui-inputgroup-addon"><vf-checkbox></vf-checkbox></span>
+              <vf-inputText type="text" placeholder="Website"/>
+              <span class="ui-inputgroup-addon"><vf-radioButton></vf-radioButton></span>
             </div>
           </div>
         </div>

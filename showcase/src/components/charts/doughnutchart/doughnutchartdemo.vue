@@ -8,7 +8,7 @@
       </div>
       <div id="wrapper">
         <p>Define the type as doughnut(type="doughnut").</p>
-        <p-charts type="doughnut" :data="doughnutData" width="100" height="20">></p-charts>
+        <vf-charts type="doughnut" :data="doughnutData" width="100" height="20">></vf-charts>
       </div>
   </div>
 </template>

@@ -12,7 +12,7 @@
 <script>
   import domHandler from '../dom/domhandler';
   export default {
-    name: 'p-scrollPanel',
+    name: 'vf-scrollPanel',
     props: {
       scrollpanelStyle: {
         type: Object,

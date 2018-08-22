@@ -8,7 +8,7 @@
 <style lang="css" src="./inputtextarea.css"></style>
 <script>
 export default {
-  name: 'p-inputTextarea',
+  name: 'vf-inputTextarea',
   props: {
     value: String,
     autoResize: Boolean,

@@ -5,7 +5,7 @@
 <script>
   var jQuery: null;
   export default {
-    name: 'p-schedule',
+    name: 'vf-schedule',
     props: {
       value: String,
       events: {

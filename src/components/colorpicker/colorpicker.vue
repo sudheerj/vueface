@@ -3,19 +3,19 @@
       'ui-colorpicker-overlay': !inline,
       'ui-colorpicker-dragging': colorDragging || hueDragging
     }]">
-    <input ref="input" type="text" v-if="!inline" 
-        class="ui-colorpicker-preview ui-inputtext ui-state-default ui-corner-all" 
+    <input ref="input" type="text" v-if="!inline"
+        class="ui-colorpicker-preview ui-inputtext ui-state-default ui-corner-all"
         readonly :class="{'ui-state-disabled': disabled}"
         @click="onInputClick"
-        @keydown="onInputKeydown($event)" 
+        @keydown="onInputKeydown($event)"
         :id="inputId" :tabindex="tabindex" :disabled="disabled"
         :style="{'background-color': inputBgColor}" />
     <transition name="slide">
-      <div ref="panel" 
+      <div ref="panel"
           :class="['ui-colorpicker-panel ui-corner-all', {
             'ui-shadow': !inline,
             'ui-state-disabled': disabled
-          }]" 
+          }]"
           @click="onPanelClick"
           v-show="inline || panelVisible"
           :style="{'position': inline ? '' : 'absolute'}">
@@ -26,7 +26,7 @@
                       <div ref="colorHandle" class="ui-colorpicker-color-handle"></div>
                   </div>
               </div>
-              <div ref="hue" class="ui-colorpicker-hue" 
+              <div ref="hue" class="ui-colorpicker-hue"
                   @mousedown="onHueMousedown($event)">
                   <div ref="hueHandle" class="ui-colorpicker-hue-handle"></div>
               </div>
@@ -50,7 +50,7 @@
 <script>
   import domHandler from '../dom/domhandler';
   export default {
-    name: 'p-colorPicker',
+    name: 'vf-colorPicker',
     props: {
       value: {},
       inline: {

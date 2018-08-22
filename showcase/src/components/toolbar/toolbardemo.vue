@@ -14,22 +14,22 @@
 
         <p>Container component holds the various components where left aligned content is placed inside a div having .ui-toolbar-group-left class and similarly .ui-toolbar-group-right for right alignment.</p>
 
-        <p-toolbar>
+        <vf-toolbar>
           <div class="ui-toolbar-group-left">
-            <p-button type="button" label="New" icon="fa-plus"></p-button>
-            <p-button  type="button" label="Open" icon="fa-folder-open" class="ui-button-success"></p-button>
+            <vf-button type="button" label="New" icon="fa-plus"></vf-button>
+            <vf-button  type="button" label="Open" icon="fa-folder-open" class="ui-button-success"></vf-button>
 
             <i class="fa fa-bars"></i>
 
           </div>
 
           <div class="ui-toolbar-group-right">
-            <p-button  pButton type="button" icon="fa-search"></p-button>
+            <vf-button  pButton type="button" icon="fa-search"></vf-button>
             <i class="fa fa-bars"></i>
-            <p-button  pButton type="button" icon="fa-refresh"></p-button>
-            <p-button  pButton type="button" icon="fa-trash" class="ui-button-danger"></p-button>
+            <vf-button  pButton type="button" icon="fa-refresh"></vf-button>
+            <vf-button  pButton type="button" icon="fa-trash" class="ui-button-danger"></vf-button>
           </div>
-        </p-toolbar>
+        </vf-toolbar>
 
       </div>
   </div>

@@ -4,7 +4,7 @@
 <script>
   const google = window.google;
   export default {
-    name: 'p-gmap',
+    name: 'vf-gmap',
     data () {
       return {
         map: null

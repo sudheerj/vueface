@@ -14,7 +14,7 @@
 <style lang="css" src="./card.css"></style>
 <script>
   export default {
-    name: 'p-card',
+    name: 'vf-card',
     props: {
       header: {
         type: String,

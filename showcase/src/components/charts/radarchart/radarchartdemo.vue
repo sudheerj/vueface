@@ -8,7 +8,7 @@
       </div>
       <div id="wrapper">
         <p>Define the type as radarData(type="radarData").</p>
-        <p-charts type="radar" :data="radarData" width="100" height="20">></p-charts>
+        <vf-charts type="radar" :data="radarData" width="100" height="20">></vf-charts>
       </div>
   </div>
 </template>

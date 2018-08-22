@@ -10,7 +10,7 @@
 
         <div class="ui-g">
           <div class="ui-g-12 ui-md-4">
-            <p-scrollPanel :scrollpanelStyle="{'width': '100%', 'height': '200px'}">
+            <vf-scrollPanel :scrollpanelStyle="{'width': '100%', 'height': '200px'}">
               <div style="{padding:'1em',line-height:'1.5'}">
                 The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved
                 son Michael has just come home from the war, but does not intend to become part of his father's business. Through
@@ -23,10 +23,10 @@
                 and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the
                 family.
             </div>
-            </p-scrollPanel>
+            </vf-scrollPanel>
           </div>
           <div class="ui-g-12 ui-md-4">
-            <p-scrollPanel :scrollpanelStyle="{'width': '100%', 'height': '200px'}" scrollpanelStyleClass="custombar1">
+            <vf-scrollPanel :scrollpanelStyle="{'width': '100%', 'height': '200px'}" scrollpanelStyleClass="custombar1">
               <div style="{padding:'1em',line-height:'1.5'}">
                 The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved
                 son Michael has just come home from the war, but does not intend to become part of his father's business. Through
@@ -39,10 +39,10 @@
                 and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the
                 family.
             </div>
-            </p-scrollPanel>
+            </vf-scrollPanel>
           </div>
           <div class="ui-g-12 ui-md-4">
-            <p-scrollPanel :scrollpanelStyle="{'width': '100%', 'height': '200px'}" scrollpanelStyleClass="custombar2">
+            <vf-scrollPanel :scrollpanelStyle="{'width': '100%', 'height': '200px'}" scrollpanelStyleClass="custombar2">
               <div style="{padding:'1em',line-height:'1.5'}">
                 The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. His beloved
                 son Michael has just come home from the war, but does not intend to become part of his father's business. Through
@@ -55,7 +55,7 @@
                 and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the
                 family.
             </div>
-            </p-scrollPanel>
+            </vf-scrollPanel>
           </div>
         </div>
 

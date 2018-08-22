@@ -9,24 +9,24 @@
       <div id="wrapper">
 
         <h3 class="first">Basic</h3>
-        <p-inplace :closable="closable">
+        <vf-inplace :closable="closable">
     <span slot="display">
         Click to Edit
     </span>
           <span slot="content">
-            <p-inputText type="text" v-model="text"></p-inputText>
+            <vf-inputText type="text" v-model="text"></vf-inputText>
     </span>
-        </p-inplace>
+        </vf-inplace>
 
         <h3>Image</h3>
-        <p-inplace>
+        <vf-inplace>
     <span slot="display">
         <span class="fa fa-picture-o"></span><span style="margin-left:8px">View Picture</span>
     </span>
           <span slot="content" >
         <img src="../../assets/images/demo/galleria/galleria5.jpg" alt="Nature">
     </span>
-        </p-inplace>
+        </vf-inplace>
       </div>
   </div>
 </template>

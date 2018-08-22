@@ -14,22 +14,22 @@
 
         <p>Displays the google map with given options.</p>
 
-        <p-growl :value="msgs"></p-growl>
+        <vf-growl :value="msgs"></vf-growl>
 
-        <p-gmap ref="gmap" 
-          :style="{'width':'100%','min-height':'320px'}" 
+        <vf-gmap ref="gmap"
+          :style="{'width':'100%','min-height':'320px'}"
           :options="options"
           :overlays="overlays"
-          @click="handleMapClick" 
+          @click="handleMapClick"
           @overlayclick="handleOverlayClick"
           @overlaydragend="handleDragEnd">
-        </p-gmap>
-        <p-button type="button" label="Clear" icon="fa-close"
-          @click="clear()" style="margin-top:10px"></p-button>
-        <p-button type="button" label="Zoom In" icon="fa-search-plus"
-          @click="zoomIn($refs.gmap.getMap())" style="margin-top:10px"></p-button>
-        <p-button type="button" label="Zoom Out" icon="fa-search-minus"
-          @click="zoomOut($refs.gmap.getMap())" style="margin-top:10px"></p-button>
+        </vf-gmap>
+        <vf-button type="button" label="Clear" icon="fa-close"
+          @click="clear()" style="margin-top:10px"></vf-button>
+        <vf-button type="button" label="Zoom In" icon="fa-search-plus"
+          @click="zoomIn($refs.gmap.getMap())" style="margin-top:10px"></vf-button>
+        <vf-button type="button" label="Zoom Out" icon="fa-search-minus"
+          @click="zoomOut($refs.gmap.getMap())" style="margin-top:10px"></vf-button>
 
       </div>
   </div>
@@ -72,10 +72,10 @@
       addMarker () {
         this.overlays.push(new google.maps.Marker({
           position: {
-            lat: this.selectedPosition.lat(), 
+            lat: this.selectedPosition.lat(),
             lng: this.selectedPosition.lng()
-          }, 
-          title: this.markerTitle, 
+          },
+          title: this.markerTitle,
           draggable: this.draggable
         }));
         this.markerTitle = null;

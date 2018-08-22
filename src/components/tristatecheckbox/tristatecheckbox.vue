@@ -18,7 +18,7 @@
 <style lang="css" src="./tristatecheckbox.css"></style>
 <script>
   export default {
-    name: 'p-tristatecheckbox',
+    name: 'vf-tristatecheckbox',
     data: function () {
       return {
         focus: false

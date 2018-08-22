@@ -9,7 +9,7 @@
       <div id="wrapper">
 
         <h3 class="first">Customized QRCode</h3>
-        <p-qrcode value="https://github.com/sudheerj/vueface" :size="300"  background="lightblue" backgroundAlpha="0.7" foreground="black" foregroundAlpha="0.7"/>
+        <vf-qrcode value="https://github.com/sudheerj/vueface" :size="300"  background="lightblue" backgroundAlpha="0.7" foreground="black" foregroundAlpha="0.7"/>
 
       </div>
   </div>

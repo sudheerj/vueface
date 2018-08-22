@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div :style="checkboxStyle" 
-         class="ui-chkbox ui-widget" 
+    <div :style="checkboxStyle"
+         class="ui-chkbox ui-widget"
          :class="checkboxStyleClass">
       <div class="ui-helper-hidden-accessible">
-        <input ref="cb" 
+        <input ref="cb"
                type="checkbox"
                :id="inputId"
                :name="name"
@@ -17,7 +17,7 @@
                @blur="onBlur"
                :class="{'ui-state-focus': focused}">
       </div>
-      <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default" 
+      <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"
            @click.prevent="onClick($event, true)"
            :class="{
              'ui-state-active': checked,
@@ -29,14 +29,14 @@
         </span>
       </div>
     </div>
-    <label class="ui-chkbox-label" 
+    <label class="ui-chkbox-label"
            @click.prevent="onClick($event, true)"
            :class="{
-             'ui-label-active': checked, 
+             'ui-label-active': checked,
              'ui-label-disabled':disabled,
              'ui-label-focus':focused
            }"
-           v-if="label" 
+           v-if="label"
            :for="inputId">
       {{label}}
     </label>
@@ -45,7 +45,7 @@
 <style lang="css" src="./checkbox.css"></style>
 <script>
   export default {
-    name: 'p-checkbox',
+    name: 'vf-checkbox',
     inheritAttrs: false,
     model: {
       prop: 'model',

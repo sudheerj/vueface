@@ -2,7 +2,7 @@
   <span class="ui-spinner ui-widget ui-corner-all">
       <input ref="inputfield"
         :type="type"
-        :id="inputId" 
+        :id="inputId"
         :value="valueAsString"
         class="ui-spinner-input ui-inputtext ui-widget ui-state-default ui-corner-all"
         :size="size"
@@ -18,7 +18,7 @@
         @blur="onInputBlur($event)"
         @change="handleChange($event)"
         @focus="onInputFocus($event)">
-      <button type="button" 
+      <button type="button"
         :class="[
           'ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default',{
           'ui-state-disabled': disabled
@@ -47,7 +47,7 @@
 <style lang="css" src="./spinner.css"></style>
 <script>
   export default {
-    name: 'p-spinner',
+    name: 'vf-spinner',
     props: {
       value: {
         type: [Number, String]

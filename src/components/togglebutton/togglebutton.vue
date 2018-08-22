@@ -19,7 +19,7 @@
   let checked = false;
 
   export default {
-    name: 'p-toggleButton',
+    name: 'vf-toggleButton',
     data: function () {
       return {
         focus, checked

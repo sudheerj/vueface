@@ -11,7 +11,7 @@
 <style lang="css" src="./message.css"></style>
 <script>
   export default {
-    name: 'p-message',
+    name: 'vf-message',
     data: function () {
       return {
       };

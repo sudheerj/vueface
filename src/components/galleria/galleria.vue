@@ -30,7 +30,7 @@
 <script>
   import domHandler from '../dom/domhandler.js';
   export default {
-    name: 'p-galleria',
+    name: 'vf-galleria',
     data: function () {
       return {
         _images: null,

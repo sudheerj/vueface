@@ -8,7 +8,7 @@
 <style lang="css" src="./progressspinner.css"></style>
 <script>
   export default {
-    name: 'p-progressSpinner',
+    name: 'vf-progressSpinner',
     data: function () {
       return {
         cornerStyleClass: 'ui-corner-all'

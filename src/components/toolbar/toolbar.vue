@@ -6,7 +6,7 @@
 <style lang="css" src="./toolbar.css"></style>
 <script>
   export default {
-    name: 'p-toolbar',
+    name: 'vf-toolbar',
     data: function () {
       return {
       };

@@ -10,10 +10,10 @@
 
 
         <h3 class="first">Default</h3>
-        <p-inputTextarea rows="5" cols="30" v-model="text"></p-inputTextarea>
+        <vf-inputTextarea rows="5" cols="30" v-model="text"></vf-inputTextarea>
 
         <h3>AutoResize</h3>
-        <p-inputTextarea rows="5" cols="30"  :autoResize="autoResize"></p-inputTextarea>
+        <vf-inputTextarea rows="5" cols="30"  :autoResize="autoResize"></vf-inputTextarea>
 
       </div>
   </div>

@@ -20,7 +20,7 @@
 <script>
   import domHandler from '../dom/domhandler';
   export default {
-    name: 'p-growl',
+    name: 'vf-growl',
     data: function () {
       return {
         zIndex: 0,

@@ -12,12 +12,12 @@
         <h3>1. Basic</h3>
         <p>Three states of element can be displayed in an icon format.</p>
         <h3>Boolean - {{checked}}</h3>
-        <p-tristatecheckbox v-model="checked" ></p-tristatecheckbox>
+        <vf-tristatecheckbox v-model="checked" ></vf-tristatecheckbox>
 
         <h3>2. Disabled</h3>
         <p>The checkbox selection is prevented using disabled attribute.</p>
         <h3>Boolean - {{checked}}</h3>
-        <p-tristatecheckbox v-model="disabledCheck" :disabled="true"></p-tristatecheckbox>
+        <vf-tristatecheckbox v-model="disabledCheck" :disabled="true"></vf-tristatecheckbox>
 
       </div>
   </div>
