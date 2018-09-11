@@ -143,7 +143,7 @@
       </a>
       <div :class="{'submenushow': (element.misctitle == activeMenuId), 'submenuhide': (element.misctitle != activeMenuId)}">
         <router-link to="/components/captcha">&#9679; Captcha</router-link>
-        <router-link to="/components/progressspinner">&#9679;ProgressSpinner</router-link>
+        <router-link to="/components/progressspinner">&#9679; ProgressSpinner</router-link>
         <router-link to="/components/progressbar">&#9679; ProgressBar</router-link>
         <router-link to="/components/terminal">&#9679; Terminal</router-link>
         <router-link to="/components/blockui">&#9679; BlockUI</router-link>

@@ -59,7 +59,7 @@ export default {
 &lt;/style&gt;
 </code></pre>
       <h4>Run</h4>
-      <pre v-highlightjs><code class="bash">$ npm run dev</code></pre>
+      <pre v-highlightjs><code class="bash">$ npm start</code></pre>
       </div>
     </div>
 

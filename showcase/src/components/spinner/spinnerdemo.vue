@@ -29,9 +29,9 @@
     name: 'spinnerdemo',
     data () {
       return {
-        val1: null,
-        val2: null,
-        val3: null,
+        val1: 10,
+        val2: 5,
+        val3: 10,
         val4: 100
       };
     }
