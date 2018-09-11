@@ -1,6 +1,6 @@
 {
   "name": "vueface",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-beta",
   "description": "Component library for VueJS framework",
   "license": "MIT",
   "private": false,
