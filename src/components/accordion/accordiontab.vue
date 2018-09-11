@@ -38,7 +38,7 @@
 <script>
   let idx = 0;
   export default {
-    name: 'p-accordionTab',
+    name: 'vf-accordionTab',
     data: function () {
       return {
         animating: false,
