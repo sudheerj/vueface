@@ -91,6 +91,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     }),
+    new CopyWebpackPlugin([
+      {from:'showcase/src/assets/images/cars',to:'img/cars'}
+    ])
   ]
 })
 
