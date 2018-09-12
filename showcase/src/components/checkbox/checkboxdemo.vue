@@ -18,10 +18,11 @@
         <h3>2. Checkbox Group</h3>
         <p>Collection of checkboxes categorized as a one group known as Checkbox Group</p>
 
-        <div class="ui-g" style="width:250px;margin-bottom:10px">
-          <div class="ui-g-12"><vf-checkbox name="group1" value="VueJS" label="VueJS" v-model="selectedFrameworks" inputId="ny"></vf-checkbox></div>
-          <div class="ui-g-12"><vf-checkbox name="group1" value="Angular" label="Angular" v-model="selectedFrameworks" inputId="sf"></vf-checkbox></div>
-          <div class="ui-g-12"><vf-checkbox name="group1" value="React" label="React" v-model="selectedFrameworks" inputId="la"></vf-checkbox></div>
+          <vf-checkbox name="group1" value="VueJS" label="VueJS" v-model="selectedFrameworks" inputId="ny"></vf-checkbox>
+          <br/>
+          <vf-checkbox name="group1" value="Angular" label="Angular" v-model="selectedFrameworks" inputId="sf"></vf-checkbox>
+          <br/>
+          <vf-checkbox name="group1" value="React" label="React" v-model="selectedFrameworks" inputId="la"></vf-checkbox>
         </div>
 
       </div>
