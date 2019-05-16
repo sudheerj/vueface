@@ -3,6 +3,8 @@
 
 > VueFace is an open source component library for VueJS framework with around 40 components at the moment. It supports 20+ themes for giving different look & feel for all the components.
 
+Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
+
 ## Install
 VueFace is available in NPM and you can add to your project as a dependency as below
 
@@ -51,3 +53,4 @@ MIT
 [daviddm-url]: https://david-dm.org/sudheerj/vueface-module
 [coveralls-image]: https://coveralls.io/repos/sudheerj/vueface/badge.svg?branch=master&service=github
 [coveralls-url]: https://coveralls.io/github/sudheerj/vueface?branch=master
+
