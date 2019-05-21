@@ -8,6 +8,7 @@ test/e2e/reports
 selenium-debug.log
 docs/
 package-lock.json
+dist/
 
 # Editor directories and files
 .idea

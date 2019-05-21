@@ -6,6 +6,9 @@
   "private": false,
   "homepage": "https://github.com/sudheerj/vueface",
   "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
