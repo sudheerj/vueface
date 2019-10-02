@@ -23,7 +23,7 @@
     name: 'vf-growl',
     data: function () {
       return {
-        zIndex: 0,
+        zIndex: ++domHandler.zindex,
 
         container: null,
 
@@ -65,7 +65,6 @@
           return;
         }
 
-        this.zIndex = ++domHandler.zindex;
         domHandler.fadeIn(this.container, 250);
 
         if (!this.sticky) {
