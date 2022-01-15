@@ -86,7 +86,7 @@
     "sass-loader": "^6.0.6",
     "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
-    "shelljs": "^0.7.6",
+    "shelljs": "^0.8.5",
     "sinon": "^4.0.0",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.19.0",
